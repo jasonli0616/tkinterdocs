@@ -1,0 +1,1790 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>tkinter.test.test_tkinter.test_variables API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tkinter.test.test_tkinter.test_variables</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import unittest
+import gc
+import tkinter
+from tkinter import (Variable, StringVar, IntVar, DoubleVar, BooleanVar, Tcl,
+                     TclError)
+from test.support import ALWAYS_EQ
+from tkinter.test.support import AbstractDefaultRootTest
+
+
+class Var(Variable):
+
+    _default = &#34;default&#34;
+    side_effect = False
+
+    def set(self, value):
+        self.side_effect = True
+        super().set(value)
+
+
+class TestBase(unittest.TestCase):
+
+    def setUp(self):
+        self.root = Tcl()
+
+    def tearDown(self):
+        del self.root
+
+
+class TestVariable(TestBase):
+
+    def info_exists(self, *args):
+        return self.root.getboolean(self.root.call(&#34;info&#34;, &#34;exists&#34;, *args))
+
+    def test_default(self):
+        v = Variable(self.root)
+        self.assertEqual(&#34;&#34;, v.get())
+        self.assertRegex(str(v), r&#34;^PY_VAR(\d+)$&#34;)
+
+    def test_name_and_value(self):
+        v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+        self.assertEqual(&#34;sample string&#34;, v.get())
+        self.assertEqual(&#34;varname&#34;, str(v))
+
+    def test___del__(self):
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+        v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+        self.assertTrue(self.info_exists(&#34;varname&#34;))
+        del v
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+
+    def test_dont_unset_not_existing(self):
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+        v1 = Variable(self.root, name=&#34;name&#34;)
+        v2 = Variable(self.root, name=&#34;name&#34;)
+        del v1
+        self.assertFalse(self.info_exists(&#34;name&#34;))
+        # shouldn&#39;t raise exception
+        del v2
+        self.assertFalse(self.info_exists(&#34;name&#34;))
+
+    def test_equality(self):
+        # values doesn&#39;t matter, only class and name are checked
+        v1 = Variable(self.root, name=&#34;abc&#34;)
+        v2 = Variable(self.root, name=&#34;abc&#34;)
+        self.assertIsNot(v1, v2)
+        self.assertEqual(v1, v2)
+
+        v3 = Variable(self.root, name=&#34;cba&#34;)
+        self.assertNotEqual(v1, v3)
+
+        v4 = StringVar(self.root, name=&#34;abc&#34;)
+        self.assertEqual(str(v1), str(v4))
+        self.assertNotEqual(v1, v4)
+
+        V = type(&#39;Variable&#39;, (), {})
+        self.assertNotEqual(v1, V())
+
+        self.assertNotEqual(v1, object())
+        self.assertEqual(v1, ALWAYS_EQ)
+
+        root2 = tkinter.Tk()
+        self.addCleanup(root2.destroy)
+        v5 = Variable(root2, name=&#34;abc&#34;)
+        self.assertEqual(str(v1), str(v5))
+        self.assertNotEqual(v1, v5)
+
+    def test_invalid_name(self):
+        with self.assertRaises(TypeError):
+            Variable(self.root, name=123)
+
+    def test_null_in_name(self):
+        with self.assertRaises(ValueError):
+            Variable(self.root, name=&#39;var\x00name&#39;)
+        with self.assertRaises(ValueError):
+            self.root.globalsetvar(&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.globalsetvar(b&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.setvar(&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.setvar(b&#39;var\x00name&#39;, &#34;value&#34;)
+
+    def test_initialize(self):
+        v = Var(self.root)
+        self.assertFalse(v.side_effect)
+        v.set(&#34;value&#34;)
+        self.assertTrue(v.side_effect)
+
+    def test_trace_old(self):
+        # Old interface
+        v = Variable(self.root)
+        vname = str(v)
+        trace = []
+        def read_tracer(*args):
+            trace.append((&#39;read&#39;,) + args)
+        def write_tracer(*args):
+            trace.append((&#39;write&#39;,) + args)
+        cb1 = v.trace_variable(&#39;r&#39;, read_tracer)
+        cb2 = v.trace_variable(&#39;wu&#39;, write_tracer)
+        self.assertEqual(sorted(v.trace_vinfo()), [(&#39;r&#39;, cb1), (&#39;wu&#39;, cb2)])
+        self.assertEqual(trace, [])
+
+        v.set(&#39;spam&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+        trace = []
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+        trace = []
+        info = sorted(v.trace_vinfo())
+        v.trace_vdelete(&#39;w&#39;, cb1)  # Wrong mode
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        with self.assertRaises(TclError):
+            v.trace_vdelete(&#39;r&#39;, &#39;spam&#39;)  # Wrong command name
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        v.trace_vdelete(&#39;r&#39;, (cb1, 43)) # Wrong arguments
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+        trace = []
+        v.trace_vdelete(&#39;r&#39;, cb1)
+        self.assertEqual(v.trace_vinfo(), [(&#39;wu&#39;, cb2)])
+        v.get()
+        self.assertEqual(trace, [])
+
+        trace = []
+        del write_tracer
+        gc.collect()
+        v.set(&#39;eggs&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+        trace = []
+        del v
+        gc.collect()
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;u&#39;)])
+
+    def test_trace(self):
+        v = Variable(self.root)
+        vname = str(v)
+        trace = []
+        def read_tracer(*args):
+            trace.append((&#39;read&#39;,) + args)
+        def write_tracer(*args):
+            trace.append((&#39;write&#39;,) + args)
+        tr1 = v.trace_add(&#39;read&#39;, read_tracer)
+        tr2 = v.trace_add([&#39;write&#39;, &#39;unset&#39;], write_tracer)
+        self.assertEqual(sorted(v.trace_info()), [
+                         ((&#39;read&#39;,), tr1),
+                         ((&#39;write&#39;, &#39;unset&#39;), tr2)])
+        self.assertEqual(trace, [])
+
+        v.set(&#39;spam&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+        trace = []
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+        trace = []
+        info = sorted(v.trace_info())
+        v.trace_remove(&#39;write&#39;, tr1)  # Wrong mode
+        self.assertEqual(sorted(v.trace_info()), info)
+        with self.assertRaises(TclError):
+            v.trace_remove(&#39;read&#39;, &#39;spam&#39;)  # Wrong command name
+        self.assertEqual(sorted(v.trace_info()), info)
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+        trace = []
+        v.trace_remove(&#39;read&#39;, tr1)
+        self.assertEqual(v.trace_info(), [((&#39;write&#39;, &#39;unset&#39;), tr2)])
+        v.get()
+        self.assertEqual(trace, [])
+
+        trace = []
+        del write_tracer
+        gc.collect()
+        v.set(&#39;eggs&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+        trace = []
+        del v
+        gc.collect()
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;unset&#39;)])
+
+
+class TestStringVar(TestBase):
+
+    def test_default(self):
+        v = StringVar(self.root)
+        self.assertEqual(&#34;&#34;, v.get())
+
+    def test_get(self):
+        v = StringVar(self.root, &#34;abc&#34;, &#34;name&#34;)
+        self.assertEqual(&#34;abc&#34;, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        self.assertEqual(&#34;value&#34;, v.get())
+
+    def test_get_null(self):
+        v = StringVar(self.root, &#34;abc\x00def&#34;, &#34;name&#34;)
+        self.assertEqual(&#34;abc\x00def&#34;, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;val\x00ue&#34;)
+        self.assertEqual(&#34;val\x00ue&#34;, v.get())
+
+
+class TestIntVar(TestBase):
+
+    def test_default(self):
+        v = IntVar(self.root)
+        self.assertEqual(0, v.get())
+
+    def test_get(self):
+        v = IntVar(self.root, 123, &#34;name&#34;)
+        self.assertEqual(123, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;345&#34;)
+        self.assertEqual(345, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;876.5&#34;)
+        self.assertEqual(876, v.get())
+
+    def test_invalid_value(self):
+        v = IntVar(self.root, name=&#34;name&#34;)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises((ValueError, TclError)):
+            v.get()
+
+
+class TestDoubleVar(TestBase):
+
+    def test_default(self):
+        v = DoubleVar(self.root)
+        self.assertEqual(0.0, v.get())
+
+    def test_get(self):
+        v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+        self.assertAlmostEqual(1.23, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+        self.assertAlmostEqual(3.45, v.get())
+
+    def test_get_from_int(self):
+        v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+        self.assertAlmostEqual(1.23, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+        self.assertAlmostEqual(3.45, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;456&#34;)
+        self.assertAlmostEqual(456, v.get())
+
+    def test_invalid_value(self):
+        v = DoubleVar(self.root, name=&#34;name&#34;)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises((ValueError, TclError)):
+            v.get()
+
+
+class TestBooleanVar(TestBase):
+
+    def test_default(self):
+        v = BooleanVar(self.root)
+        self.assertIs(v.get(), False)
+
+    def test_get(self):
+        v = BooleanVar(self.root, True, &#34;name&#34;)
+        self.assertIs(v.get(), True)
+        self.root.globalsetvar(&#34;name&#34;, &#34;0&#34;)
+        self.assertIs(v.get(), False)
+        self.root.globalsetvar(&#34;name&#34;, 42 if self.root.wantobjects() else 1)
+        self.assertIs(v.get(), True)
+        self.root.globalsetvar(&#34;name&#34;, 0)
+        self.assertIs(v.get(), False)
+        self.root.globalsetvar(&#34;name&#34;, &#34;on&#34;)
+        self.assertIs(v.get(), True)
+
+    def test_set(self):
+        true = 1 if self.root.wantobjects() else &#34;1&#34;
+        false = 0 if self.root.wantobjects() else &#34;0&#34;
+        v = BooleanVar(self.root, name=&#34;name&#34;)
+        v.set(True)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+        v.set(&#34;0&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        v.set(42)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+        v.set(0)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        v.set(&#34;on&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+
+    def test_invalid_value_domain(self):
+        false = 0 if self.root.wantobjects() else &#34;0&#34;
+        v = BooleanVar(self.root, name=&#34;name&#34;)
+        with self.assertRaises(TclError):
+            v.set(&#34;value&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            v.get()
+        self.root.globalsetvar(&#34;name&#34;, &#34;1.0&#34;)
+        with self.assertRaises(ValueError):
+            v.get()
+
+
+class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_variable(self):
+        self.assertRaises(RuntimeError, Variable)
+        root = tkinter.Tk()
+        v = Variable()
+        v.set(&#34;value&#34;)
+        self.assertEqual(v.get(), &#34;value&#34;)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, Variable)
+
+
+tests_gui = (TestVariable, TestStringVar, TestIntVar,
+             TestDoubleVar, TestBooleanVar, DefaultRootTest)
+
+
+if __name__ == &#34;__main__&#34;:
+    from test.support import run_unittest
+    run_unittest(*tests_gui)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.DefaultRootTest"><code class="flex name class">
+<span>class <span class="ident">DefaultRootTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_variable(self):
+        self.assertRaises(RuntimeError, Variable)
+        root = tkinter.Tk()
+        v = Variable()
+        v.set(&#34;value&#34;)
+        self.assertEqual(v.get(), &#34;value&#34;)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, Variable)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractDefaultRootTest" href="../support.html#tkinter.test.support.AbstractDefaultRootTest">AbstractDefaultRootTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.DefaultRootTest.test_variable"><code class="name flex">
+<span>def <span class="ident">test_variable</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_variable(self):
+    self.assertRaises(RuntimeError, Variable)
+    root = tkinter.Tk()
+    v = Variable()
+    v.set(&#34;value&#34;)
+    self.assertEqual(v.get(), &#34;value&#34;)
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, Variable)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBase"><code class="flex name class">
+<span>class <span class="ident">TestBase</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestBase(unittest.TestCase):
+
+    def setUp(self):
+        self.root = Tcl()
+
+    def tearDown(self):
+        del self.root</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar">TestBooleanVar</a></li>
+<li><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar">TestDoubleVar</a></li>
+<li><a title="tkinter.test.test_tkinter.test_variables.TestIntVar" href="#tkinter.test.test_tkinter.test_variables.TestIntVar">TestIntVar</a></li>
+<li><a title="tkinter.test.test_tkinter.test_variables.TestStringVar" href="#tkinter.test.test_tkinter.test_variables.TestStringVar">TestStringVar</a></li>
+<li><a title="tkinter.test.test_tkinter.test_variables.TestVariable" href="#tkinter.test.test_tkinter.test_variables.TestVariable">TestVariable</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBase.setUp"><code class="name flex">
+<span>def <span class="ident">setUp</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Hook method for setting up the test fixture before exercising it.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setUp(self):
+    self.root = Tcl()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBase.tearDown"><code class="name flex">
+<span>def <span class="ident">tearDown</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Hook method for deconstructing the test fixture after testing it.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tearDown(self):
+    del self.root</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBooleanVar"><code class="flex name class">
+<span>class <span class="ident">TestBooleanVar</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestBooleanVar(TestBase):
+
+    def test_default(self):
+        v = BooleanVar(self.root)
+        self.assertIs(v.get(), False)
+
+    def test_get(self):
+        v = BooleanVar(self.root, True, &#34;name&#34;)
+        self.assertIs(v.get(), True)
+        self.root.globalsetvar(&#34;name&#34;, &#34;0&#34;)
+        self.assertIs(v.get(), False)
+        self.root.globalsetvar(&#34;name&#34;, 42 if self.root.wantobjects() else 1)
+        self.assertIs(v.get(), True)
+        self.root.globalsetvar(&#34;name&#34;, 0)
+        self.assertIs(v.get(), False)
+        self.root.globalsetvar(&#34;name&#34;, &#34;on&#34;)
+        self.assertIs(v.get(), True)
+
+    def test_set(self):
+        true = 1 if self.root.wantobjects() else &#34;1&#34;
+        false = 0 if self.root.wantobjects() else &#34;0&#34;
+        v = BooleanVar(self.root, name=&#34;name&#34;)
+        v.set(True)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+        v.set(&#34;0&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        v.set(42)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+        v.set(0)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        v.set(&#34;on&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+
+    def test_invalid_value_domain(self):
+        false = 0 if self.root.wantobjects() else &#34;0&#34;
+        v = BooleanVar(self.root, name=&#34;name&#34;)
+        with self.assertRaises(TclError):
+            v.set(&#34;value&#34;)
+        self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            v.get()
+        self.root.globalsetvar(&#34;name&#34;, &#34;1.0&#34;)
+        with self.assertRaises(ValueError):
+            v.get()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_default"><code class="name flex">
+<span>def <span class="ident">test_default</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default(self):
+    v = BooleanVar(self.root)
+    self.assertIs(v.get(), False)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_get"><code class="name flex">
+<span>def <span class="ident">test_get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get(self):
+    v = BooleanVar(self.root, True, &#34;name&#34;)
+    self.assertIs(v.get(), True)
+    self.root.globalsetvar(&#34;name&#34;, &#34;0&#34;)
+    self.assertIs(v.get(), False)
+    self.root.globalsetvar(&#34;name&#34;, 42 if self.root.wantobjects() else 1)
+    self.assertIs(v.get(), True)
+    self.root.globalsetvar(&#34;name&#34;, 0)
+    self.assertIs(v.get(), False)
+    self.root.globalsetvar(&#34;name&#34;, &#34;on&#34;)
+    self.assertIs(v.get(), True)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_invalid_value_domain"><code class="name flex">
+<span>def <span class="ident">test_invalid_value_domain</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_invalid_value_domain(self):
+    false = 0 if self.root.wantobjects() else &#34;0&#34;
+    v = BooleanVar(self.root, name=&#34;name&#34;)
+    with self.assertRaises(TclError):
+        v.set(&#34;value&#34;)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+    self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+    with self.assertRaises(ValueError):
+        v.get()
+    self.root.globalsetvar(&#34;name&#34;, &#34;1.0&#34;)
+    with self.assertRaises(ValueError):
+        v.get()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_set"><code class="name flex">
+<span>def <span class="ident">test_set</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_set(self):
+    true = 1 if self.root.wantobjects() else &#34;1&#34;
+    false = 0 if self.root.wantobjects() else &#34;0&#34;
+    v = BooleanVar(self.root, name=&#34;name&#34;)
+    v.set(True)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+    v.set(&#34;0&#34;)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+    v.set(42)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)
+    v.set(0)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), false)
+    v.set(&#34;on&#34;)
+    self.assertEqual(self.root.globalgetvar(&#34;name&#34;), true)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestDoubleVar"><code class="flex name class">
+<span>class <span class="ident">TestDoubleVar</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestDoubleVar(TestBase):
+
+    def test_default(self):
+        v = DoubleVar(self.root)
+        self.assertEqual(0.0, v.get())
+
+    def test_get(self):
+        v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+        self.assertAlmostEqual(1.23, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+        self.assertAlmostEqual(3.45, v.get())
+
+    def test_get_from_int(self):
+        v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+        self.assertAlmostEqual(1.23, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+        self.assertAlmostEqual(3.45, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;456&#34;)
+        self.assertAlmostEqual(456, v.get())
+
+    def test_invalid_value(self):
+        v = DoubleVar(self.root, name=&#34;name&#34;)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises((ValueError, TclError)):
+            v.get()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_default"><code class="name flex">
+<span>def <span class="ident">test_default</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default(self):
+    v = DoubleVar(self.root)
+    self.assertEqual(0.0, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get"><code class="name flex">
+<span>def <span class="ident">test_get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get(self):
+    v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+    self.assertAlmostEqual(1.23, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+    self.assertAlmostEqual(3.45, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get_from_int"><code class="name flex">
+<span>def <span class="ident">test_get_from_int</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get_from_int(self):
+    v = DoubleVar(self.root, 1.23, &#34;name&#34;)
+    self.assertAlmostEqual(1.23, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;3.45&#34;)
+    self.assertAlmostEqual(3.45, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;456&#34;)
+    self.assertAlmostEqual(456, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_invalid_value"><code class="name flex">
+<span>def <span class="ident">test_invalid_value</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_invalid_value(self):
+    v = DoubleVar(self.root, name=&#34;name&#34;)
+    self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+    with self.assertRaises((ValueError, TclError)):
+        v.get()</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestIntVar"><code class="flex name class">
+<span>class <span class="ident">TestIntVar</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestIntVar(TestBase):
+
+    def test_default(self):
+        v = IntVar(self.root)
+        self.assertEqual(0, v.get())
+
+    def test_get(self):
+        v = IntVar(self.root, 123, &#34;name&#34;)
+        self.assertEqual(123, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;345&#34;)
+        self.assertEqual(345, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;876.5&#34;)
+        self.assertEqual(876, v.get())
+
+    def test_invalid_value(self):
+        v = IntVar(self.root, name=&#34;name&#34;)
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        with self.assertRaises((ValueError, TclError)):
+            v.get()</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestIntVar.test_default"><code class="name flex">
+<span>def <span class="ident">test_default</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default(self):
+    v = IntVar(self.root)
+    self.assertEqual(0, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestIntVar.test_get"><code class="name flex">
+<span>def <span class="ident">test_get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get(self):
+    v = IntVar(self.root, 123, &#34;name&#34;)
+    self.assertEqual(123, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;345&#34;)
+    self.assertEqual(345, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;876.5&#34;)
+    self.assertEqual(876, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestIntVar.test_invalid_value"><code class="name flex">
+<span>def <span class="ident">test_invalid_value</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_invalid_value(self):
+    v = IntVar(self.root, name=&#34;name&#34;)
+    self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+    with self.assertRaises((ValueError, TclError)):
+        v.get()</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestStringVar"><code class="flex name class">
+<span>class <span class="ident">TestStringVar</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestStringVar(TestBase):
+
+    def test_default(self):
+        v = StringVar(self.root)
+        self.assertEqual(&#34;&#34;, v.get())
+
+    def test_get(self):
+        v = StringVar(self.root, &#34;abc&#34;, &#34;name&#34;)
+        self.assertEqual(&#34;abc&#34;, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+        self.assertEqual(&#34;value&#34;, v.get())
+
+    def test_get_null(self):
+        v = StringVar(self.root, &#34;abc\x00def&#34;, &#34;name&#34;)
+        self.assertEqual(&#34;abc\x00def&#34;, v.get())
+        self.root.globalsetvar(&#34;name&#34;, &#34;val\x00ue&#34;)
+        self.assertEqual(&#34;val\x00ue&#34;, v.get())</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestStringVar.test_default"><code class="name flex">
+<span>def <span class="ident">test_default</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default(self):
+    v = StringVar(self.root)
+    self.assertEqual(&#34;&#34;, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestStringVar.test_get"><code class="name flex">
+<span>def <span class="ident">test_get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get(self):
+    v = StringVar(self.root, &#34;abc&#34;, &#34;name&#34;)
+    self.assertEqual(&#34;abc&#34;, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;value&#34;)
+    self.assertEqual(&#34;value&#34;, v.get())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestStringVar.test_get_null"><code class="name flex">
+<span>def <span class="ident">test_get_null</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get_null(self):
+    v = StringVar(self.root, &#34;abc\x00def&#34;, &#34;name&#34;)
+    self.assertEqual(&#34;abc\x00def&#34;, v.get())
+    self.root.globalsetvar(&#34;name&#34;, &#34;val\x00ue&#34;)
+    self.assertEqual(&#34;val\x00ue&#34;, v.get())</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable"><code class="flex name class">
+<span>class <span class="ident">TestVariable</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TestVariable(TestBase):
+
+    def info_exists(self, *args):
+        return self.root.getboolean(self.root.call(&#34;info&#34;, &#34;exists&#34;, *args))
+
+    def test_default(self):
+        v = Variable(self.root)
+        self.assertEqual(&#34;&#34;, v.get())
+        self.assertRegex(str(v), r&#34;^PY_VAR(\d+)$&#34;)
+
+    def test_name_and_value(self):
+        v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+        self.assertEqual(&#34;sample string&#34;, v.get())
+        self.assertEqual(&#34;varname&#34;, str(v))
+
+    def test___del__(self):
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+        v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+        self.assertTrue(self.info_exists(&#34;varname&#34;))
+        del v
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+
+    def test_dont_unset_not_existing(self):
+        self.assertFalse(self.info_exists(&#34;varname&#34;))
+        v1 = Variable(self.root, name=&#34;name&#34;)
+        v2 = Variable(self.root, name=&#34;name&#34;)
+        del v1
+        self.assertFalse(self.info_exists(&#34;name&#34;))
+        # shouldn&#39;t raise exception
+        del v2
+        self.assertFalse(self.info_exists(&#34;name&#34;))
+
+    def test_equality(self):
+        # values doesn&#39;t matter, only class and name are checked
+        v1 = Variable(self.root, name=&#34;abc&#34;)
+        v2 = Variable(self.root, name=&#34;abc&#34;)
+        self.assertIsNot(v1, v2)
+        self.assertEqual(v1, v2)
+
+        v3 = Variable(self.root, name=&#34;cba&#34;)
+        self.assertNotEqual(v1, v3)
+
+        v4 = StringVar(self.root, name=&#34;abc&#34;)
+        self.assertEqual(str(v1), str(v4))
+        self.assertNotEqual(v1, v4)
+
+        V = type(&#39;Variable&#39;, (), {})
+        self.assertNotEqual(v1, V())
+
+        self.assertNotEqual(v1, object())
+        self.assertEqual(v1, ALWAYS_EQ)
+
+        root2 = tkinter.Tk()
+        self.addCleanup(root2.destroy)
+        v5 = Variable(root2, name=&#34;abc&#34;)
+        self.assertEqual(str(v1), str(v5))
+        self.assertNotEqual(v1, v5)
+
+    def test_invalid_name(self):
+        with self.assertRaises(TypeError):
+            Variable(self.root, name=123)
+
+    def test_null_in_name(self):
+        with self.assertRaises(ValueError):
+            Variable(self.root, name=&#39;var\x00name&#39;)
+        with self.assertRaises(ValueError):
+            self.root.globalsetvar(&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.globalsetvar(b&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.setvar(&#39;var\x00name&#39;, &#34;value&#34;)
+        with self.assertRaises(ValueError):
+            self.root.setvar(b&#39;var\x00name&#39;, &#34;value&#34;)
+
+    def test_initialize(self):
+        v = Var(self.root)
+        self.assertFalse(v.side_effect)
+        v.set(&#34;value&#34;)
+        self.assertTrue(v.side_effect)
+
+    def test_trace_old(self):
+        # Old interface
+        v = Variable(self.root)
+        vname = str(v)
+        trace = []
+        def read_tracer(*args):
+            trace.append((&#39;read&#39;,) + args)
+        def write_tracer(*args):
+            trace.append((&#39;write&#39;,) + args)
+        cb1 = v.trace_variable(&#39;r&#39;, read_tracer)
+        cb2 = v.trace_variable(&#39;wu&#39;, write_tracer)
+        self.assertEqual(sorted(v.trace_vinfo()), [(&#39;r&#39;, cb1), (&#39;wu&#39;, cb2)])
+        self.assertEqual(trace, [])
+
+        v.set(&#39;spam&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+        trace = []
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+        trace = []
+        info = sorted(v.trace_vinfo())
+        v.trace_vdelete(&#39;w&#39;, cb1)  # Wrong mode
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        with self.assertRaises(TclError):
+            v.trace_vdelete(&#39;r&#39;, &#39;spam&#39;)  # Wrong command name
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        v.trace_vdelete(&#39;r&#39;, (cb1, 43)) # Wrong arguments
+        self.assertEqual(sorted(v.trace_vinfo()), info)
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+        trace = []
+        v.trace_vdelete(&#39;r&#39;, cb1)
+        self.assertEqual(v.trace_vinfo(), [(&#39;wu&#39;, cb2)])
+        v.get()
+        self.assertEqual(trace, [])
+
+        trace = []
+        del write_tracer
+        gc.collect()
+        v.set(&#39;eggs&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+        trace = []
+        del v
+        gc.collect()
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;u&#39;)])
+
+    def test_trace(self):
+        v = Variable(self.root)
+        vname = str(v)
+        trace = []
+        def read_tracer(*args):
+            trace.append((&#39;read&#39;,) + args)
+        def write_tracer(*args):
+            trace.append((&#39;write&#39;,) + args)
+        tr1 = v.trace_add(&#39;read&#39;, read_tracer)
+        tr2 = v.trace_add([&#39;write&#39;, &#39;unset&#39;], write_tracer)
+        self.assertEqual(sorted(v.trace_info()), [
+                         ((&#39;read&#39;,), tr1),
+                         ((&#39;write&#39;, &#39;unset&#39;), tr2)])
+        self.assertEqual(trace, [])
+
+        v.set(&#39;spam&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+        trace = []
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+        trace = []
+        info = sorted(v.trace_info())
+        v.trace_remove(&#39;write&#39;, tr1)  # Wrong mode
+        self.assertEqual(sorted(v.trace_info()), info)
+        with self.assertRaises(TclError):
+            v.trace_remove(&#39;read&#39;, &#39;spam&#39;)  # Wrong command name
+        self.assertEqual(sorted(v.trace_info()), info)
+        v.get()
+        self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+        trace = []
+        v.trace_remove(&#39;read&#39;, tr1)
+        self.assertEqual(v.trace_info(), [((&#39;write&#39;, &#39;unset&#39;), tr2)])
+        v.get()
+        self.assertEqual(trace, [])
+
+        trace = []
+        del write_tracer
+        gc.collect()
+        v.set(&#39;eggs&#39;)
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+        trace = []
+        del v
+        gc.collect()
+        self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;unset&#39;)])</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.info_exists"><code class="name flex">
+<span>def <span class="ident">info_exists</span></span>(<span>self, *args)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def info_exists(self, *args):
+    return self.root.getboolean(self.root.call(&#34;info&#34;, &#34;exists&#34;, *args))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test___del__"><code class="name flex">
+<span>def <span class="ident">test___del__</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test___del__(self):
+    self.assertFalse(self.info_exists(&#34;varname&#34;))
+    v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+    self.assertTrue(self.info_exists(&#34;varname&#34;))
+    del v
+    self.assertFalse(self.info_exists(&#34;varname&#34;))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_default"><code class="name flex">
+<span>def <span class="ident">test_default</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default(self):
+    v = Variable(self.root)
+    self.assertEqual(&#34;&#34;, v.get())
+    self.assertRegex(str(v), r&#34;^PY_VAR(\d+)$&#34;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_dont_unset_not_existing"><code class="name flex">
+<span>def <span class="ident">test_dont_unset_not_existing</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_dont_unset_not_existing(self):
+    self.assertFalse(self.info_exists(&#34;varname&#34;))
+    v1 = Variable(self.root, name=&#34;name&#34;)
+    v2 = Variable(self.root, name=&#34;name&#34;)
+    del v1
+    self.assertFalse(self.info_exists(&#34;name&#34;))
+    # shouldn&#39;t raise exception
+    del v2
+    self.assertFalse(self.info_exists(&#34;name&#34;))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_equality"><code class="name flex">
+<span>def <span class="ident">test_equality</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_equality(self):
+    # values doesn&#39;t matter, only class and name are checked
+    v1 = Variable(self.root, name=&#34;abc&#34;)
+    v2 = Variable(self.root, name=&#34;abc&#34;)
+    self.assertIsNot(v1, v2)
+    self.assertEqual(v1, v2)
+
+    v3 = Variable(self.root, name=&#34;cba&#34;)
+    self.assertNotEqual(v1, v3)
+
+    v4 = StringVar(self.root, name=&#34;abc&#34;)
+    self.assertEqual(str(v1), str(v4))
+    self.assertNotEqual(v1, v4)
+
+    V = type(&#39;Variable&#39;, (), {})
+    self.assertNotEqual(v1, V())
+
+    self.assertNotEqual(v1, object())
+    self.assertEqual(v1, ALWAYS_EQ)
+
+    root2 = tkinter.Tk()
+    self.addCleanup(root2.destroy)
+    v5 = Variable(root2, name=&#34;abc&#34;)
+    self.assertEqual(str(v1), str(v5))
+    self.assertNotEqual(v1, v5)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_initialize"><code class="name flex">
+<span>def <span class="ident">test_initialize</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_initialize(self):
+    v = Var(self.root)
+    self.assertFalse(v.side_effect)
+    v.set(&#34;value&#34;)
+    self.assertTrue(v.side_effect)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_invalid_name"><code class="name flex">
+<span>def <span class="ident">test_invalid_name</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_invalid_name(self):
+    with self.assertRaises(TypeError):
+        Variable(self.root, name=123)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_name_and_value"><code class="name flex">
+<span>def <span class="ident">test_name_and_value</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_name_and_value(self):
+    v = Variable(self.root, &#34;sample string&#34;, &#34;varname&#34;)
+    self.assertEqual(&#34;sample string&#34;, v.get())
+    self.assertEqual(&#34;varname&#34;, str(v))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_null_in_name"><code class="name flex">
+<span>def <span class="ident">test_null_in_name</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_null_in_name(self):
+    with self.assertRaises(ValueError):
+        Variable(self.root, name=&#39;var\x00name&#39;)
+    with self.assertRaises(ValueError):
+        self.root.globalsetvar(&#39;var\x00name&#39;, &#34;value&#34;)
+    with self.assertRaises(ValueError):
+        self.root.globalsetvar(b&#39;var\x00name&#39;, &#34;value&#34;)
+    with self.assertRaises(ValueError):
+        self.root.setvar(&#39;var\x00name&#39;, &#34;value&#34;)
+    with self.assertRaises(ValueError):
+        self.root.setvar(b&#39;var\x00name&#39;, &#34;value&#34;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_trace"><code class="name flex">
+<span>def <span class="ident">test_trace</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_trace(self):
+    v = Variable(self.root)
+    vname = str(v)
+    trace = []
+    def read_tracer(*args):
+        trace.append((&#39;read&#39;,) + args)
+    def write_tracer(*args):
+        trace.append((&#39;write&#39;,) + args)
+    tr1 = v.trace_add(&#39;read&#39;, read_tracer)
+    tr2 = v.trace_add([&#39;write&#39;, &#39;unset&#39;], write_tracer)
+    self.assertEqual(sorted(v.trace_info()), [
+                     ((&#39;read&#39;,), tr1),
+                     ((&#39;write&#39;, &#39;unset&#39;), tr2)])
+    self.assertEqual(trace, [])
+
+    v.set(&#39;spam&#39;)
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+    trace = []
+    v.get()
+    self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+    trace = []
+    info = sorted(v.trace_info())
+    v.trace_remove(&#39;write&#39;, tr1)  # Wrong mode
+    self.assertEqual(sorted(v.trace_info()), info)
+    with self.assertRaises(TclError):
+        v.trace_remove(&#39;read&#39;, &#39;spam&#39;)  # Wrong command name
+    self.assertEqual(sorted(v.trace_info()), info)
+    v.get()
+    self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;read&#39;)])
+
+    trace = []
+    v.trace_remove(&#39;read&#39;, tr1)
+    self.assertEqual(v.trace_info(), [((&#39;write&#39;, &#39;unset&#39;), tr2)])
+    v.get()
+    self.assertEqual(trace, [])
+
+    trace = []
+    del write_tracer
+    gc.collect()
+    v.set(&#39;eggs&#39;)
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;write&#39;)])
+
+    trace = []
+    del v
+    gc.collect()
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;unset&#39;)])</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.TestVariable.test_trace_old"><code class="name flex">
+<span>def <span class="ident">test_trace_old</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_trace_old(self):
+    # Old interface
+    v = Variable(self.root)
+    vname = str(v)
+    trace = []
+    def read_tracer(*args):
+        trace.append((&#39;read&#39;,) + args)
+    def write_tracer(*args):
+        trace.append((&#39;write&#39;,) + args)
+    cb1 = v.trace_variable(&#39;r&#39;, read_tracer)
+    cb2 = v.trace_variable(&#39;wu&#39;, write_tracer)
+    self.assertEqual(sorted(v.trace_vinfo()), [(&#39;r&#39;, cb1), (&#39;wu&#39;, cb2)])
+    self.assertEqual(trace, [])
+
+    v.set(&#39;spam&#39;)
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+    trace = []
+    v.get()
+    self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+    trace = []
+    info = sorted(v.trace_vinfo())
+    v.trace_vdelete(&#39;w&#39;, cb1)  # Wrong mode
+    self.assertEqual(sorted(v.trace_vinfo()), info)
+    with self.assertRaises(TclError):
+        v.trace_vdelete(&#39;r&#39;, &#39;spam&#39;)  # Wrong command name
+    self.assertEqual(sorted(v.trace_vinfo()), info)
+    v.trace_vdelete(&#39;r&#39;, (cb1, 43)) # Wrong arguments
+    self.assertEqual(sorted(v.trace_vinfo()), info)
+    v.get()
+    self.assertEqual(trace, [(&#39;read&#39;, vname, &#39;&#39;, &#39;r&#39;)])
+
+    trace = []
+    v.trace_vdelete(&#39;r&#39;, cb1)
+    self.assertEqual(v.trace_vinfo(), [(&#39;wu&#39;, cb2)])
+    v.get()
+    self.assertEqual(trace, [])
+
+    trace = []
+    del write_tracer
+    gc.collect()
+    v.set(&#39;eggs&#39;)
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;w&#39;)])
+
+    trace = []
+    del v
+    gc.collect()
+    self.assertEqual(trace, [(&#39;write&#39;, vname, &#39;&#39;, &#39;u&#39;)])</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_variables.Var"><code class="flex name class">
+<span>class <span class="ident">Var</span></span>
+<span>(</span><span>master=None, value=None, name=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class to define value holders for e.g. buttons.</p>
+<p>Subclasses StringVar, IntVar, DoubleVar, BooleanVar are specializations
+that constrain the type of the value returned from get().</p>
+<p>Construct a variable</p>
+<p>MASTER can be given as master widget.
+VALUE is an optional value (defaults to "")
+NAME is an optional Tcl name (defaults to PY_VARnum).</p>
+<p>If NAME matches an existing variable and VALUE is omitted
+then the existing value is retained.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Var(Variable):
+
+    _default = &#34;default&#34;
+    side_effect = False
+
+    def set(self, value):
+        self.side_effect = True
+        super().set(value)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.Variable" href="../../index.html#tkinter.Variable">Variable</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_variables.Var.side_effect"><code class="name">var <span class="ident">side_effect</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.Variable" href="../../index.html#tkinter.Variable">Variable</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.Variable.get" href="../../index.html#tkinter.Variable.get">get</a></code></li>
+<li><code><a title="tkinter.Variable.initialize" href="../../index.html#tkinter.Variable.initialize">initialize</a></code></li>
+<li><code><a title="tkinter.Variable.set" href="../../index.html#tkinter.Variable.set">set</a></code></li>
+<li><code><a title="tkinter.Variable.trace" href="../../index.html#tkinter.Variable.trace">trace</a></code></li>
+<li><code><a title="tkinter.Variable.trace_add" href="../../index.html#tkinter.Variable.trace_add">trace_add</a></code></li>
+<li><code><a title="tkinter.Variable.trace_info" href="../../index.html#tkinter.Variable.trace_info">trace_info</a></code></li>
+<li><code><a title="tkinter.Variable.trace_remove" href="../../index.html#tkinter.Variable.trace_remove">trace_remove</a></code></li>
+<li><code><a title="tkinter.Variable.trace_variable" href="../../index.html#tkinter.Variable.trace_variable">trace_variable</a></code></li>
+<li><code><a title="tkinter.Variable.trace_vdelete" href="../../index.html#tkinter.Variable.trace_vdelete">trace_vdelete</a></code></li>
+<li><code><a title="tkinter.Variable.trace_vinfo" href="../../index.html#tkinter.Variable.trace_vinfo">trace_vinfo</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tkinter.test.test_tkinter" href="index.html">tkinter.test.test_tkinter</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.DefaultRootTest" href="#tkinter.test.test_tkinter.test_variables.DefaultRootTest">DefaultRootTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.DefaultRootTest.test_variable" href="#tkinter.test.test_tkinter.test_variables.DefaultRootTest.test_variable">test_variable</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestBase" href="#tkinter.test.test_tkinter.test_variables.TestBase">TestBase</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.setUp" href="#tkinter.test.test_tkinter.test_variables.TestBase.setUp">setUp</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBase.tearDown" href="#tkinter.test.test_tkinter.test_variables.TestBase.tearDown">tearDown</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar">TestBooleanVar</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_default" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_default">test_default</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_get" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_get">test_get</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_invalid_value_domain" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_invalid_value_domain">test_invalid_value_domain</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_set" href="#tkinter.test.test_tkinter.test_variables.TestBooleanVar.test_set">test_set</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar">TestDoubleVar</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_default" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_default">test_default</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get">test_get</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get_from_int" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_get_from_int">test_get_from_int</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_invalid_value" href="#tkinter.test.test_tkinter.test_variables.TestDoubleVar.test_invalid_value">test_invalid_value</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestIntVar" href="#tkinter.test.test_tkinter.test_variables.TestIntVar">TestIntVar</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestIntVar.test_default" href="#tkinter.test.test_tkinter.test_variables.TestIntVar.test_default">test_default</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestIntVar.test_get" href="#tkinter.test.test_tkinter.test_variables.TestIntVar.test_get">test_get</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestIntVar.test_invalid_value" href="#tkinter.test.test_tkinter.test_variables.TestIntVar.test_invalid_value">test_invalid_value</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestStringVar" href="#tkinter.test.test_tkinter.test_variables.TestStringVar">TestStringVar</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestStringVar.test_default" href="#tkinter.test.test_tkinter.test_variables.TestStringVar.test_default">test_default</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestStringVar.test_get" href="#tkinter.test.test_tkinter.test_variables.TestStringVar.test_get">test_get</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestStringVar.test_get_null" href="#tkinter.test.test_tkinter.test_variables.TestStringVar.test_get_null">test_get_null</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable" href="#tkinter.test.test_tkinter.test_variables.TestVariable">TestVariable</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.info_exists" href="#tkinter.test.test_tkinter.test_variables.TestVariable.info_exists">info_exists</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test___del__" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test___del__">test___del__</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_default" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_default">test_default</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_dont_unset_not_existing" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_dont_unset_not_existing">test_dont_unset_not_existing</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_equality" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_equality">test_equality</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_initialize" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_initialize">test_initialize</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_invalid_name" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_invalid_name">test_invalid_name</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_name_and_value" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_name_and_value">test_name_and_value</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_null_in_name" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_null_in_name">test_null_in_name</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_trace" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_trace">test_trace</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_variables.TestVariable.test_trace_old" href="#tkinter.test.test_tkinter.test_variables.TestVariable.test_trace_old">test_trace_old</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_variables.Var" href="#tkinter.test.test_tkinter.test_variables.Var">Var</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_variables.Var.side_effect" href="#tkinter.test.test_tkinter.test_variables.Var.side_effect">side_effect</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

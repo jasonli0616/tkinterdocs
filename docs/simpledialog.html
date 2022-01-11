@@ -1,0 +1,1288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>tkinter.simpledialog API documentation</title>
+<meta name="description" content="This modules handles dialog boxes …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tkinter.simpledialog</code></h1>
+</header>
+<section id="section-intro">
+<p>This modules handles dialog boxes.</p>
+<p>It contains the following public symbols:</p>
+<p>SimpleDialog &ndash; A simple but flexible modal dialog box</p>
+<p>Dialog &ndash; a base class for dialogs</p>
+<p>askinteger &ndash; get an integer from the user</p>
+<p>askfloat &ndash; get a float from the user</p>
+<p>askstring &ndash; get a string from the user</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#
+# An Introduction to Tkinter
+#
+# Copyright (c) 1997 by Fredrik Lundh
+#
+# This copyright applies to Dialog, askinteger, askfloat and asktring
+#
+# fredrik@pythonware.com
+# http://www.pythonware.com
+#
+&#34;&#34;&#34;This modules handles dialog boxes.
+
+It contains the following public symbols:
+
+SimpleDialog -- A simple but flexible modal dialog box
+
+Dialog -- a base class for dialogs
+
+askinteger -- get an integer from the user
+
+askfloat -- get a float from the user
+
+askstring -- get a string from the user
+&#34;&#34;&#34;
+
+from tkinter import *
+from tkinter import _get_temp_root, _destroy_temp_root
+from tkinter import messagebox
+
+
+class SimpleDialog:
+
+    def __init__(self, master,
+                 text=&#39;&#39;, buttons=[], default=None, cancel=None,
+                 title=None, class_=None):
+        if class_:
+            self.root = Toplevel(master, class_=class_)
+        else:
+            self.root = Toplevel(master)
+        if title:
+            self.root.title(title)
+            self.root.iconname(title)
+
+        _setup_dialog(self.root)
+
+        self.message = Message(self.root, text=text, aspect=400)
+        self.message.pack(expand=1, fill=BOTH)
+        self.frame = Frame(self.root)
+        self.frame.pack()
+        self.num = default
+        self.cancel = cancel
+        self.default = default
+        self.root.bind(&#39;&lt;Return&gt;&#39;, self.return_event)
+        for num in range(len(buttons)):
+            s = buttons[num]
+            b = Button(self.frame, text=s,
+                       command=(lambda self=self, num=num: self.done(num)))
+            if num == default:
+                b.config(relief=RIDGE, borderwidth=8)
+            b.pack(side=LEFT, fill=BOTH, expand=1)
+        self.root.protocol(&#39;WM_DELETE_WINDOW&#39;, self.wm_delete_window)
+        self.root.transient(master)
+        _place_window(self.root, master)
+
+    def go(self):
+        self.root.wait_visibility()
+        self.root.grab_set()
+        self.root.mainloop()
+        self.root.destroy()
+        return self.num
+
+    def return_event(self, event):
+        if self.default is None:
+            self.root.bell()
+        else:
+            self.done(self.default)
+
+    def wm_delete_window(self):
+        if self.cancel is None:
+            self.root.bell()
+        else:
+            self.done(self.cancel)
+
+    def done(self, num):
+        self.num = num
+        self.root.quit()
+
+
+class Dialog(Toplevel):
+
+    &#39;&#39;&#39;Class to open dialogs.
+
+    This class is intended as a base class for custom dialogs
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, title = None):
+        &#39;&#39;&#39;Initialize a dialog.
+
+        Arguments:
+
+            parent -- a parent window (the application window)
+
+            title -- the dialog title
+        &#39;&#39;&#39;
+        master = parent
+        if master is None:
+            master = _get_temp_root()
+
+        Toplevel.__init__(self, master)
+
+        self.withdraw() # remain invisible for now
+        # If the parent is not viewable, don&#39;t
+        # make the child transient, or else it
+        # would be opened withdrawn
+        if parent is not None and parent.winfo_viewable():
+            self.transient(parent)
+
+        if title:
+            self.title(title)
+
+        _setup_dialog(self)
+
+        self.parent = parent
+
+        self.result = None
+
+        body = Frame(self)
+        self.initial_focus = self.body(body)
+        body.pack(padx=5, pady=5)
+
+        self.buttonbox()
+
+        if self.initial_focus is None:
+            self.initial_focus = self
+
+        self.protocol(&#34;WM_DELETE_WINDOW&#34;, self.cancel)
+
+        _place_window(self, parent)
+
+        self.initial_focus.focus_set()
+
+        # wait for window to appear on screen before calling grab_set
+        self.wait_visibility()
+        self.grab_set()
+        self.wait_window(self)
+
+    def destroy(self):
+        &#39;&#39;&#39;Destroy the window&#39;&#39;&#39;
+        self.initial_focus = None
+        Toplevel.destroy(self)
+        _destroy_temp_root(self.master)
+
+    #
+    # construction hooks
+
+    def body(self, master):
+        &#39;&#39;&#39;create dialog body.
+
+        return widget that should have initial focus.
+        This method should be overridden, and is called
+        by the __init__ method.
+        &#39;&#39;&#39;
+        pass
+
+    def buttonbox(self):
+        &#39;&#39;&#39;add standard button box.
+
+        override if you do not want the standard buttons
+        &#39;&#39;&#39;
+
+        box = Frame(self)
+
+        w = Button(box, text=&#34;OK&#34;, width=10, command=self.ok, default=ACTIVE)
+        w.pack(side=LEFT, padx=5, pady=5)
+        w = Button(box, text=&#34;Cancel&#34;, width=10, command=self.cancel)
+        w.pack(side=LEFT, padx=5, pady=5)
+
+        self.bind(&#34;&lt;Return&gt;&#34;, self.ok)
+        self.bind(&#34;&lt;Escape&gt;&#34;, self.cancel)
+
+        box.pack()
+
+    #
+    # standard button semantics
+
+    def ok(self, event=None):
+
+        if not self.validate():
+            self.initial_focus.focus_set() # put focus back
+            return
+
+        self.withdraw()
+        self.update_idletasks()
+
+        try:
+            self.apply()
+        finally:
+            self.cancel()
+
+    def cancel(self, event=None):
+
+        # put focus back to the parent window
+        if self.parent is not None:
+            self.parent.focus_set()
+        self.destroy()
+
+    #
+    # command hooks
+
+    def validate(self):
+        &#39;&#39;&#39;validate the data
+
+        This method is called automatically to validate the data before the
+        dialog is destroyed. By default, it always validates OK.
+        &#39;&#39;&#39;
+
+        return 1 # override
+
+    def apply(self):
+        &#39;&#39;&#39;process the data
+
+        This method is called automatically to process the data, *after*
+        the dialog is destroyed. By default, it does nothing.
+        &#39;&#39;&#39;
+
+        pass # override
+
+
+# Place a toplevel window at the center of parent or screen
+# It is a Python implementation of ::tk::PlaceWindow.
+def _place_window(w, parent=None):
+    w.wm_withdraw() # Remain invisible while we figure out the geometry
+    w.update_idletasks() # Actualize geometry information
+
+    minwidth = w.winfo_reqwidth()
+    minheight = w.winfo_reqheight()
+    maxwidth = w.winfo_vrootwidth()
+    maxheight = w.winfo_vrootheight()
+    if parent is not None and parent.winfo_ismapped():
+        x = parent.winfo_rootx() + (parent.winfo_width() - minwidth) // 2
+        y = parent.winfo_rooty() + (parent.winfo_height() - minheight) // 2
+        vrootx = w.winfo_vrootx()
+        vrooty = w.winfo_vrooty()
+        x = min(x, vrootx + maxwidth - minwidth)
+        x = max(x, vrootx)
+        y = min(y, vrooty + maxheight - minheight)
+        y = max(y, vrooty)
+        if w._windowingsystem == &#39;aqua&#39;:
+            # Avoid the native menu bar which sits on top of everything.
+            y = max(y, 22)
+    else:
+        x = (w.winfo_screenwidth() - minwidth) // 2
+        y = (w.winfo_screenheight() - minheight) // 2
+
+    w.wm_maxsize(maxwidth, maxheight)
+    w.wm_geometry(&#39;+%d+%d&#39; % (x, y))
+    w.wm_deiconify() # Become visible at the desired location
+
+
+def _setup_dialog(w):
+    if w._windowingsystem == &#34;aqua&#34;:
+        w.tk.call(&#34;::tk::unsupported::MacWindowStyle&#34;, &#34;style&#34;,
+                  w, &#34;moveableModal&#34;, &#34;&#34;)
+    elif w._windowingsystem == &#34;x11&#34;:
+        w.wm_attributes(&#34;-type&#34;, &#34;dialog&#34;)
+
+# --------------------------------------------------------------------
+# convenience dialogues
+
+class _QueryDialog(Dialog):
+
+    def __init__(self, title, prompt,
+                 initialvalue=None,
+                 minvalue = None, maxvalue = None,
+                 parent = None):
+
+        self.prompt   = prompt
+        self.minvalue = minvalue
+        self.maxvalue = maxvalue
+
+        self.initialvalue = initialvalue
+
+        Dialog.__init__(self, parent, title)
+
+    def destroy(self):
+        self.entry = None
+        Dialog.destroy(self)
+
+    def body(self, master):
+
+        w = Label(master, text=self.prompt, justify=LEFT)
+        w.grid(row=0, padx=5, sticky=W)
+
+        self.entry = Entry(master, name=&#34;entry&#34;)
+        self.entry.grid(row=1, padx=5, sticky=W+E)
+
+        if self.initialvalue is not None:
+            self.entry.insert(0, self.initialvalue)
+            self.entry.select_range(0, END)
+
+        return self.entry
+
+    def validate(self):
+        try:
+            result = self.getresult()
+        except ValueError:
+            messagebox.showwarning(
+                &#34;Illegal value&#34;,
+                self.errormessage + &#34;\nPlease try again&#34;,
+                parent = self
+            )
+            return 0
+
+        if self.minvalue is not None and result &lt; self.minvalue:
+            messagebox.showwarning(
+                &#34;Too small&#34;,
+                &#34;The allowed minimum value is %s. &#34;
+                &#34;Please try again.&#34; % self.minvalue,
+                parent = self
+            )
+            return 0
+
+        if self.maxvalue is not None and result &gt; self.maxvalue:
+            messagebox.showwarning(
+                &#34;Too large&#34;,
+                &#34;The allowed maximum value is %s. &#34;
+                &#34;Please try again.&#34; % self.maxvalue,
+                parent = self
+            )
+            return 0
+
+        self.result = result
+
+        return 1
+
+
+class _QueryInteger(_QueryDialog):
+    errormessage = &#34;Not an integer.&#34;
+
+    def getresult(self):
+        return self.getint(self.entry.get())
+
+
+def askinteger(title, prompt, **kw):
+    &#39;&#39;&#39;get an integer from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is an integer
+    &#39;&#39;&#39;
+    d = _QueryInteger(title, prompt, **kw)
+    return d.result
+
+
+class _QueryFloat(_QueryDialog):
+    errormessage = &#34;Not a floating point value.&#34;
+
+    def getresult(self):
+        return self.getdouble(self.entry.get())
+
+
+def askfloat(title, prompt, **kw):
+    &#39;&#39;&#39;get a float from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is a float
+    &#39;&#39;&#39;
+    d = _QueryFloat(title, prompt, **kw)
+    return d.result
+
+
+class _QueryString(_QueryDialog):
+    def __init__(self, *args, **kw):
+        if &#34;show&#34; in kw:
+            self.__show = kw[&#34;show&#34;]
+            del kw[&#34;show&#34;]
+        else:
+            self.__show = None
+        _QueryDialog.__init__(self, *args, **kw)
+
+    def body(self, master):
+        entry = _QueryDialog.body(self, master)
+        if self.__show is not None:
+            entry.configure(show=self.__show)
+        return entry
+
+    def getresult(self):
+        return self.entry.get()
+
+
+def askstring(title, prompt, **kw):
+    &#39;&#39;&#39;get a string from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is a string
+    &#39;&#39;&#39;
+    d = _QueryString(title, prompt, **kw)
+    return d.result
+
+
+if __name__ == &#39;__main__&#39;:
+
+    def test():
+        root = Tk()
+        def doit(root=root):
+            d = SimpleDialog(root,
+                         text=&#34;This is a test dialog.  &#34;
+                              &#34;Would this have been an actual dialog, &#34;
+                              &#34;the buttons below would have been glowing &#34;
+                              &#34;in soft pink light.\n&#34;
+                              &#34;Do you believe this?&#34;,
+                         buttons=[&#34;Yes&#34;, &#34;No&#34;, &#34;Cancel&#34;],
+                         default=0,
+                         cancel=2,
+                         title=&#34;Test Dialog&#34;)
+            print(d.go())
+            print(askinteger(&#34;Spam&#34;, &#34;Egg count&#34;, initialvalue=12*12))
+            print(askfloat(&#34;Spam&#34;, &#34;Egg weight\n(in tons)&#34;, minvalue=1,
+                           maxvalue=100))
+            print(askstring(&#34;Spam&#34;, &#34;Egg label&#34;))
+        t = Button(root, text=&#39;Test&#39;, command=doit)
+        t.pack()
+        q = Button(root, text=&#39;Quit&#39;, command=t.quit)
+        q.pack()
+        t.mainloop()
+
+    test()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="tkinter.simpledialog.askfloat"><code class="name flex">
+<span>def <span class="ident">askfloat</span></span>(<span>title, prompt, **kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>get a float from the user</p>
+<h2 id="arguments">Arguments</h2>
+<p>title &ndash; the dialog title
+prompt &ndash; the label text
+**kw &ndash; see SimpleDialog class</p>
+<p>Return value is a float</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askfloat(title, prompt, **kw):
+    &#39;&#39;&#39;get a float from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is a float
+    &#39;&#39;&#39;
+    d = _QueryFloat(title, prompt, **kw)
+    return d.result</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.askinteger"><code class="name flex">
+<span>def <span class="ident">askinteger</span></span>(<span>title, prompt, **kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>get an integer from the user</p>
+<h2 id="arguments">Arguments</h2>
+<p>title &ndash; the dialog title
+prompt &ndash; the label text
+**kw &ndash; see SimpleDialog class</p>
+<p>Return value is an integer</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askinteger(title, prompt, **kw):
+    &#39;&#39;&#39;get an integer from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is an integer
+    &#39;&#39;&#39;
+    d = _QueryInteger(title, prompt, **kw)
+    return d.result</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.askstring"><code class="name flex">
+<span>def <span class="ident">askstring</span></span>(<span>title, prompt, **kw)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>get a string from the user</p>
+<h2 id="arguments">Arguments</h2>
+<p>title &ndash; the dialog title
+prompt &ndash; the label text
+**kw &ndash; see SimpleDialog class</p>
+<p>Return value is a string</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askstring(title, prompt, **kw):
+    &#39;&#39;&#39;get a string from the user
+
+    Arguments:
+
+        title -- the dialog title
+        prompt -- the label text
+        **kw -- see SimpleDialog class
+
+    Return value is a string
+    &#39;&#39;&#39;
+    d = _QueryString(title, prompt, **kw)
+    return d.result</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tkinter.simpledialog.Dialog"><code class="flex name class">
+<span>class <span class="ident">Dialog</span></span>
+<span>(</span><span>parent, title=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class to open dialogs.</p>
+<p>This class is intended as a base class for custom dialogs</p>
+<p>Initialize a dialog.</p>
+<h2 id="arguments">Arguments</h2>
+<p>parent &ndash; a parent window (the application window)</p>
+<p>title &ndash; the dialog title</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Dialog(Toplevel):
+
+    &#39;&#39;&#39;Class to open dialogs.
+
+    This class is intended as a base class for custom dialogs
+    &#39;&#39;&#39;
+
+    def __init__(self, parent, title = None):
+        &#39;&#39;&#39;Initialize a dialog.
+
+        Arguments:
+
+            parent -- a parent window (the application window)
+
+            title -- the dialog title
+        &#39;&#39;&#39;
+        master = parent
+        if master is None:
+            master = _get_temp_root()
+
+        Toplevel.__init__(self, master)
+
+        self.withdraw() # remain invisible for now
+        # If the parent is not viewable, don&#39;t
+        # make the child transient, or else it
+        # would be opened withdrawn
+        if parent is not None and parent.winfo_viewable():
+            self.transient(parent)
+
+        if title:
+            self.title(title)
+
+        _setup_dialog(self)
+
+        self.parent = parent
+
+        self.result = None
+
+        body = Frame(self)
+        self.initial_focus = self.body(body)
+        body.pack(padx=5, pady=5)
+
+        self.buttonbox()
+
+        if self.initial_focus is None:
+            self.initial_focus = self
+
+        self.protocol(&#34;WM_DELETE_WINDOW&#34;, self.cancel)
+
+        _place_window(self, parent)
+
+        self.initial_focus.focus_set()
+
+        # wait for window to appear on screen before calling grab_set
+        self.wait_visibility()
+        self.grab_set()
+        self.wait_window(self)
+
+    def destroy(self):
+        &#39;&#39;&#39;Destroy the window&#39;&#39;&#39;
+        self.initial_focus = None
+        Toplevel.destroy(self)
+        _destroy_temp_root(self.master)
+
+    #
+    # construction hooks
+
+    def body(self, master):
+        &#39;&#39;&#39;create dialog body.
+
+        return widget that should have initial focus.
+        This method should be overridden, and is called
+        by the __init__ method.
+        &#39;&#39;&#39;
+        pass
+
+    def buttonbox(self):
+        &#39;&#39;&#39;add standard button box.
+
+        override if you do not want the standard buttons
+        &#39;&#39;&#39;
+
+        box = Frame(self)
+
+        w = Button(box, text=&#34;OK&#34;, width=10, command=self.ok, default=ACTIVE)
+        w.pack(side=LEFT, padx=5, pady=5)
+        w = Button(box, text=&#34;Cancel&#34;, width=10, command=self.cancel)
+        w.pack(side=LEFT, padx=5, pady=5)
+
+        self.bind(&#34;&lt;Return&gt;&#34;, self.ok)
+        self.bind(&#34;&lt;Escape&gt;&#34;, self.cancel)
+
+        box.pack()
+
+    #
+    # standard button semantics
+
+    def ok(self, event=None):
+
+        if not self.validate():
+            self.initial_focus.focus_set() # put focus back
+            return
+
+        self.withdraw()
+        self.update_idletasks()
+
+        try:
+            self.apply()
+        finally:
+            self.cancel()
+
+    def cancel(self, event=None):
+
+        # put focus back to the parent window
+        if self.parent is not None:
+            self.parent.focus_set()
+        self.destroy()
+
+    #
+    # command hooks
+
+    def validate(self):
+        &#39;&#39;&#39;validate the data
+
+        This method is called automatically to validate the data before the
+        dialog is destroyed. By default, it always validates OK.
+        &#39;&#39;&#39;
+
+        return 1 # override
+
+    def apply(self):
+        &#39;&#39;&#39;process the data
+
+        This method is called automatically to process the data, *after*
+        the dialog is destroyed. By default, it does nothing.
+        &#39;&#39;&#39;
+
+        pass # override</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.Toplevel" href="index.html#tkinter.Toplevel">Toplevel</a></li>
+<li><a title="tkinter.BaseWidget" href="index.html#tkinter.BaseWidget">BaseWidget</a></li>
+<li><a title="tkinter.Misc" href="index.html#tkinter.Misc">Misc</a></li>
+<li><a title="tkinter.Wm" href="index.html#tkinter.Wm">Wm</a></li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li>tkinter.simpledialog._QueryDialog</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.simpledialog.Dialog.apply"><code class="name flex">
+<span>def <span class="ident">apply</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>process the data</p>
+<p>This method is called automatically to process the data, <em>after</em>
+the dialog is destroyed. By default, it does nothing.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def apply(self):
+    &#39;&#39;&#39;process the data
+
+    This method is called automatically to process the data, *after*
+    the dialog is destroyed. By default, it does nothing.
+    &#39;&#39;&#39;
+
+    pass # override</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.body"><code class="name flex">
+<span>def <span class="ident">body</span></span>(<span>self, master)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>create dialog body.</p>
+<p>return widget that should have initial focus.
+This method should be overridden, and is called
+by the <strong>init</strong> method.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def body(self, master):
+    &#39;&#39;&#39;create dialog body.
+
+    return widget that should have initial focus.
+    This method should be overridden, and is called
+    by the __init__ method.
+    &#39;&#39;&#39;
+    pass</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.buttonbox"><code class="name flex">
+<span>def <span class="ident">buttonbox</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>add standard button box.</p>
+<p>override if you do not want the standard buttons</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def buttonbox(self):
+    &#39;&#39;&#39;add standard button box.
+
+    override if you do not want the standard buttons
+    &#39;&#39;&#39;
+
+    box = Frame(self)
+
+    w = Button(box, text=&#34;OK&#34;, width=10, command=self.ok, default=ACTIVE)
+    w.pack(side=LEFT, padx=5, pady=5)
+    w = Button(box, text=&#34;Cancel&#34;, width=10, command=self.cancel)
+    w.pack(side=LEFT, padx=5, pady=5)
+
+    self.bind(&#34;&lt;Return&gt;&#34;, self.ok)
+    self.bind(&#34;&lt;Escape&gt;&#34;, self.cancel)
+
+    box.pack()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.cancel"><code class="name flex">
+<span>def <span class="ident">cancel</span></span>(<span>self, event=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cancel(self, event=None):
+
+    # put focus back to the parent window
+    if self.parent is not None:
+        self.parent.focus_set()
+    self.destroy()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.destroy"><code class="name flex">
+<span>def <span class="ident">destroy</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Destroy the window</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def destroy(self):
+    &#39;&#39;&#39;Destroy the window&#39;&#39;&#39;
+    self.initial_focus = None
+    Toplevel.destroy(self)
+    _destroy_temp_root(self.master)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.ok"><code class="name flex">
+<span>def <span class="ident">ok</span></span>(<span>self, event=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ok(self, event=None):
+
+    if not self.validate():
+        self.initial_focus.focus_set() # put focus back
+        return
+
+    self.withdraw()
+    self.update_idletasks()
+
+    try:
+        self.apply()
+    finally:
+        self.cancel()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.Dialog.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>validate the data</p>
+<p>This method is called automatically to validate the data before the
+dialog is destroyed. By default, it always validates OK.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate(self):
+    &#39;&#39;&#39;validate the data
+
+    This method is called automatically to validate the data before the
+    dialog is destroyed. By default, it always validates OK.
+    &#39;&#39;&#39;
+
+    return 1 # override</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="tkinter.Toplevel" href="index.html#tkinter.Toplevel">Toplevel</a></b></code>:
+<ul class="hlist">
+<li><code><a title="tkinter.Toplevel.after" href="index.html#tkinter.Misc.after">after</a></code></li>
+<li><code><a title="tkinter.Toplevel.after_cancel" href="index.html#tkinter.Misc.after_cancel">after_cancel</a></code></li>
+<li><code><a title="tkinter.Toplevel.after_idle" href="index.html#tkinter.Misc.after_idle">after_idle</a></code></li>
+<li><code><a title="tkinter.Toplevel.anchor" href="index.html#tkinter.Misc.anchor">anchor</a></code></li>
+<li><code><a title="tkinter.Toplevel.aspect" href="index.html#tkinter.Wm.aspect">aspect</a></code></li>
+<li><code><a title="tkinter.Toplevel.attributes" href="index.html#tkinter.Wm.attributes">attributes</a></code></li>
+<li><code><a title="tkinter.Toplevel.bbox" href="index.html#tkinter.Misc.bbox">bbox</a></code></li>
+<li><code><a title="tkinter.Toplevel.bell" href="index.html#tkinter.Misc.bell">bell</a></code></li>
+<li><code><a title="tkinter.Toplevel.bind" href="index.html#tkinter.Misc.bind">bind</a></code></li>
+<li><code><a title="tkinter.Toplevel.bind_all" href="index.html#tkinter.Misc.bind_all">bind_all</a></code></li>
+<li><code><a title="tkinter.Toplevel.bind_class" href="index.html#tkinter.Misc.bind_class">bind_class</a></code></li>
+<li><code><a title="tkinter.Toplevel.bindtags" href="index.html#tkinter.Misc.bindtags">bindtags</a></code></li>
+<li><code><a title="tkinter.Toplevel.cget" href="index.html#tkinter.Misc.cget">cget</a></code></li>
+<li><code><a title="tkinter.Toplevel.client" href="index.html#tkinter.Wm.client">client</a></code></li>
+<li><code><a title="tkinter.Toplevel.clipboard_append" href="index.html#tkinter.Misc.clipboard_append">clipboard_append</a></code></li>
+<li><code><a title="tkinter.Toplevel.clipboard_clear" href="index.html#tkinter.Misc.clipboard_clear">clipboard_clear</a></code></li>
+<li><code><a title="tkinter.Toplevel.clipboard_get" href="index.html#tkinter.Misc.clipboard_get">clipboard_get</a></code></li>
+<li><code><a title="tkinter.Toplevel.colormapwindows" href="index.html#tkinter.Wm.colormapwindows">colormapwindows</a></code></li>
+<li><code><a title="tkinter.Toplevel.columnconfigure" href="index.html#tkinter.Misc.columnconfigure">columnconfigure</a></code></li>
+<li><code><a title="tkinter.Toplevel.command" href="index.html#tkinter.Wm.command">command</a></code></li>
+<li><code><a title="tkinter.Toplevel.config" href="index.html#tkinter.Misc.config">config</a></code></li>
+<li><code><a title="tkinter.Toplevel.configure" href="index.html#tkinter.Misc.configure">configure</a></code></li>
+<li><code><a title="tkinter.Toplevel.deiconify" href="index.html#tkinter.Wm.deiconify">deiconify</a></code></li>
+<li><code><a title="tkinter.Toplevel.deletecommand" href="index.html#tkinter.Misc.deletecommand">deletecommand</a></code></li>
+<li><code><a title="tkinter.Toplevel.event_add" href="index.html#tkinter.Misc.event_add">event_add</a></code></li>
+<li><code><a title="tkinter.Toplevel.event_delete" href="index.html#tkinter.Misc.event_delete">event_delete</a></code></li>
+<li><code><a title="tkinter.Toplevel.event_generate" href="index.html#tkinter.Misc.event_generate">event_generate</a></code></li>
+<li><code><a title="tkinter.Toplevel.event_info" href="index.html#tkinter.Misc.event_info">event_info</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus" href="index.html#tkinter.Misc.focus">focus</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus_displayof" href="index.html#tkinter.Misc.focus_displayof">focus_displayof</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus_force" href="index.html#tkinter.Misc.focus_force">focus_force</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus_get" href="index.html#tkinter.Misc.focus_get">focus_get</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus_lastfor" href="index.html#tkinter.Misc.focus_lastfor">focus_lastfor</a></code></li>
+<li><code><a title="tkinter.Toplevel.focus_set" href="index.html#tkinter.Misc.focus_set">focus_set</a></code></li>
+<li><code><a title="tkinter.Toplevel.focusmodel" href="index.html#tkinter.Wm.focusmodel">focusmodel</a></code></li>
+<li><code><a title="tkinter.Toplevel.forget" href="index.html#tkinter.Wm.forget">forget</a></code></li>
+<li><code><a title="tkinter.Toplevel.frame" href="index.html#tkinter.Wm.frame">frame</a></code></li>
+<li><code><a title="tkinter.Toplevel.geometry" href="index.html#tkinter.Wm.geometry">geometry</a></code></li>
+<li><code><a title="tkinter.Toplevel.getboolean" href="index.html#tkinter.Misc.getboolean">getboolean</a></code></li>
+<li><code><a title="tkinter.Toplevel.getvar" href="index.html#tkinter.Misc.getvar">getvar</a></code></li>
+<li><code><a title="tkinter.Toplevel.grab_current" href="index.html#tkinter.Misc.grab_current">grab_current</a></code></li>
+<li><code><a title="tkinter.Toplevel.grab_release" href="index.html#tkinter.Misc.grab_release">grab_release</a></code></li>
+<li><code><a title="tkinter.Toplevel.grab_set" href="index.html#tkinter.Misc.grab_set">grab_set</a></code></li>
+<li><code><a title="tkinter.Toplevel.grab_set_global" href="index.html#tkinter.Misc.grab_set_global">grab_set_global</a></code></li>
+<li><code><a title="tkinter.Toplevel.grab_status" href="index.html#tkinter.Misc.grab_status">grab_status</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid" href="index.html#tkinter.Wm.grid">grid</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_anchor" href="index.html#tkinter.Misc.grid_anchor">grid_anchor</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_bbox" href="index.html#tkinter.Misc.grid_bbox">grid_bbox</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_columnconfigure" href="index.html#tkinter.Misc.grid_columnconfigure">grid_columnconfigure</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_location" href="index.html#tkinter.Misc.grid_location">grid_location</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_propagate" href="index.html#tkinter.Misc.grid_propagate">grid_propagate</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_rowconfigure" href="index.html#tkinter.Misc.grid_rowconfigure">grid_rowconfigure</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_size" href="index.html#tkinter.Misc.grid_size">grid_size</a></code></li>
+<li><code><a title="tkinter.Toplevel.grid_slaves" href="index.html#tkinter.Misc.grid_slaves">grid_slaves</a></code></li>
+<li><code><a title="tkinter.Toplevel.group" href="index.html#tkinter.Wm.group">group</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconbitmap" href="index.html#tkinter.Wm.iconbitmap">iconbitmap</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconify" href="index.html#tkinter.Wm.iconify">iconify</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconmask" href="index.html#tkinter.Wm.iconmask">iconmask</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconname" href="index.html#tkinter.Wm.iconname">iconname</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconphoto" href="index.html#tkinter.Wm.iconphoto">iconphoto</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconposition" href="index.html#tkinter.Wm.iconposition">iconposition</a></code></li>
+<li><code><a title="tkinter.Toplevel.iconwindow" href="index.html#tkinter.Wm.iconwindow">iconwindow</a></code></li>
+<li><code><a title="tkinter.Toplevel.image_names" href="index.html#tkinter.Misc.image_names">image_names</a></code></li>
+<li><code><a title="tkinter.Toplevel.image_types" href="index.html#tkinter.Misc.image_types">image_types</a></code></li>
+<li><code><a title="tkinter.Toplevel.keys" href="index.html#tkinter.Misc.keys">keys</a></code></li>
+<li><code><a title="tkinter.Toplevel.lift" href="index.html#tkinter.Misc.lift">lift</a></code></li>
+<li><code><a title="tkinter.Toplevel.lower" href="index.html#tkinter.Misc.lower">lower</a></code></li>
+<li><code><a title="tkinter.Toplevel.mainloop" href="index.html#tkinter.Misc.mainloop">mainloop</a></code></li>
+<li><code><a title="tkinter.Toplevel.manage" href="index.html#tkinter.Wm.manage">manage</a></code></li>
+<li><code><a title="tkinter.Toplevel.maxsize" href="index.html#tkinter.Wm.maxsize">maxsize</a></code></li>
+<li><code><a title="tkinter.Toplevel.minsize" href="index.html#tkinter.Wm.minsize">minsize</a></code></li>
+<li><code><a title="tkinter.Toplevel.nametowidget" href="index.html#tkinter.Misc.nametowidget">nametowidget</a></code></li>
+<li><code><a title="tkinter.Toplevel.option_add" href="index.html#tkinter.Misc.option_add">option_add</a></code></li>
+<li><code><a title="tkinter.Toplevel.option_clear" href="index.html#tkinter.Misc.option_clear">option_clear</a></code></li>
+<li><code><a title="tkinter.Toplevel.option_get" href="index.html#tkinter.Misc.option_get">option_get</a></code></li>
+<li><code><a title="tkinter.Toplevel.option_readfile" href="index.html#tkinter.Misc.option_readfile">option_readfile</a></code></li>
+<li><code><a title="tkinter.Toplevel.overrideredirect" href="index.html#tkinter.Wm.overrideredirect">overrideredirect</a></code></li>
+<li><code><a title="tkinter.Toplevel.pack_propagate" href="index.html#tkinter.Misc.pack_propagate">pack_propagate</a></code></li>
+<li><code><a title="tkinter.Toplevel.pack_slaves" href="index.html#tkinter.Misc.pack_slaves">pack_slaves</a></code></li>
+<li><code><a title="tkinter.Toplevel.place_slaves" href="index.html#tkinter.Misc.place_slaves">place_slaves</a></code></li>
+<li><code><a title="tkinter.Toplevel.positionfrom" href="index.html#tkinter.Wm.positionfrom">positionfrom</a></code></li>
+<li><code><a title="tkinter.Toplevel.propagate" href="index.html#tkinter.Misc.propagate">propagate</a></code></li>
+<li><code><a title="tkinter.Toplevel.protocol" href="index.html#tkinter.Wm.protocol">protocol</a></code></li>
+<li><code><a title="tkinter.Toplevel.quit" href="index.html#tkinter.Misc.quit">quit</a></code></li>
+<li><code><a title="tkinter.Toplevel.register" href="index.html#tkinter.Misc.register">register</a></code></li>
+<li><code><a title="tkinter.Toplevel.resizable" href="index.html#tkinter.Wm.resizable">resizable</a></code></li>
+<li><code><a title="tkinter.Toplevel.rowconfigure" href="index.html#tkinter.Misc.rowconfigure">rowconfigure</a></code></li>
+<li><code><a title="tkinter.Toplevel.selection_clear" href="index.html#tkinter.Misc.selection_clear">selection_clear</a></code></li>
+<li><code><a title="tkinter.Toplevel.selection_get" href="index.html#tkinter.Misc.selection_get">selection_get</a></code></li>
+<li><code><a title="tkinter.Toplevel.selection_handle" href="index.html#tkinter.Misc.selection_handle">selection_handle</a></code></li>
+<li><code><a title="tkinter.Toplevel.selection_own" href="index.html#tkinter.Misc.selection_own">selection_own</a></code></li>
+<li><code><a title="tkinter.Toplevel.selection_own_get" href="index.html#tkinter.Misc.selection_own_get">selection_own_get</a></code></li>
+<li><code><a title="tkinter.Toplevel.send" href="index.html#tkinter.Misc.send">send</a></code></li>
+<li><code><a title="tkinter.Toplevel.setvar" href="index.html#tkinter.Misc.setvar">setvar</a></code></li>
+<li><code><a title="tkinter.Toplevel.size" href="index.html#tkinter.Misc.size">size</a></code></li>
+<li><code><a title="tkinter.Toplevel.sizefrom" href="index.html#tkinter.Wm.sizefrom">sizefrom</a></code></li>
+<li><code><a title="tkinter.Toplevel.slaves" href="index.html#tkinter.Misc.slaves">slaves</a></code></li>
+<li><code><a title="tkinter.Toplevel.state" href="index.html#tkinter.Wm.state">state</a></code></li>
+<li><code><a title="tkinter.Toplevel.title" href="index.html#tkinter.Wm.title">title</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_bisque" href="index.html#tkinter.Misc.tk_bisque">tk_bisque</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_focusFollowsMouse" href="index.html#tkinter.Misc.tk_focusFollowsMouse">tk_focusFollowsMouse</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_focusNext" href="index.html#tkinter.Misc.tk_focusNext">tk_focusNext</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_focusPrev" href="index.html#tkinter.Misc.tk_focusPrev">tk_focusPrev</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_setPalette" href="index.html#tkinter.Misc.tk_setPalette">tk_setPalette</a></code></li>
+<li><code><a title="tkinter.Toplevel.tk_strictMotif" href="index.html#tkinter.Misc.tk_strictMotif">tk_strictMotif</a></code></li>
+<li><code><a title="tkinter.Toplevel.tkraise" href="index.html#tkinter.Misc.tkraise">tkraise</a></code></li>
+<li><code><a title="tkinter.Toplevel.transient" href="index.html#tkinter.Wm.transient">transient</a></code></li>
+<li><code><a title="tkinter.Toplevel.unbind" href="index.html#tkinter.Misc.unbind">unbind</a></code></li>
+<li><code><a title="tkinter.Toplevel.unbind_all" href="index.html#tkinter.Misc.unbind_all">unbind_all</a></code></li>
+<li><code><a title="tkinter.Toplevel.unbind_class" href="index.html#tkinter.Misc.unbind_class">unbind_class</a></code></li>
+<li><code><a title="tkinter.Toplevel.update" href="index.html#tkinter.Misc.update">update</a></code></li>
+<li><code><a title="tkinter.Toplevel.update_idletasks" href="index.html#tkinter.Misc.update_idletasks">update_idletasks</a></code></li>
+<li><code><a title="tkinter.Toplevel.wait_variable" href="index.html#tkinter.Misc.wait_variable">wait_variable</a></code></li>
+<li><code><a title="tkinter.Toplevel.wait_visibility" href="index.html#tkinter.Misc.wait_visibility">wait_visibility</a></code></li>
+<li><code><a title="tkinter.Toplevel.wait_window" href="index.html#tkinter.Misc.wait_window">wait_window</a></code></li>
+<li><code><a title="tkinter.Toplevel.waitvar" href="index.html#tkinter.Misc.waitvar">waitvar</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_atom" href="index.html#tkinter.Misc.winfo_atom">winfo_atom</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_atomname" href="index.html#tkinter.Misc.winfo_atomname">winfo_atomname</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_cells" href="index.html#tkinter.Misc.winfo_cells">winfo_cells</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_children" href="index.html#tkinter.Misc.winfo_children">winfo_children</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_class" href="index.html#tkinter.Misc.winfo_class">winfo_class</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_colormapfull" href="index.html#tkinter.Misc.winfo_colormapfull">winfo_colormapfull</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_containing" href="index.html#tkinter.Misc.winfo_containing">winfo_containing</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_depth" href="index.html#tkinter.Misc.winfo_depth">winfo_depth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_exists" href="index.html#tkinter.Misc.winfo_exists">winfo_exists</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_fpixels" href="index.html#tkinter.Misc.winfo_fpixels">winfo_fpixels</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_geometry" href="index.html#tkinter.Misc.winfo_geometry">winfo_geometry</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_height" href="index.html#tkinter.Misc.winfo_height">winfo_height</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_id" href="index.html#tkinter.Misc.winfo_id">winfo_id</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_interps" href="index.html#tkinter.Misc.winfo_interps">winfo_interps</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_ismapped" href="index.html#tkinter.Misc.winfo_ismapped">winfo_ismapped</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_manager" href="index.html#tkinter.Misc.winfo_manager">winfo_manager</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_name" href="index.html#tkinter.Misc.winfo_name">winfo_name</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_parent" href="index.html#tkinter.Misc.winfo_parent">winfo_parent</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_pathname" href="index.html#tkinter.Misc.winfo_pathname">winfo_pathname</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_pixels" href="index.html#tkinter.Misc.winfo_pixels">winfo_pixels</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_pointerx" href="index.html#tkinter.Misc.winfo_pointerx">winfo_pointerx</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_pointerxy" href="index.html#tkinter.Misc.winfo_pointerxy">winfo_pointerxy</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_pointery" href="index.html#tkinter.Misc.winfo_pointery">winfo_pointery</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_reqheight" href="index.html#tkinter.Misc.winfo_reqheight">winfo_reqheight</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_reqwidth" href="index.html#tkinter.Misc.winfo_reqwidth">winfo_reqwidth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_rgb" href="index.html#tkinter.Misc.winfo_rgb">winfo_rgb</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_rootx" href="index.html#tkinter.Misc.winfo_rootx">winfo_rootx</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_rooty" href="index.html#tkinter.Misc.winfo_rooty">winfo_rooty</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screen" href="index.html#tkinter.Misc.winfo_screen">winfo_screen</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screencells" href="index.html#tkinter.Misc.winfo_screencells">winfo_screencells</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screendepth" href="index.html#tkinter.Misc.winfo_screendepth">winfo_screendepth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screenheight" href="index.html#tkinter.Misc.winfo_screenheight">winfo_screenheight</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screenmmheight" href="index.html#tkinter.Misc.winfo_screenmmheight">winfo_screenmmheight</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screenmmwidth" href="index.html#tkinter.Misc.winfo_screenmmwidth">winfo_screenmmwidth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screenvisual" href="index.html#tkinter.Misc.winfo_screenvisual">winfo_screenvisual</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_screenwidth" href="index.html#tkinter.Misc.winfo_screenwidth">winfo_screenwidth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_server" href="index.html#tkinter.Misc.winfo_server">winfo_server</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_toplevel" href="index.html#tkinter.Misc.winfo_toplevel">winfo_toplevel</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_viewable" href="index.html#tkinter.Misc.winfo_viewable">winfo_viewable</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_visual" href="index.html#tkinter.Misc.winfo_visual">winfo_visual</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_visualid" href="index.html#tkinter.Misc.winfo_visualid">winfo_visualid</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_visualsavailable" href="index.html#tkinter.Misc.winfo_visualsavailable">winfo_visualsavailable</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_vrootheight" href="index.html#tkinter.Misc.winfo_vrootheight">winfo_vrootheight</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_vrootwidth" href="index.html#tkinter.Misc.winfo_vrootwidth">winfo_vrootwidth</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_vrootx" href="index.html#tkinter.Misc.winfo_vrootx">winfo_vrootx</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_vrooty" href="index.html#tkinter.Misc.winfo_vrooty">winfo_vrooty</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_width" href="index.html#tkinter.Misc.winfo_width">winfo_width</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_x" href="index.html#tkinter.Misc.winfo_x">winfo_x</a></code></li>
+<li><code><a title="tkinter.Toplevel.winfo_y" href="index.html#tkinter.Misc.winfo_y">winfo_y</a></code></li>
+<li><code><a title="tkinter.Toplevel.withdraw" href="index.html#tkinter.Wm.withdraw">withdraw</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_aspect" href="index.html#tkinter.Wm.wm_aspect">wm_aspect</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_attributes" href="index.html#tkinter.Wm.wm_attributes">wm_attributes</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_client" href="index.html#tkinter.Wm.wm_client">wm_client</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_colormapwindows" href="index.html#tkinter.Wm.wm_colormapwindows">wm_colormapwindows</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_command" href="index.html#tkinter.Wm.wm_command">wm_command</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_deiconify" href="index.html#tkinter.Wm.wm_deiconify">wm_deiconify</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_focusmodel" href="index.html#tkinter.Wm.wm_focusmodel">wm_focusmodel</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_forget" href="index.html#tkinter.Wm.wm_forget">wm_forget</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_frame" href="index.html#tkinter.Wm.wm_frame">wm_frame</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_geometry" href="index.html#tkinter.Wm.wm_geometry">wm_geometry</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_grid" href="index.html#tkinter.Wm.wm_grid">wm_grid</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_group" href="index.html#tkinter.Wm.wm_group">wm_group</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconbitmap" href="index.html#tkinter.Wm.wm_iconbitmap">wm_iconbitmap</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconify" href="index.html#tkinter.Wm.wm_iconify">wm_iconify</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconmask" href="index.html#tkinter.Wm.wm_iconmask">wm_iconmask</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconname" href="index.html#tkinter.Wm.wm_iconname">wm_iconname</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconphoto" href="index.html#tkinter.Wm.wm_iconphoto">wm_iconphoto</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconposition" href="index.html#tkinter.Wm.wm_iconposition">wm_iconposition</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_iconwindow" href="index.html#tkinter.Wm.wm_iconwindow">wm_iconwindow</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_manage" href="index.html#tkinter.Wm.wm_manage">wm_manage</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_maxsize" href="index.html#tkinter.Wm.wm_maxsize">wm_maxsize</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_minsize" href="index.html#tkinter.Wm.wm_minsize">wm_minsize</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_overrideredirect" href="index.html#tkinter.Wm.wm_overrideredirect">wm_overrideredirect</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_positionfrom" href="index.html#tkinter.Wm.wm_positionfrom">wm_positionfrom</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_protocol" href="index.html#tkinter.Wm.wm_protocol">wm_protocol</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_resizable" href="index.html#tkinter.Wm.wm_resizable">wm_resizable</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_sizefrom" href="index.html#tkinter.Wm.wm_sizefrom">wm_sizefrom</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_state" href="index.html#tkinter.Wm.wm_state">wm_state</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_title" href="index.html#tkinter.Wm.wm_title">wm_title</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_transient" href="index.html#tkinter.Wm.wm_transient">wm_transient</a></code></li>
+<li><code><a title="tkinter.Toplevel.wm_withdraw" href="index.html#tkinter.Wm.wm_withdraw">wm_withdraw</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="tkinter.simpledialog.SimpleDialog"><code class="flex name class">
+<span>class <span class="ident">SimpleDialog</span></span>
+<span>(</span><span>master, text='', buttons=[], default=None, cancel=None, title=None, class_=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SimpleDialog:
+
+    def __init__(self, master,
+                 text=&#39;&#39;, buttons=[], default=None, cancel=None,
+                 title=None, class_=None):
+        if class_:
+            self.root = Toplevel(master, class_=class_)
+        else:
+            self.root = Toplevel(master)
+        if title:
+            self.root.title(title)
+            self.root.iconname(title)
+
+        _setup_dialog(self.root)
+
+        self.message = Message(self.root, text=text, aspect=400)
+        self.message.pack(expand=1, fill=BOTH)
+        self.frame = Frame(self.root)
+        self.frame.pack()
+        self.num = default
+        self.cancel = cancel
+        self.default = default
+        self.root.bind(&#39;&lt;Return&gt;&#39;, self.return_event)
+        for num in range(len(buttons)):
+            s = buttons[num]
+            b = Button(self.frame, text=s,
+                       command=(lambda self=self, num=num: self.done(num)))
+            if num == default:
+                b.config(relief=RIDGE, borderwidth=8)
+            b.pack(side=LEFT, fill=BOTH, expand=1)
+        self.root.protocol(&#39;WM_DELETE_WINDOW&#39;, self.wm_delete_window)
+        self.root.transient(master)
+        _place_window(self.root, master)
+
+    def go(self):
+        self.root.wait_visibility()
+        self.root.grab_set()
+        self.root.mainloop()
+        self.root.destroy()
+        return self.num
+
+    def return_event(self, event):
+        if self.default is None:
+            self.root.bell()
+        else:
+            self.done(self.default)
+
+    def wm_delete_window(self):
+        if self.cancel is None:
+            self.root.bell()
+        else:
+            self.done(self.cancel)
+
+    def done(self, num):
+        self.num = num
+        self.root.quit()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.simpledialog.SimpleDialog.done"><code class="name flex">
+<span>def <span class="ident">done</span></span>(<span>self, num)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def done(self, num):
+    self.num = num
+    self.root.quit()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.SimpleDialog.go"><code class="name flex">
+<span>def <span class="ident">go</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def go(self):
+    self.root.wait_visibility()
+    self.root.grab_set()
+    self.root.mainloop()
+    self.root.destroy()
+    return self.num</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.SimpleDialog.return_event"><code class="name flex">
+<span>def <span class="ident">return_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def return_event(self, event):
+    if self.default is None:
+        self.root.bell()
+    else:
+        self.done(self.default)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.simpledialog.SimpleDialog.wm_delete_window"><code class="name flex">
+<span>def <span class="ident">wm_delete_window</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def wm_delete_window(self):
+    if self.cancel is None:
+        self.root.bell()
+    else:
+        self.done(self.cancel)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tkinter" href="index.html">tkinter</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="tkinter.simpledialog.askfloat" href="#tkinter.simpledialog.askfloat">askfloat</a></code></li>
+<li><code><a title="tkinter.simpledialog.askinteger" href="#tkinter.simpledialog.askinteger">askinteger</a></code></li>
+<li><code><a title="tkinter.simpledialog.askstring" href="#tkinter.simpledialog.askstring">askstring</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tkinter.simpledialog.Dialog" href="#tkinter.simpledialog.Dialog">Dialog</a></code></h4>
+<ul class="two-column">
+<li><code><a title="tkinter.simpledialog.Dialog.apply" href="#tkinter.simpledialog.Dialog.apply">apply</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.body" href="#tkinter.simpledialog.Dialog.body">body</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.buttonbox" href="#tkinter.simpledialog.Dialog.buttonbox">buttonbox</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.cancel" href="#tkinter.simpledialog.Dialog.cancel">cancel</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.destroy" href="#tkinter.simpledialog.Dialog.destroy">destroy</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.ok" href="#tkinter.simpledialog.Dialog.ok">ok</a></code></li>
+<li><code><a title="tkinter.simpledialog.Dialog.validate" href="#tkinter.simpledialog.Dialog.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.simpledialog.SimpleDialog" href="#tkinter.simpledialog.SimpleDialog">SimpleDialog</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.simpledialog.SimpleDialog.done" href="#tkinter.simpledialog.SimpleDialog.done">done</a></code></li>
+<li><code><a title="tkinter.simpledialog.SimpleDialog.go" href="#tkinter.simpledialog.SimpleDialog.go">go</a></code></li>
+<li><code><a title="tkinter.simpledialog.SimpleDialog.return_event" href="#tkinter.simpledialog.SimpleDialog.return_event">return_event</a></code></li>
+<li><code><a title="tkinter.simpledialog.SimpleDialog.wm_delete_window" href="#tkinter.simpledialog.SimpleDialog.wm_delete_window">wm_delete_window</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,1504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>tkinter.filedialog API documentation</title>
+<meta name="description" content="File selection dialog classes …" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tkinter.filedialog</code></h1>
+</header>
+<section id="section-intro">
+<p>File selection dialog classes.</p>
+<p>Classes:</p>
+<ul>
+<li>FileDialog</li>
+<li>LoadFileDialog</li>
+<li>SaveFileDialog</li>
+</ul>
+<p>This module also presents tk common file dialogues, it provides interfaces
+to the native file dialogues available in Tk 4.2 and newer, and the
+directory dialogue available in Tk 8.3 and newer.
+These interfaces were written by Fredrik Lundh, May 1997.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;File selection dialog classes.
+
+Classes:
+
+- FileDialog
+- LoadFileDialog
+- SaveFileDialog
+
+This module also presents tk common file dialogues, it provides interfaces
+to the native file dialogues available in Tk 4.2 and newer, and the
+directory dialogue available in Tk 8.3 and newer.
+These interfaces were written by Fredrik Lundh, May 1997.
+&#34;&#34;&#34;
+__all__ = [&#34;FileDialog&#34;, &#34;LoadFileDialog&#34;, &#34;SaveFileDialog&#34;,
+           &#34;Open&#34;, &#34;SaveAs&#34;, &#34;Directory&#34;,
+           &#34;askopenfilename&#34;, &#34;asksaveasfilename&#34;, &#34;askopenfilenames&#34;,
+           &#34;askopenfile&#34;, &#34;askopenfiles&#34;, &#34;asksaveasfile&#34;, &#34;askdirectory&#34;]
+
+import fnmatch
+import os
+from tkinter import (
+    Frame, LEFT, YES, BOTTOM, Entry, TOP, Button, Tk, X,
+    Toplevel, RIGHT, Y, END, Listbox, BOTH, Scrollbar,
+)
+from tkinter.dialog import Dialog
+from tkinter import commondialog
+from tkinter.simpledialog import _setup_dialog
+
+
+dialogstates = {}
+
+
+class FileDialog:
+
+    &#34;&#34;&#34;Standard file selection dialog -- no checks on selected file.
+
+    Usage:
+
+        d = FileDialog(master)
+        fname = d.go(dir_or_file, pattern, default, key)
+        if fname is None: ...canceled...
+        else: ...open file...
+
+    All arguments to go() are optional.
+
+    The &#39;key&#39; argument specifies a key in the global dictionary
+    &#39;dialogstates&#39;, which keeps track of the values for the directory
+    and pattern arguments, overriding the values passed in (it does
+    not keep track of the default argument!).  If no key is specified,
+    the dialog keeps no memory of previous state.  Note that memory is
+    kept even when the dialog is canceled.  (All this emulates the
+    behavior of the Macintosh file selection dialogs.)
+
+    &#34;&#34;&#34;
+
+    title = &#34;File Selection Dialog&#34;
+
+    def __init__(self, master, title=None):
+        if title is None: title = self.title
+        self.master = master
+        self.directory = None
+
+        self.top = Toplevel(master)
+        self.top.title(title)
+        self.top.iconname(title)
+        _setup_dialog(self.top)
+
+        self.botframe = Frame(self.top)
+        self.botframe.pack(side=BOTTOM, fill=X)
+
+        self.selection = Entry(self.top)
+        self.selection.pack(side=BOTTOM, fill=X)
+        self.selection.bind(&#39;&lt;Return&gt;&#39;, self.ok_event)
+
+        self.filter = Entry(self.top)
+        self.filter.pack(side=TOP, fill=X)
+        self.filter.bind(&#39;&lt;Return&gt;&#39;, self.filter_command)
+
+        self.midframe = Frame(self.top)
+        self.midframe.pack(expand=YES, fill=BOTH)
+
+        self.filesbar = Scrollbar(self.midframe)
+        self.filesbar.pack(side=RIGHT, fill=Y)
+        self.files = Listbox(self.midframe, exportselection=0,
+                             yscrollcommand=(self.filesbar, &#39;set&#39;))
+        self.files.pack(side=RIGHT, expand=YES, fill=BOTH)
+        btags = self.files.bindtags()
+        self.files.bindtags(btags[1:] + btags[:1])
+        self.files.bind(&#39;&lt;ButtonRelease-1&gt;&#39;, self.files_select_event)
+        self.files.bind(&#39;&lt;Double-ButtonRelease-1&gt;&#39;, self.files_double_event)
+        self.filesbar.config(command=(self.files, &#39;yview&#39;))
+
+        self.dirsbar = Scrollbar(self.midframe)
+        self.dirsbar.pack(side=LEFT, fill=Y)
+        self.dirs = Listbox(self.midframe, exportselection=0,
+                            yscrollcommand=(self.dirsbar, &#39;set&#39;))
+        self.dirs.pack(side=LEFT, expand=YES, fill=BOTH)
+        self.dirsbar.config(command=(self.dirs, &#39;yview&#39;))
+        btags = self.dirs.bindtags()
+        self.dirs.bindtags(btags[1:] + btags[:1])
+        self.dirs.bind(&#39;&lt;ButtonRelease-1&gt;&#39;, self.dirs_select_event)
+        self.dirs.bind(&#39;&lt;Double-ButtonRelease-1&gt;&#39;, self.dirs_double_event)
+
+        self.ok_button = Button(self.botframe,
+                                 text=&#34;OK&#34;,
+                                 command=self.ok_command)
+        self.ok_button.pack(side=LEFT)
+        self.filter_button = Button(self.botframe,
+                                    text=&#34;Filter&#34;,
+                                    command=self.filter_command)
+        self.filter_button.pack(side=LEFT, expand=YES)
+        self.cancel_button = Button(self.botframe,
+                                    text=&#34;Cancel&#34;,
+                                    command=self.cancel_command)
+        self.cancel_button.pack(side=RIGHT)
+
+        self.top.protocol(&#39;WM_DELETE_WINDOW&#39;, self.cancel_command)
+        # XXX Are the following okay for a general audience?
+        self.top.bind(&#39;&lt;Alt-w&gt;&#39;, self.cancel_command)
+        self.top.bind(&#39;&lt;Alt-W&gt;&#39;, self.cancel_command)
+
+    def go(self, dir_or_file=os.curdir, pattern=&#34;*&#34;, default=&#34;&#34;, key=None):
+        if key and key in dialogstates:
+            self.directory, pattern = dialogstates[key]
+        else:
+            dir_or_file = os.path.expanduser(dir_or_file)
+            if os.path.isdir(dir_or_file):
+                self.directory = dir_or_file
+            else:
+                self.directory, default = os.path.split(dir_or_file)
+        self.set_filter(self.directory, pattern)
+        self.set_selection(default)
+        self.filter_command()
+        self.selection.focus_set()
+        self.top.wait_visibility() # window needs to be visible for the grab
+        self.top.grab_set()
+        self.how = None
+        self.master.mainloop()          # Exited by self.quit(how)
+        if key:
+            directory, pattern = self.get_filter()
+            if self.how:
+                directory = os.path.dirname(self.how)
+            dialogstates[key] = directory, pattern
+        self.top.destroy()
+        return self.how
+
+    def quit(self, how=None):
+        self.how = how
+        self.master.quit()              # Exit mainloop()
+
+    def dirs_double_event(self, event):
+        self.filter_command()
+
+    def dirs_select_event(self, event):
+        dir, pat = self.get_filter()
+        subdir = self.dirs.get(&#39;active&#39;)
+        dir = os.path.normpath(os.path.join(self.directory, subdir))
+        self.set_filter(dir, pat)
+
+    def files_double_event(self, event):
+        self.ok_command()
+
+    def files_select_event(self, event):
+        file = self.files.get(&#39;active&#39;)
+        self.set_selection(file)
+
+    def ok_event(self, event):
+        self.ok_command()
+
+    def ok_command(self):
+        self.quit(self.get_selection())
+
+    def filter_command(self, event=None):
+        dir, pat = self.get_filter()
+        try:
+            names = os.listdir(dir)
+        except OSError:
+            self.master.bell()
+            return
+        self.directory = dir
+        self.set_filter(dir, pat)
+        names.sort()
+        subdirs = [os.pardir]
+        matchingfiles = []
+        for name in names:
+            fullname = os.path.join(dir, name)
+            if os.path.isdir(fullname):
+                subdirs.append(name)
+            elif fnmatch.fnmatch(name, pat):
+                matchingfiles.append(name)
+        self.dirs.delete(0, END)
+        for name in subdirs:
+            self.dirs.insert(END, name)
+        self.files.delete(0, END)
+        for name in matchingfiles:
+            self.files.insert(END, name)
+        head, tail = os.path.split(self.get_selection())
+        if tail == os.curdir: tail = &#39;&#39;
+        self.set_selection(tail)
+
+    def get_filter(self):
+        filter = self.filter.get()
+        filter = os.path.expanduser(filter)
+        if filter[-1:] == os.sep or os.path.isdir(filter):
+            filter = os.path.join(filter, &#34;*&#34;)
+        return os.path.split(filter)
+
+    def get_selection(self):
+        file = self.selection.get()
+        file = os.path.expanduser(file)
+        return file
+
+    def cancel_command(self, event=None):
+        self.quit()
+
+    def set_filter(self, dir, pat):
+        if not os.path.isabs(dir):
+            try:
+                pwd = os.getcwd()
+            except OSError:
+                pwd = None
+            if pwd:
+                dir = os.path.join(pwd, dir)
+                dir = os.path.normpath(dir)
+        self.filter.delete(0, END)
+        self.filter.insert(END, os.path.join(dir or os.curdir, pat or &#34;*&#34;))
+
+    def set_selection(self, file):
+        self.selection.delete(0, END)
+        self.selection.insert(END, os.path.join(self.directory, file))
+
+
+class LoadFileDialog(FileDialog):
+
+    &#34;&#34;&#34;File selection dialog which checks that the file exists.&#34;&#34;&#34;
+
+    title = &#34;Load File Selection Dialog&#34;
+
+    def ok_command(self):
+        file = self.get_selection()
+        if not os.path.isfile(file):
+            self.master.bell()
+        else:
+            self.quit(file)
+
+
+class SaveFileDialog(FileDialog):
+
+    &#34;&#34;&#34;File selection dialog which checks that the file may be created.&#34;&#34;&#34;
+
+    title = &#34;Save File Selection Dialog&#34;
+
+    def ok_command(self):
+        file = self.get_selection()
+        if os.path.exists(file):
+            if os.path.isdir(file):
+                self.master.bell()
+                return
+            d = Dialog(self.top,
+                       title=&#34;Overwrite Existing File Question&#34;,
+                       text=&#34;Overwrite existing file %r?&#34; % (file,),
+                       bitmap=&#39;questhead&#39;,
+                       default=1,
+                       strings=(&#34;Yes&#34;, &#34;Cancel&#34;))
+            if d.num != 0:
+                return
+        else:
+            head, tail = os.path.split(file)
+            if not os.path.isdir(head):
+                self.master.bell()
+                return
+        self.quit(file)
+
+
+# For the following classes and modules:
+#
+# options (all have default values):
+#
+# - defaultextension: added to filename if not explicitly given
+#
+# - filetypes: sequence of (label, pattern) tuples.  the same pattern
+#   may occur with several patterns.  use &#34;*&#34; as pattern to indicate
+#   all files.
+#
+# - initialdir: initial directory.  preserved by dialog instance.
+#
+# - initialfile: initial file (ignored by the open dialog).  preserved
+#   by dialog instance.
+#
+# - parent: which window to place the dialog on top of
+#
+# - title: dialog title
+#
+# - multiple: if true user may select more than one file
+#
+# options for the directory chooser:
+#
+# - initialdir, parent, title: see above
+#
+# - mustexist: if true, user must pick an existing directory
+#
+
+
+class _Dialog(commondialog.Dialog):
+
+    def _fixoptions(self):
+        try:
+            # make sure &#34;filetypes&#34; is a tuple
+            self.options[&#34;filetypes&#34;] = tuple(self.options[&#34;filetypes&#34;])
+        except KeyError:
+            pass
+
+    def _fixresult(self, widget, result):
+        if result:
+            # keep directory and filename until next time
+            # convert Tcl path objects to strings
+            try:
+                result = result.string
+            except AttributeError:
+                # it already is a string
+                pass
+            path, file = os.path.split(result)
+            self.options[&#34;initialdir&#34;] = path
+            self.options[&#34;initialfile&#34;] = file
+        self.filename = result # compatibility
+        return result
+
+
+#
+# file dialogs
+
+class Open(_Dialog):
+    &#34;Ask for a filename to open&#34;
+
+    command = &#34;tk_getOpenFile&#34;
+
+    def _fixresult(self, widget, result):
+        if isinstance(result, tuple):
+            # multiple results:
+            result = tuple([getattr(r, &#34;string&#34;, r) for r in result])
+            if result:
+                path, file = os.path.split(result[0])
+                self.options[&#34;initialdir&#34;] = path
+                # don&#39;t set initialfile or filename, as we have multiple of these
+            return result
+        if not widget.tk.wantobjects() and &#34;multiple&#34; in self.options:
+            # Need to split result explicitly
+            return self._fixresult(widget, widget.tk.splitlist(result))
+        return _Dialog._fixresult(self, widget, result)
+
+
+class SaveAs(_Dialog):
+    &#34;Ask for a filename to save as&#34;
+
+    command = &#34;tk_getSaveFile&#34;
+
+
+# the directory dialog has its own _fix routines.
+class Directory(commondialog.Dialog):
+    &#34;Ask for a directory&#34;
+
+    command = &#34;tk_chooseDirectory&#34;
+
+    def _fixresult(self, widget, result):
+        if result:
+            # convert Tcl path objects to strings
+            try:
+                result = result.string
+            except AttributeError:
+                # it already is a string
+                pass
+            # keep directory until next time
+            self.options[&#34;initialdir&#34;] = result
+        self.directory = result # compatibility
+        return result
+
+#
+# convenience stuff
+
+
+def askopenfilename(**options):
+    &#34;Ask for a filename to open&#34;
+
+    return Open(**options).show()
+
+
+def asksaveasfilename(**options):
+    &#34;Ask for a filename to save as&#34;
+
+    return SaveAs(**options).show()
+
+
+def askopenfilenames(**options):
+    &#34;&#34;&#34;Ask for multiple filenames to open
+
+    Returns a list of filenames or empty list if
+    cancel button selected
+    &#34;&#34;&#34;
+    options[&#34;multiple&#34;]=1
+    return Open(**options).show()
+
+# FIXME: are the following  perhaps a bit too convenient?
+
+
+def askopenfile(mode = &#34;r&#34;, **options):
+    &#34;Ask for a filename to open, and returned the opened file&#34;
+
+    filename = Open(**options).show()
+    if filename:
+        return open(filename, mode)
+    return None
+
+
+def askopenfiles(mode = &#34;r&#34;, **options):
+    &#34;&#34;&#34;Ask for multiple filenames and return the open file
+    objects
+
+    returns a list of open file objects or an empty list if
+    cancel selected
+    &#34;&#34;&#34;
+
+    files = askopenfilenames(**options)
+    if files:
+        ofiles=[]
+        for filename in files:
+            ofiles.append(open(filename, mode))
+        files=ofiles
+    return files
+
+
+def asksaveasfile(mode = &#34;w&#34;, **options):
+    &#34;Ask for a filename to save as, and returned the opened file&#34;
+
+    filename = SaveAs(**options).show()
+    if filename:
+        return open(filename, mode)
+    return None
+
+
+def askdirectory (**options):
+    &#34;Ask for a directory, and return the file name&#34;
+    return Directory(**options).show()
+
+
+# --------------------------------------------------------------------
+# test stuff
+
+def test():
+    &#34;&#34;&#34;Simple test program.&#34;&#34;&#34;
+    root = Tk()
+    root.withdraw()
+    fd = LoadFileDialog(root)
+    loadfile = fd.go(key=&#34;test&#34;)
+    fd = SaveFileDialog(root)
+    savefile = fd.go(key=&#34;test&#34;)
+    print(loadfile, savefile)
+
+    # Since the file name may contain non-ASCII characters, we need
+    # to find an encoding that likely supports the file name, and
+    # displays correctly on the terminal.
+
+    # Start off with UTF-8
+    enc = &#34;utf-8&#34;
+    import sys
+
+    # See whether CODESET is defined
+    try:
+        import locale
+        locale.setlocale(locale.LC_ALL,&#39;&#39;)
+        enc = locale.nl_langinfo(locale.CODESET)
+    except (ImportError, AttributeError):
+        pass
+
+    # dialog for opening files
+
+    openfilename=askopenfilename(filetypes=[(&#34;all files&#34;, &#34;*&#34;)])
+    try:
+        fp=open(openfilename,&#34;r&#34;)
+        fp.close()
+    except:
+        print(&#34;Could not open File: &#34;)
+        print(sys.exc_info()[1])
+
+    print(&#34;open&#34;, openfilename.encode(enc))
+
+    # dialog for saving files
+
+    saveasfilename=asksaveasfilename()
+    print(&#34;saveas&#34;, saveasfilename.encode(enc))
+
+
+if __name__ == &#39;__main__&#39;:
+    test()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="tkinter.filedialog.askdirectory"><code class="name flex">
+<span>def <span class="ident">askdirectory</span></span>(<span>**options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a directory, and return the file name</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askdirectory (**options):
+    &#34;Ask for a directory, and return the file name&#34;
+    return Directory(**options).show()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.askopenfile"><code class="name flex">
+<span>def <span class="ident">askopenfile</span></span>(<span>mode='r', **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to open, and returned the opened file</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askopenfile(mode = &#34;r&#34;, **options):
+    &#34;Ask for a filename to open, and returned the opened file&#34;
+
+    filename = Open(**options).show()
+    if filename:
+        return open(filename, mode)
+    return None</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.askopenfilename"><code class="name flex">
+<span>def <span class="ident">askopenfilename</span></span>(<span>**options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to open</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askopenfilename(**options):
+    &#34;Ask for a filename to open&#34;
+
+    return Open(**options).show()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.askopenfilenames"><code class="name flex">
+<span>def <span class="ident">askopenfilenames</span></span>(<span>**options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for multiple filenames to open</p>
+<p>Returns a list of filenames or empty list if
+cancel button selected</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askopenfilenames(**options):
+    &#34;&#34;&#34;Ask for multiple filenames to open
+
+    Returns a list of filenames or empty list if
+    cancel button selected
+    &#34;&#34;&#34;
+    options[&#34;multiple&#34;]=1
+    return Open(**options).show()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.askopenfiles"><code class="name flex">
+<span>def <span class="ident">askopenfiles</span></span>(<span>mode='r', **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for multiple filenames and return the open file
+objects</p>
+<p>returns a list of open file objects or an empty list if
+cancel selected</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def askopenfiles(mode = &#34;r&#34;, **options):
+    &#34;&#34;&#34;Ask for multiple filenames and return the open file
+    objects
+
+    returns a list of open file objects or an empty list if
+    cancel selected
+    &#34;&#34;&#34;
+
+    files = askopenfilenames(**options)
+    if files:
+        ofiles=[]
+        for filename in files:
+            ofiles.append(open(filename, mode))
+        files=ofiles
+    return files</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.asksaveasfile"><code class="name flex">
+<span>def <span class="ident">asksaveasfile</span></span>(<span>mode='w', **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to save as, and returned the opened file</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def asksaveasfile(mode = &#34;w&#34;, **options):
+    &#34;Ask for a filename to save as, and returned the opened file&#34;
+
+    filename = SaveAs(**options).show()
+    if filename:
+        return open(filename, mode)
+    return None</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.asksaveasfilename"><code class="name flex">
+<span>def <span class="ident">asksaveasfilename</span></span>(<span>**options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to save as</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def asksaveasfilename(**options):
+    &#34;Ask for a filename to save as&#34;
+
+    return SaveAs(**options).show()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tkinter.filedialog.Directory"><code class="flex name class">
+<span>class <span class="ident">Directory</span></span>
+<span>(</span><span>master=None, **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a directory</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Directory(commondialog.Dialog):
+    &#34;Ask for a directory&#34;
+
+    command = &#34;tk_chooseDirectory&#34;
+
+    def _fixresult(self, widget, result):
+        if result:
+            # convert Tcl path objects to strings
+            try:
+                result = result.string
+            except AttributeError:
+                # it already is a string
+                pass
+            # keep directory until next time
+            self.options[&#34;initialdir&#34;] = result
+        self.directory = result # compatibility
+        return result</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.commondialog.Dialog" href="commondialog.html#tkinter.commondialog.Dialog">Dialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.Directory.command"><code class="name">var <span class="ident">command</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.filedialog.FileDialog"><code class="flex name class">
+<span>class <span class="ident">FileDialog</span></span>
+<span>(</span><span>master, title=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Standard file selection dialog &ndash; no checks on selected file.</p>
+<h2 id="usage">Usage</h2>
+<p>d = FileDialog(master)
+fname = d.go(dir_or_file, pattern, default, key)
+if fname is None: &hellip;canceled&hellip;
+else: &hellip;open file&hellip;</p>
+<p>All arguments to go() are optional.</p>
+<p>The 'key' argument specifies a key in the global dictionary
+'dialogstates', which keeps track of the values for the directory
+and pattern arguments, overriding the values passed in (it does
+not keep track of the default argument!).
+If no key is specified,
+the dialog keeps no memory of previous state.
+Note that memory is
+kept even when the dialog is canceled.
+(All this emulates the
+behavior of the Macintosh file selection dialogs.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FileDialog:
+
+    &#34;&#34;&#34;Standard file selection dialog -- no checks on selected file.
+
+    Usage:
+
+        d = FileDialog(master)
+        fname = d.go(dir_or_file, pattern, default, key)
+        if fname is None: ...canceled...
+        else: ...open file...
+
+    All arguments to go() are optional.
+
+    The &#39;key&#39; argument specifies a key in the global dictionary
+    &#39;dialogstates&#39;, which keeps track of the values for the directory
+    and pattern arguments, overriding the values passed in (it does
+    not keep track of the default argument!).  If no key is specified,
+    the dialog keeps no memory of previous state.  Note that memory is
+    kept even when the dialog is canceled.  (All this emulates the
+    behavior of the Macintosh file selection dialogs.)
+
+    &#34;&#34;&#34;
+
+    title = &#34;File Selection Dialog&#34;
+
+    def __init__(self, master, title=None):
+        if title is None: title = self.title
+        self.master = master
+        self.directory = None
+
+        self.top = Toplevel(master)
+        self.top.title(title)
+        self.top.iconname(title)
+        _setup_dialog(self.top)
+
+        self.botframe = Frame(self.top)
+        self.botframe.pack(side=BOTTOM, fill=X)
+
+        self.selection = Entry(self.top)
+        self.selection.pack(side=BOTTOM, fill=X)
+        self.selection.bind(&#39;&lt;Return&gt;&#39;, self.ok_event)
+
+        self.filter = Entry(self.top)
+        self.filter.pack(side=TOP, fill=X)
+        self.filter.bind(&#39;&lt;Return&gt;&#39;, self.filter_command)
+
+        self.midframe = Frame(self.top)
+        self.midframe.pack(expand=YES, fill=BOTH)
+
+        self.filesbar = Scrollbar(self.midframe)
+        self.filesbar.pack(side=RIGHT, fill=Y)
+        self.files = Listbox(self.midframe, exportselection=0,
+                             yscrollcommand=(self.filesbar, &#39;set&#39;))
+        self.files.pack(side=RIGHT, expand=YES, fill=BOTH)
+        btags = self.files.bindtags()
+        self.files.bindtags(btags[1:] + btags[:1])
+        self.files.bind(&#39;&lt;ButtonRelease-1&gt;&#39;, self.files_select_event)
+        self.files.bind(&#39;&lt;Double-ButtonRelease-1&gt;&#39;, self.files_double_event)
+        self.filesbar.config(command=(self.files, &#39;yview&#39;))
+
+        self.dirsbar = Scrollbar(self.midframe)
+        self.dirsbar.pack(side=LEFT, fill=Y)
+        self.dirs = Listbox(self.midframe, exportselection=0,
+                            yscrollcommand=(self.dirsbar, &#39;set&#39;))
+        self.dirs.pack(side=LEFT, expand=YES, fill=BOTH)
+        self.dirsbar.config(command=(self.dirs, &#39;yview&#39;))
+        btags = self.dirs.bindtags()
+        self.dirs.bindtags(btags[1:] + btags[:1])
+        self.dirs.bind(&#39;&lt;ButtonRelease-1&gt;&#39;, self.dirs_select_event)
+        self.dirs.bind(&#39;&lt;Double-ButtonRelease-1&gt;&#39;, self.dirs_double_event)
+
+        self.ok_button = Button(self.botframe,
+                                 text=&#34;OK&#34;,
+                                 command=self.ok_command)
+        self.ok_button.pack(side=LEFT)
+        self.filter_button = Button(self.botframe,
+                                    text=&#34;Filter&#34;,
+                                    command=self.filter_command)
+        self.filter_button.pack(side=LEFT, expand=YES)
+        self.cancel_button = Button(self.botframe,
+                                    text=&#34;Cancel&#34;,
+                                    command=self.cancel_command)
+        self.cancel_button.pack(side=RIGHT)
+
+        self.top.protocol(&#39;WM_DELETE_WINDOW&#39;, self.cancel_command)
+        # XXX Are the following okay for a general audience?
+        self.top.bind(&#39;&lt;Alt-w&gt;&#39;, self.cancel_command)
+        self.top.bind(&#39;&lt;Alt-W&gt;&#39;, self.cancel_command)
+
+    def go(self, dir_or_file=os.curdir, pattern=&#34;*&#34;, default=&#34;&#34;, key=None):
+        if key and key in dialogstates:
+            self.directory, pattern = dialogstates[key]
+        else:
+            dir_or_file = os.path.expanduser(dir_or_file)
+            if os.path.isdir(dir_or_file):
+                self.directory = dir_or_file
+            else:
+                self.directory, default = os.path.split(dir_or_file)
+        self.set_filter(self.directory, pattern)
+        self.set_selection(default)
+        self.filter_command()
+        self.selection.focus_set()
+        self.top.wait_visibility() # window needs to be visible for the grab
+        self.top.grab_set()
+        self.how = None
+        self.master.mainloop()          # Exited by self.quit(how)
+        if key:
+            directory, pattern = self.get_filter()
+            if self.how:
+                directory = os.path.dirname(self.how)
+            dialogstates[key] = directory, pattern
+        self.top.destroy()
+        return self.how
+
+    def quit(self, how=None):
+        self.how = how
+        self.master.quit()              # Exit mainloop()
+
+    def dirs_double_event(self, event):
+        self.filter_command()
+
+    def dirs_select_event(self, event):
+        dir, pat = self.get_filter()
+        subdir = self.dirs.get(&#39;active&#39;)
+        dir = os.path.normpath(os.path.join(self.directory, subdir))
+        self.set_filter(dir, pat)
+
+    def files_double_event(self, event):
+        self.ok_command()
+
+    def files_select_event(self, event):
+        file = self.files.get(&#39;active&#39;)
+        self.set_selection(file)
+
+    def ok_event(self, event):
+        self.ok_command()
+
+    def ok_command(self):
+        self.quit(self.get_selection())
+
+    def filter_command(self, event=None):
+        dir, pat = self.get_filter()
+        try:
+            names = os.listdir(dir)
+        except OSError:
+            self.master.bell()
+            return
+        self.directory = dir
+        self.set_filter(dir, pat)
+        names.sort()
+        subdirs = [os.pardir]
+        matchingfiles = []
+        for name in names:
+            fullname = os.path.join(dir, name)
+            if os.path.isdir(fullname):
+                subdirs.append(name)
+            elif fnmatch.fnmatch(name, pat):
+                matchingfiles.append(name)
+        self.dirs.delete(0, END)
+        for name in subdirs:
+            self.dirs.insert(END, name)
+        self.files.delete(0, END)
+        for name in matchingfiles:
+            self.files.insert(END, name)
+        head, tail = os.path.split(self.get_selection())
+        if tail == os.curdir: tail = &#39;&#39;
+        self.set_selection(tail)
+
+    def get_filter(self):
+        filter = self.filter.get()
+        filter = os.path.expanduser(filter)
+        if filter[-1:] == os.sep or os.path.isdir(filter):
+            filter = os.path.join(filter, &#34;*&#34;)
+        return os.path.split(filter)
+
+    def get_selection(self):
+        file = self.selection.get()
+        file = os.path.expanduser(file)
+        return file
+
+    def cancel_command(self, event=None):
+        self.quit()
+
+    def set_filter(self, dir, pat):
+        if not os.path.isabs(dir):
+            try:
+                pwd = os.getcwd()
+            except OSError:
+                pwd = None
+            if pwd:
+                dir = os.path.join(pwd, dir)
+                dir = os.path.normpath(dir)
+        self.filter.delete(0, END)
+        self.filter.insert(END, os.path.join(dir or os.curdir, pat or &#34;*&#34;))
+
+    def set_selection(self, file):
+        self.selection.delete(0, END)
+        self.selection.insert(END, os.path.join(self.directory, file))</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="tkinter.filedialog.LoadFileDialog" href="#tkinter.filedialog.LoadFileDialog">LoadFileDialog</a></li>
+<li><a title="tkinter.filedialog.SaveFileDialog" href="#tkinter.filedialog.SaveFileDialog">SaveFileDialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.FileDialog.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.filedialog.FileDialog.cancel_command"><code class="name flex">
+<span>def <span class="ident">cancel_command</span></span>(<span>self, event=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cancel_command(self, event=None):
+    self.quit()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.dirs_double_event"><code class="name flex">
+<span>def <span class="ident">dirs_double_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dirs_double_event(self, event):
+    self.filter_command()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.dirs_select_event"><code class="name flex">
+<span>def <span class="ident">dirs_select_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dirs_select_event(self, event):
+    dir, pat = self.get_filter()
+    subdir = self.dirs.get(&#39;active&#39;)
+    dir = os.path.normpath(os.path.join(self.directory, subdir))
+    self.set_filter(dir, pat)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.files_double_event"><code class="name flex">
+<span>def <span class="ident">files_double_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def files_double_event(self, event):
+    self.ok_command()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.files_select_event"><code class="name flex">
+<span>def <span class="ident">files_select_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def files_select_event(self, event):
+    file = self.files.get(&#39;active&#39;)
+    self.set_selection(file)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.filter_command"><code class="name flex">
+<span>def <span class="ident">filter_command</span></span>(<span>self, event=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def filter_command(self, event=None):
+    dir, pat = self.get_filter()
+    try:
+        names = os.listdir(dir)
+    except OSError:
+        self.master.bell()
+        return
+    self.directory = dir
+    self.set_filter(dir, pat)
+    names.sort()
+    subdirs = [os.pardir]
+    matchingfiles = []
+    for name in names:
+        fullname = os.path.join(dir, name)
+        if os.path.isdir(fullname):
+            subdirs.append(name)
+        elif fnmatch.fnmatch(name, pat):
+            matchingfiles.append(name)
+    self.dirs.delete(0, END)
+    for name in subdirs:
+        self.dirs.insert(END, name)
+    self.files.delete(0, END)
+    for name in matchingfiles:
+        self.files.insert(END, name)
+    head, tail = os.path.split(self.get_selection())
+    if tail == os.curdir: tail = &#39;&#39;
+    self.set_selection(tail)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.get_filter"><code class="name flex">
+<span>def <span class="ident">get_filter</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_filter(self):
+    filter = self.filter.get()
+    filter = os.path.expanduser(filter)
+    if filter[-1:] == os.sep or os.path.isdir(filter):
+        filter = os.path.join(filter, &#34;*&#34;)
+    return os.path.split(filter)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.get_selection"><code class="name flex">
+<span>def <span class="ident">get_selection</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_selection(self):
+    file = self.selection.get()
+    file = os.path.expanduser(file)
+    return file</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.go"><code class="name flex">
+<span>def <span class="ident">go</span></span>(<span>self, dir_or_file='.', pattern='*', default='', key=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def go(self, dir_or_file=os.curdir, pattern=&#34;*&#34;, default=&#34;&#34;, key=None):
+    if key and key in dialogstates:
+        self.directory, pattern = dialogstates[key]
+    else:
+        dir_or_file = os.path.expanduser(dir_or_file)
+        if os.path.isdir(dir_or_file):
+            self.directory = dir_or_file
+        else:
+            self.directory, default = os.path.split(dir_or_file)
+    self.set_filter(self.directory, pattern)
+    self.set_selection(default)
+    self.filter_command()
+    self.selection.focus_set()
+    self.top.wait_visibility() # window needs to be visible for the grab
+    self.top.grab_set()
+    self.how = None
+    self.master.mainloop()          # Exited by self.quit(how)
+    if key:
+        directory, pattern = self.get_filter()
+        if self.how:
+            directory = os.path.dirname(self.how)
+        dialogstates[key] = directory, pattern
+    self.top.destroy()
+    return self.how</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.ok_command"><code class="name flex">
+<span>def <span class="ident">ok_command</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ok_command(self):
+    self.quit(self.get_selection())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.ok_event"><code class="name flex">
+<span>def <span class="ident">ok_event</span></span>(<span>self, event)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ok_event(self, event):
+    self.ok_command()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.quit"><code class="name flex">
+<span>def <span class="ident">quit</span></span>(<span>self, how=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def quit(self, how=None):
+    self.how = how
+    self.master.quit()              # Exit mainloop()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.set_filter"><code class="name flex">
+<span>def <span class="ident">set_filter</span></span>(<span>self, dir, pat)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_filter(self, dir, pat):
+    if not os.path.isabs(dir):
+        try:
+            pwd = os.getcwd()
+        except OSError:
+            pwd = None
+        if pwd:
+            dir = os.path.join(pwd, dir)
+            dir = os.path.normpath(dir)
+    self.filter.delete(0, END)
+    self.filter.insert(END, os.path.join(dir or os.curdir, pat or &#34;*&#34;))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.filedialog.FileDialog.set_selection"><code class="name flex">
+<span>def <span class="ident">set_selection</span></span>(<span>self, file)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_selection(self, file):
+    self.selection.delete(0, END)
+    self.selection.insert(END, os.path.join(self.directory, file))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.filedialog.LoadFileDialog"><code class="flex name class">
+<span>class <span class="ident">LoadFileDialog</span></span>
+<span>(</span><span>master, title=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>File selection dialog which checks that the file exists.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class LoadFileDialog(FileDialog):
+
+    &#34;&#34;&#34;File selection dialog which checks that the file exists.&#34;&#34;&#34;
+
+    title = &#34;Load File Selection Dialog&#34;
+
+    def ok_command(self):
+        file = self.get_selection()
+        if not os.path.isfile(file):
+            self.master.bell()
+        else:
+            self.quit(file)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.filedialog.FileDialog" href="#tkinter.filedialog.FileDialog">FileDialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.LoadFileDialog.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.filedialog.LoadFileDialog.ok_command"><code class="name flex">
+<span>def <span class="ident">ok_command</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ok_command(self):
+    file = self.get_selection()
+    if not os.path.isfile(file):
+        self.master.bell()
+    else:
+        self.quit(file)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.filedialog.Open"><code class="flex name class">
+<span>class <span class="ident">Open</span></span>
+<span>(</span><span>master=None, **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to open</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Open(_Dialog):
+    &#34;Ask for a filename to open&#34;
+
+    command = &#34;tk_getOpenFile&#34;
+
+    def _fixresult(self, widget, result):
+        if isinstance(result, tuple):
+            # multiple results:
+            result = tuple([getattr(r, &#34;string&#34;, r) for r in result])
+            if result:
+                path, file = os.path.split(result[0])
+                self.options[&#34;initialdir&#34;] = path
+                # don&#39;t set initialfile or filename, as we have multiple of these
+            return result
+        if not widget.tk.wantobjects() and &#34;multiple&#34; in self.options:
+            # Need to split result explicitly
+            return self._fixresult(widget, widget.tk.splitlist(result))
+        return _Dialog._fixresult(self, widget, result)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.filedialog._Dialog</li>
+<li><a title="tkinter.commondialog.Dialog" href="commondialog.html#tkinter.commondialog.Dialog">Dialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.Open.command"><code class="name">var <span class="ident">command</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.filedialog.SaveAs"><code class="flex name class">
+<span>class <span class="ident">SaveAs</span></span>
+<span>(</span><span>master=None, **options)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Ask for a filename to save as</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SaveAs(_Dialog):
+    &#34;Ask for a filename to save as&#34;
+
+    command = &#34;tk_getSaveFile&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.filedialog._Dialog</li>
+<li><a title="tkinter.commondialog.Dialog" href="commondialog.html#tkinter.commondialog.Dialog">Dialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.SaveAs.command"><code class="name">var <span class="ident">command</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.filedialog.SaveFileDialog"><code class="flex name class">
+<span>class <span class="ident">SaveFileDialog</span></span>
+<span>(</span><span>master, title=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>File selection dialog which checks that the file may be created.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SaveFileDialog(FileDialog):
+
+    &#34;&#34;&#34;File selection dialog which checks that the file may be created.&#34;&#34;&#34;
+
+    title = &#34;Save File Selection Dialog&#34;
+
+    def ok_command(self):
+        file = self.get_selection()
+        if os.path.exists(file):
+            if os.path.isdir(file):
+                self.master.bell()
+                return
+            d = Dialog(self.top,
+                       title=&#34;Overwrite Existing File Question&#34;,
+                       text=&#34;Overwrite existing file %r?&#34; % (file,),
+                       bitmap=&#39;questhead&#39;,
+                       default=1,
+                       strings=(&#34;Yes&#34;, &#34;Cancel&#34;))
+            if d.num != 0:
+                return
+        else:
+            head, tail = os.path.split(file)
+            if not os.path.isdir(head):
+                self.master.bell()
+                return
+        self.quit(file)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.filedialog.FileDialog" href="#tkinter.filedialog.FileDialog">FileDialog</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="tkinter.filedialog.SaveFileDialog.title"><code class="name">var <span class="ident">title</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.filedialog.SaveFileDialog.ok_command"><code class="name flex">
+<span>def <span class="ident">ok_command</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ok_command(self):
+    file = self.get_selection()
+    if os.path.exists(file):
+        if os.path.isdir(file):
+            self.master.bell()
+            return
+        d = Dialog(self.top,
+                   title=&#34;Overwrite Existing File Question&#34;,
+                   text=&#34;Overwrite existing file %r?&#34; % (file,),
+                   bitmap=&#39;questhead&#39;,
+                   default=1,
+                   strings=(&#34;Yes&#34;, &#34;Cancel&#34;))
+        if d.num != 0:
+            return
+    else:
+        head, tail = os.path.split(file)
+        if not os.path.isdir(head):
+            self.master.bell()
+            return
+    self.quit(file)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tkinter" href="index.html">tkinter</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="tkinter.filedialog.askdirectory" href="#tkinter.filedialog.askdirectory">askdirectory</a></code></li>
+<li><code><a title="tkinter.filedialog.askopenfile" href="#tkinter.filedialog.askopenfile">askopenfile</a></code></li>
+<li><code><a title="tkinter.filedialog.askopenfilename" href="#tkinter.filedialog.askopenfilename">askopenfilename</a></code></li>
+<li><code><a title="tkinter.filedialog.askopenfilenames" href="#tkinter.filedialog.askopenfilenames">askopenfilenames</a></code></li>
+<li><code><a title="tkinter.filedialog.askopenfiles" href="#tkinter.filedialog.askopenfiles">askopenfiles</a></code></li>
+<li><code><a title="tkinter.filedialog.asksaveasfile" href="#tkinter.filedialog.asksaveasfile">asksaveasfile</a></code></li>
+<li><code><a title="tkinter.filedialog.asksaveasfilename" href="#tkinter.filedialog.asksaveasfilename">asksaveasfilename</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tkinter.filedialog.Directory" href="#tkinter.filedialog.Directory">Directory</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.filedialog.Directory.command" href="#tkinter.filedialog.Directory.command">command</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.filedialog.FileDialog" href="#tkinter.filedialog.FileDialog">FileDialog</a></code></h4>
+<ul class="two-column">
+<li><code><a title="tkinter.filedialog.FileDialog.cancel_command" href="#tkinter.filedialog.FileDialog.cancel_command">cancel_command</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.dirs_double_event" href="#tkinter.filedialog.FileDialog.dirs_double_event">dirs_double_event</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.dirs_select_event" href="#tkinter.filedialog.FileDialog.dirs_select_event">dirs_select_event</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.files_double_event" href="#tkinter.filedialog.FileDialog.files_double_event">files_double_event</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.files_select_event" href="#tkinter.filedialog.FileDialog.files_select_event">files_select_event</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.filter_command" href="#tkinter.filedialog.FileDialog.filter_command">filter_command</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.get_filter" href="#tkinter.filedialog.FileDialog.get_filter">get_filter</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.get_selection" href="#tkinter.filedialog.FileDialog.get_selection">get_selection</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.go" href="#tkinter.filedialog.FileDialog.go">go</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.ok_command" href="#tkinter.filedialog.FileDialog.ok_command">ok_command</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.ok_event" href="#tkinter.filedialog.FileDialog.ok_event">ok_event</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.quit" href="#tkinter.filedialog.FileDialog.quit">quit</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.set_filter" href="#tkinter.filedialog.FileDialog.set_filter">set_filter</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.set_selection" href="#tkinter.filedialog.FileDialog.set_selection">set_selection</a></code></li>
+<li><code><a title="tkinter.filedialog.FileDialog.title" href="#tkinter.filedialog.FileDialog.title">title</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.filedialog.LoadFileDialog" href="#tkinter.filedialog.LoadFileDialog">LoadFileDialog</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.filedialog.LoadFileDialog.ok_command" href="#tkinter.filedialog.LoadFileDialog.ok_command">ok_command</a></code></li>
+<li><code><a title="tkinter.filedialog.LoadFileDialog.title" href="#tkinter.filedialog.LoadFileDialog.title">title</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.filedialog.Open" href="#tkinter.filedialog.Open">Open</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.filedialog.Open.command" href="#tkinter.filedialog.Open.command">command</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.filedialog.SaveAs" href="#tkinter.filedialog.SaveAs">SaveAs</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.filedialog.SaveAs.command" href="#tkinter.filedialog.SaveAs.command">command</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.filedialog.SaveFileDialog" href="#tkinter.filedialog.SaveFileDialog">SaveFileDialog</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.filedialog.SaveFileDialog.ok_command" href="#tkinter.filedialog.SaveFileDialog.ok_command">ok_command</a></code></li>
+<li><code><a title="tkinter.filedialog.SaveFileDialog.title" href="#tkinter.filedialog.SaveFileDialog.title">title</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

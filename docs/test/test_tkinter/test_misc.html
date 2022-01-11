@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>tkinter.test.test_tkinter.test_misc API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tkinter.test.test_tkinter.test_misc</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import functools
+import unittest
+import tkinter
+from test import support
+from tkinter.test.support import AbstractTkTest, AbstractDefaultRootTest
+
+support.requires(&#39;gui&#39;)
+
+class MiscTest(AbstractTkTest, unittest.TestCase):
+
+    def test_all(self):
+        self.assertIn(&#34;Widget&#34;, tkinter.__all__)
+        # Check that variables from tkinter.constants are also in tkinter.__all__
+        self.assertIn(&#34;CASCADE&#34;, tkinter.__all__)
+        self.assertIsNotNone(tkinter.CASCADE)
+        # Check that sys, re, and constants are not in tkinter.__all__
+        self.assertNotIn(&#34;re&#34;, tkinter.__all__)
+        self.assertNotIn(&#34;sys&#34;, tkinter.__all__)
+        self.assertNotIn(&#34;constants&#34;, tkinter.__all__)
+        # Check that an underscored functions is not in tkinter.__all__
+        self.assertNotIn(&#34;_tkerror&#34;, tkinter.__all__)
+        # Check that wantobjects is not in tkinter.__all__
+        self.assertNotIn(&#34;wantobjects&#34;, tkinter.__all__)
+
+    def test_repr(self):
+        t = tkinter.Toplevel(self.root, name=&#39;top&#39;)
+        f = tkinter.Frame(t, name=&#39;child&#39;)
+        self.assertEqual(repr(f), &#39;&lt;tkinter.Frame object .top.child&gt;&#39;)
+
+    def test_generated_names(self):
+        t = tkinter.Toplevel(self.root)
+        f = tkinter.Frame(t)
+        f2 = tkinter.Frame(t)
+        b = tkinter.Button(f2)
+        for name in str(b).split(&#39;.&#39;):
+            self.assertFalse(name.isidentifier(), msg=repr(name))
+
+    def test_tk_setPalette(self):
+        root = self.root
+        root.tk_setPalette(&#39;black&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+        root.tk_setPalette(&#39;white&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;white&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^unknown color name &#34;spam&#34;$&#39;,
+                root.tk_setPalette, &#39;spam&#39;)
+
+        root.tk_setPalette(background=&#39;black&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+        root.tk_setPalette(background=&#39;blue&#39;, highlightColor=&#39;yellow&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;blue&#39;)
+        self.assertEqual(root[&#39;highlightcolor&#39;], &#39;yellow&#39;)
+        root.tk_setPalette(background=&#39;yellow&#39;, highlightColor=&#39;blue&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;yellow&#39;)
+        self.assertEqual(root[&#39;highlightcolor&#39;], &#39;blue&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^unknown color name &#34;spam&#34;$&#39;,
+                root.tk_setPalette, background=&#39;spam&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^must specify a background color$&#39;,
+                root.tk_setPalette, spam=&#39;white&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^must specify a background color$&#39;,
+                root.tk_setPalette, highlightColor=&#39;blue&#39;)
+
+    def test_after(self):
+        root = self.root
+
+        def callback(start=0, step=1):
+            nonlocal count
+            count = start + step
+
+        # Without function, sleeps for ms.
+        self.assertIsNone(root.after(1))
+
+        # Set up with callback with no args.
+        count = 0
+        timer1 = root.after(0, callback)
+        self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Set up with callback with args.
+        count = 0
+        timer1 = root.after(0, callback, 42, 11)
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+        # Cancel before called.
+        timer1 = root.after(1000, callback)
+        self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.after_cancel(timer1)  # Cancel this event.
+        self.assertEqual(count, 53)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Call with a callable class
+        count = 0
+        timer1 = root.after(0, functools.partial(callback, 42, 11))
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+    def test_after_idle(self):
+        root = self.root
+
+        def callback(start=0, step=1):
+            nonlocal count
+            count = start + step
+
+        # Set up with callback with no args.
+        count = 0
+        idle1 = root.after_idle(callback)
+        self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.update_idletasks()  # Process all pending events.
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Set up with callback with args.
+        count = 0
+        idle1 = root.after_idle(callback, 42, 11)
+        root.update_idletasks()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+        # Cancel before called.
+        idle1 = root.after_idle(callback)
+        self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.after_cancel(idle1)  # Cancel this event.
+        self.assertEqual(count, 53)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+    def test_after_cancel(self):
+        root = self.root
+
+        def callback():
+            nonlocal count
+            count += 1
+
+        timer1 = root.after(5000, callback)
+        idle1 = root.after_idle(callback)
+
+        # No value for id raises a ValueError.
+        with self.assertRaises(ValueError):
+            root.after_cancel(None)
+
+        # Cancel timer event.
+        count = 0
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.tk.call(script)
+        self.assertEqual(count, 1)
+        root.after_cancel(timer1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1)
+
+        # Cancel same event - nothing happens.
+        root.after_cancel(timer1)
+
+        # Cancel idle event.
+        count = 0
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.tk.call(script)
+        self.assertEqual(count, 1)
+        root.after_cancel(idle1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1)
+
+    def test_clipboard(self):
+        root = self.root
+        root.clipboard_clear()
+        root.clipboard_append(&#39;Ùñî&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;Ùñî&#39;)
+        root.clipboard_append(&#39;çōđě&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;Ùñîçōđě&#39;)
+        root.clipboard_clear()
+        with self.assertRaises(tkinter.TclError):
+            root.clipboard_get()
+
+    def test_clipboard_astral(self):
+        root = self.root
+        root.clipboard_clear()
+        root.clipboard_append(&#39;𝔘𝔫𝔦&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦&#39;)
+        root.clipboard_append(&#39;𝔠𝔬𝔡𝔢&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦𝔠𝔬𝔡𝔢&#39;)
+        root.clipboard_clear()
+        with self.assertRaises(tkinter.TclError):
+            root.clipboard_get()
+
+    def test_winfo_rgb(self):
+        root = self.root
+        rgb = root.winfo_rgb
+
+        # Color name.
+        self.assertEqual(rgb(&#39;red&#39;), (65535, 0, 0))
+        self.assertEqual(rgb(&#39;dark slate blue&#39;), (18504, 15677, 35723))
+        # #RGB - extends each 4-bit hex value to be 16-bit.
+        self.assertEqual(rgb(&#39;#F0F&#39;), (0xFFFF, 0x0000, 0xFFFF))
+        # #RRGGBB - extends each 8-bit hex value to be 16-bit.
+        self.assertEqual(rgb(&#39;#4a3c8c&#39;), (0x4a4a, 0x3c3c, 0x8c8c))
+        # #RRRRGGGGBBBB
+        self.assertEqual(rgb(&#39;#dede14143939&#39;), (0xdede, 0x1414, 0x3939))
+        # Invalid string.
+        with self.assertRaises(tkinter.TclError):
+            rgb(&#39;#123456789a&#39;)
+        # RGB triplet is invalid input.
+        with self.assertRaises(tkinter.TclError):
+            rgb((111, 78, 55))
+
+    def test_event_repr_defaults(self):
+        e = tkinter.Event()
+        e.serial = 12345
+        e.num = &#39;??&#39;
+        e.height = &#39;??&#39;
+        e.keycode = &#39;??&#39;
+        e.state = 0
+        e.time = 123456789
+        e.width = &#39;??&#39;
+        e.x = &#39;??&#39;
+        e.y = &#39;??&#39;
+        e.char = &#39;&#39;
+        e.keysym = &#39;??&#39;
+        e.keysym_num = &#39;??&#39;
+        e.type = &#39;100&#39;
+        e.widget = &#39;??&#39;
+        e.x_root = &#39;??&#39;
+        e.y_root = &#39;??&#39;
+        e.delta = 0
+        self.assertEqual(repr(e), &#39;&lt;100 event&gt;&#39;)
+
+    def test_event_repr(self):
+        e = tkinter.Event()
+        e.serial = 12345
+        e.num = 3
+        e.focus = True
+        e.height = 200
+        e.keycode = 65
+        e.state = 0x30405
+        e.time = 123456789
+        e.width = 300
+        e.x = 10
+        e.y = 20
+        e.char = &#39;A&#39;
+        e.send_event = True
+        e.keysym = &#39;Key-A&#39;
+        e.keysym_num = ord(&#39;A&#39;)
+        e.type = tkinter.EventType.Configure
+        e.widget = &#39;.text&#39;
+        e.x_root = 1010
+        e.y_root = 1020
+        e.delta = -1
+        self.assertEqual(repr(e),
+                         &#34;&lt;Configure event send_event=True&#34;
+                         &#34; state=Shift|Control|Button3|0x30000&#34;
+                         &#34; keysym=Key-A keycode=65 char=&#39;A&#39;&#34;
+                         &#34; num=3 delta=-1 focus=True&#34;
+                         &#34; x=10 y=20 width=300 height=200&gt;&#34;)
+
+    def test_getboolean(self):
+        for v in &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;, &#39;1&#39;, &#39;t&#39;, &#39;y&#39;, 1, True:
+            self.assertIs(self.root.getboolean(v), True)
+        for v in &#39;false&#39;, &#39;no&#39;, &#39;off&#39;, &#39;0&#39;, &#39;f&#39;, &#39;n&#39;, 0, False:
+            self.assertIs(self.root.getboolean(v), False)
+        self.assertRaises(ValueError, self.root.getboolean, &#39;yea&#39;)
+        self.assertRaises(ValueError, self.root.getboolean, &#39;&#39;)
+        self.assertRaises(TypeError, self.root.getboolean, None)
+        self.assertRaises(TypeError, self.root.getboolean, ())
+
+    def test_mainloop(self):
+        log = []
+        def callback():
+            log.append(1)
+            self.root.after(100, self.root.quit)
+        self.root.after(100, callback)
+        self.root.mainloop(1)
+        self.assertEqual(log, [])
+        self.root.mainloop(0)
+        self.assertEqual(log, [1])
+        self.assertTrue(self.root.winfo_exists())
+
+
+class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_default_root(self):
+        self.assertIs(tkinter._support_default_root, True)
+        self.assertIsNone(tkinter._default_root)
+        root = tkinter.Tk()
+        root2 = tkinter.Tk()
+        root3 = tkinter.Tk()
+        self.assertIs(tkinter._default_root, root)
+        root2.destroy()
+        self.assertIs(tkinter._default_root, root)
+        root.destroy()
+        self.assertIsNone(tkinter._default_root)
+        root3.destroy()
+        self.assertIsNone(tkinter._default_root)
+
+    def test_no_default_root(self):
+        self.assertIs(tkinter._support_default_root, True)
+        self.assertIsNone(tkinter._default_root)
+        root = tkinter.Tk()
+        self.assertIs(tkinter._default_root, root)
+        tkinter.NoDefaultRoot()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        # repeated call is no-op
+        tkinter.NoDefaultRoot()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root.destroy()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root = tkinter.Tk()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root.destroy()
+
+    def test_getboolean(self):
+        self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)
+        root = tkinter.Tk()
+        self.assertIs(tkinter.getboolean(&#39;1&#39;), True)
+        self.assertRaises(ValueError, tkinter.getboolean, &#39;yea&#39;)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)
+
+    def test_mainloop(self):
+        self.assertRaises(RuntimeError, tkinter.mainloop)
+        root = tkinter.Tk()
+        root.after_idle(root.quit)
+        tkinter.mainloop()
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.mainloop)
+
+
+tests_gui = (MiscTest, DefaultRootTest)
+
+if __name__ == &#34;__main__&#34;:
+    support.run_unittest(*tests_gui)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_misc.DefaultRootTest"><code class="flex name class">
+<span>class <span class="ident">DefaultRootTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_default_root(self):
+        self.assertIs(tkinter._support_default_root, True)
+        self.assertIsNone(tkinter._default_root)
+        root = tkinter.Tk()
+        root2 = tkinter.Tk()
+        root3 = tkinter.Tk()
+        self.assertIs(tkinter._default_root, root)
+        root2.destroy()
+        self.assertIs(tkinter._default_root, root)
+        root.destroy()
+        self.assertIsNone(tkinter._default_root)
+        root3.destroy()
+        self.assertIsNone(tkinter._default_root)
+
+    def test_no_default_root(self):
+        self.assertIs(tkinter._support_default_root, True)
+        self.assertIsNone(tkinter._default_root)
+        root = tkinter.Tk()
+        self.assertIs(tkinter._default_root, root)
+        tkinter.NoDefaultRoot()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        # repeated call is no-op
+        tkinter.NoDefaultRoot()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root.destroy()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root = tkinter.Tk()
+        self.assertIs(tkinter._support_default_root, False)
+        self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+        root.destroy()
+
+    def test_getboolean(self):
+        self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)
+        root = tkinter.Tk()
+        self.assertIs(tkinter.getboolean(&#39;1&#39;), True)
+        self.assertRaises(ValueError, tkinter.getboolean, &#39;yea&#39;)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)
+
+    def test_mainloop(self):
+        self.assertRaises(RuntimeError, tkinter.mainloop)
+        root = tkinter.Tk()
+        root.after_idle(root.quit)
+        tkinter.mainloop()
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.mainloop)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractDefaultRootTest" href="../support.html#tkinter.test.support.AbstractDefaultRootTest">AbstractDefaultRootTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_default_root"><code class="name flex">
+<span>def <span class="ident">test_default_root</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_default_root(self):
+    self.assertIs(tkinter._support_default_root, True)
+    self.assertIsNone(tkinter._default_root)
+    root = tkinter.Tk()
+    root2 = tkinter.Tk()
+    root3 = tkinter.Tk()
+    self.assertIs(tkinter._default_root, root)
+    root2.destroy()
+    self.assertIs(tkinter._default_root, root)
+    root.destroy()
+    self.assertIsNone(tkinter._default_root)
+    root3.destroy()
+    self.assertIsNone(tkinter._default_root)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_getboolean"><code class="name flex">
+<span>def <span class="ident">test_getboolean</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_getboolean(self):
+    self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)
+    root = tkinter.Tk()
+    self.assertIs(tkinter.getboolean(&#39;1&#39;), True)
+    self.assertRaises(ValueError, tkinter.getboolean, &#39;yea&#39;)
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.getboolean, &#39;1&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_mainloop"><code class="name flex">
+<span>def <span class="ident">test_mainloop</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_mainloop(self):
+    self.assertRaises(RuntimeError, tkinter.mainloop)
+    root = tkinter.Tk()
+    root.after_idle(root.quit)
+    tkinter.mainloop()
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.mainloop)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_no_default_root"><code class="name flex">
+<span>def <span class="ident">test_no_default_root</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_no_default_root(self):
+    self.assertIs(tkinter._support_default_root, True)
+    self.assertIsNone(tkinter._default_root)
+    root = tkinter.Tk()
+    self.assertIs(tkinter._default_root, root)
+    tkinter.NoDefaultRoot()
+    self.assertIs(tkinter._support_default_root, False)
+    self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+    # repeated call is no-op
+    tkinter.NoDefaultRoot()
+    self.assertIs(tkinter._support_default_root, False)
+    self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+    root.destroy()
+    self.assertIs(tkinter._support_default_root, False)
+    self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+    root = tkinter.Tk()
+    self.assertIs(tkinter._support_default_root, False)
+    self.assertFalse(hasattr(tkinter, &#39;_default_root&#39;))
+    root.destroy()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest"><code class="flex name class">
+<span>class <span class="ident">MiscTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MiscTest(AbstractTkTest, unittest.TestCase):
+
+    def test_all(self):
+        self.assertIn(&#34;Widget&#34;, tkinter.__all__)
+        # Check that variables from tkinter.constants are also in tkinter.__all__
+        self.assertIn(&#34;CASCADE&#34;, tkinter.__all__)
+        self.assertIsNotNone(tkinter.CASCADE)
+        # Check that sys, re, and constants are not in tkinter.__all__
+        self.assertNotIn(&#34;re&#34;, tkinter.__all__)
+        self.assertNotIn(&#34;sys&#34;, tkinter.__all__)
+        self.assertNotIn(&#34;constants&#34;, tkinter.__all__)
+        # Check that an underscored functions is not in tkinter.__all__
+        self.assertNotIn(&#34;_tkerror&#34;, tkinter.__all__)
+        # Check that wantobjects is not in tkinter.__all__
+        self.assertNotIn(&#34;wantobjects&#34;, tkinter.__all__)
+
+    def test_repr(self):
+        t = tkinter.Toplevel(self.root, name=&#39;top&#39;)
+        f = tkinter.Frame(t, name=&#39;child&#39;)
+        self.assertEqual(repr(f), &#39;&lt;tkinter.Frame object .top.child&gt;&#39;)
+
+    def test_generated_names(self):
+        t = tkinter.Toplevel(self.root)
+        f = tkinter.Frame(t)
+        f2 = tkinter.Frame(t)
+        b = tkinter.Button(f2)
+        for name in str(b).split(&#39;.&#39;):
+            self.assertFalse(name.isidentifier(), msg=repr(name))
+
+    def test_tk_setPalette(self):
+        root = self.root
+        root.tk_setPalette(&#39;black&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+        root.tk_setPalette(&#39;white&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;white&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^unknown color name &#34;spam&#34;$&#39;,
+                root.tk_setPalette, &#39;spam&#39;)
+
+        root.tk_setPalette(background=&#39;black&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+        root.tk_setPalette(background=&#39;blue&#39;, highlightColor=&#39;yellow&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;blue&#39;)
+        self.assertEqual(root[&#39;highlightcolor&#39;], &#39;yellow&#39;)
+        root.tk_setPalette(background=&#39;yellow&#39;, highlightColor=&#39;blue&#39;)
+        self.assertEqual(root[&#39;background&#39;], &#39;yellow&#39;)
+        self.assertEqual(root[&#39;highlightcolor&#39;], &#39;blue&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^unknown color name &#34;spam&#34;$&#39;,
+                root.tk_setPalette, background=&#39;spam&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^must specify a background color$&#39;,
+                root.tk_setPalette, spam=&#39;white&#39;)
+        self.assertRaisesRegex(tkinter.TclError,
+                &#39;^must specify a background color$&#39;,
+                root.tk_setPalette, highlightColor=&#39;blue&#39;)
+
+    def test_after(self):
+        root = self.root
+
+        def callback(start=0, step=1):
+            nonlocal count
+            count = start + step
+
+        # Without function, sleeps for ms.
+        self.assertIsNone(root.after(1))
+
+        # Set up with callback with no args.
+        count = 0
+        timer1 = root.after(0, callback)
+        self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Set up with callback with args.
+        count = 0
+        timer1 = root.after(0, callback, 42, 11)
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+        # Cancel before called.
+        timer1 = root.after(1000, callback)
+        self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.after_cancel(timer1)  # Cancel this event.
+        self.assertEqual(count, 53)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Call with a callable class
+        count = 0
+        timer1 = root.after(0, functools.partial(callback, 42, 11))
+        root.update()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+    def test_after_idle(self):
+        root = self.root
+
+        def callback(start=0, step=1):
+            nonlocal count
+            count = start + step
+
+        # Set up with callback with no args.
+        count = 0
+        idle1 = root.after_idle(callback)
+        self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.update_idletasks()  # Process all pending events.
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+        # Set up with callback with args.
+        count = 0
+        idle1 = root.after_idle(callback, 42, 11)
+        root.update_idletasks()  # Process all pending events.
+        self.assertEqual(count, 53)
+
+        # Cancel before called.
+        idle1 = root.after_idle(callback)
+        self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.after_cancel(idle1)  # Cancel this event.
+        self.assertEqual(count, 53)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+
+    def test_after_cancel(self):
+        root = self.root
+
+        def callback():
+            nonlocal count
+            count += 1
+
+        timer1 = root.after(5000, callback)
+        idle1 = root.after_idle(callback)
+
+        # No value for id raises a ValueError.
+        with self.assertRaises(ValueError):
+            root.after_cancel(None)
+
+        # Cancel timer event.
+        count = 0
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+        root.tk.call(script)
+        self.assertEqual(count, 1)
+        root.after_cancel(timer1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1)
+
+        # Cancel same event - nothing happens.
+        root.after_cancel(timer1)
+
+        # Cancel idle event.
+        count = 0
+        (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+        root.tk.call(script)
+        self.assertEqual(count, 1)
+        root.after_cancel(idle1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(script)
+        self.assertEqual(count, 1)
+        with self.assertRaises(tkinter.TclError):
+            root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1)
+
+    def test_clipboard(self):
+        root = self.root
+        root.clipboard_clear()
+        root.clipboard_append(&#39;Ùñî&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;Ùñî&#39;)
+        root.clipboard_append(&#39;çōđě&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;Ùñîçōđě&#39;)
+        root.clipboard_clear()
+        with self.assertRaises(tkinter.TclError):
+            root.clipboard_get()
+
+    def test_clipboard_astral(self):
+        root = self.root
+        root.clipboard_clear()
+        root.clipboard_append(&#39;𝔘𝔫𝔦&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦&#39;)
+        root.clipboard_append(&#39;𝔠𝔬𝔡𝔢&#39;)
+        self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦𝔠𝔬𝔡𝔢&#39;)
+        root.clipboard_clear()
+        with self.assertRaises(tkinter.TclError):
+            root.clipboard_get()
+
+    def test_winfo_rgb(self):
+        root = self.root
+        rgb = root.winfo_rgb
+
+        # Color name.
+        self.assertEqual(rgb(&#39;red&#39;), (65535, 0, 0))
+        self.assertEqual(rgb(&#39;dark slate blue&#39;), (18504, 15677, 35723))
+        # #RGB - extends each 4-bit hex value to be 16-bit.
+        self.assertEqual(rgb(&#39;#F0F&#39;), (0xFFFF, 0x0000, 0xFFFF))
+        # #RRGGBB - extends each 8-bit hex value to be 16-bit.
+        self.assertEqual(rgb(&#39;#4a3c8c&#39;), (0x4a4a, 0x3c3c, 0x8c8c))
+        # #RRRRGGGGBBBB
+        self.assertEqual(rgb(&#39;#dede14143939&#39;), (0xdede, 0x1414, 0x3939))
+        # Invalid string.
+        with self.assertRaises(tkinter.TclError):
+            rgb(&#39;#123456789a&#39;)
+        # RGB triplet is invalid input.
+        with self.assertRaises(tkinter.TclError):
+            rgb((111, 78, 55))
+
+    def test_event_repr_defaults(self):
+        e = tkinter.Event()
+        e.serial = 12345
+        e.num = &#39;??&#39;
+        e.height = &#39;??&#39;
+        e.keycode = &#39;??&#39;
+        e.state = 0
+        e.time = 123456789
+        e.width = &#39;??&#39;
+        e.x = &#39;??&#39;
+        e.y = &#39;??&#39;
+        e.char = &#39;&#39;
+        e.keysym = &#39;??&#39;
+        e.keysym_num = &#39;??&#39;
+        e.type = &#39;100&#39;
+        e.widget = &#39;??&#39;
+        e.x_root = &#39;??&#39;
+        e.y_root = &#39;??&#39;
+        e.delta = 0
+        self.assertEqual(repr(e), &#39;&lt;100 event&gt;&#39;)
+
+    def test_event_repr(self):
+        e = tkinter.Event()
+        e.serial = 12345
+        e.num = 3
+        e.focus = True
+        e.height = 200
+        e.keycode = 65
+        e.state = 0x30405
+        e.time = 123456789
+        e.width = 300
+        e.x = 10
+        e.y = 20
+        e.char = &#39;A&#39;
+        e.send_event = True
+        e.keysym = &#39;Key-A&#39;
+        e.keysym_num = ord(&#39;A&#39;)
+        e.type = tkinter.EventType.Configure
+        e.widget = &#39;.text&#39;
+        e.x_root = 1010
+        e.y_root = 1020
+        e.delta = -1
+        self.assertEqual(repr(e),
+                         &#34;&lt;Configure event send_event=True&#34;
+                         &#34; state=Shift|Control|Button3|0x30000&#34;
+                         &#34; keysym=Key-A keycode=65 char=&#39;A&#39;&#34;
+                         &#34; num=3 delta=-1 focus=True&#34;
+                         &#34; x=10 y=20 width=300 height=200&gt;&#34;)
+
+    def test_getboolean(self):
+        for v in &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;, &#39;1&#39;, &#39;t&#39;, &#39;y&#39;, 1, True:
+            self.assertIs(self.root.getboolean(v), True)
+        for v in &#39;false&#39;, &#39;no&#39;, &#39;off&#39;, &#39;0&#39;, &#39;f&#39;, &#39;n&#39;, 0, False:
+            self.assertIs(self.root.getboolean(v), False)
+        self.assertRaises(ValueError, self.root.getboolean, &#39;yea&#39;)
+        self.assertRaises(ValueError, self.root.getboolean, &#39;&#39;)
+        self.assertRaises(TypeError, self.root.getboolean, None)
+        self.assertRaises(TypeError, self.root.getboolean, ())
+
+    def test_mainloop(self):
+        log = []
+        def callback():
+            log.append(1)
+            self.root.after(100, self.root.quit)
+        self.root.after(100, callback)
+        self.root.mainloop(1)
+        self.assertEqual(log, [])
+        self.root.mainloop(0)
+        self.assertEqual(log, [1])
+        self.assertTrue(self.root.winfo_exists())</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractTkTest" href="../support.html#tkinter.test.support.AbstractTkTest">AbstractTkTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_after"><code class="name flex">
+<span>def <span class="ident">test_after</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_after(self):
+    root = self.root
+
+    def callback(start=0, step=1):
+        nonlocal count
+        count = start + step
+
+    # Without function, sleeps for ms.
+    self.assertIsNone(root.after(1))
+
+    # Set up with callback with no args.
+    count = 0
+    timer1 = root.after(0, callback)
+    self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+    root.update()  # Process all pending events.
+    self.assertEqual(count, 1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)
+
+    # Set up with callback with args.
+    count = 0
+    timer1 = root.after(0, callback, 42, 11)
+    root.update()  # Process all pending events.
+    self.assertEqual(count, 53)
+
+    # Cancel before called.
+    timer1 = root.after(1000, callback)
+    self.assertIn(timer1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+    root.after_cancel(timer1)  # Cancel this event.
+    self.assertEqual(count, 53)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)
+
+    # Call with a callable class
+    count = 0
+    timer1 = root.after(0, functools.partial(callback, 42, 11))
+    root.update()  # Process all pending events.
+    self.assertEqual(count, 53)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_after_cancel"><code class="name flex">
+<span>def <span class="ident">test_after_cancel</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_after_cancel(self):
+    root = self.root
+
+    def callback():
+        nonlocal count
+        count += 1
+
+    timer1 = root.after(5000, callback)
+    idle1 = root.after_idle(callback)
+
+    # No value for id raises a ValueError.
+    with self.assertRaises(ValueError):
+        root.after_cancel(None)
+
+    # Cancel timer event.
+    count = 0
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1))
+    root.tk.call(script)
+    self.assertEqual(count, 1)
+    root.after_cancel(timer1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)
+    self.assertEqual(count, 1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(&#39;after&#39;, &#39;info&#39;, timer1)
+
+    # Cancel same event - nothing happens.
+    root.after_cancel(timer1)
+
+    # Cancel idle event.
+    count = 0
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+    root.tk.call(script)
+    self.assertEqual(count, 1)
+    root.after_cancel(idle1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)
+    self.assertEqual(count, 1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_after_idle"><code class="name flex">
+<span>def <span class="ident">test_after_idle</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_after_idle(self):
+    root = self.root
+
+    def callback(start=0, step=1):
+        nonlocal count
+        count = start + step
+
+    # Set up with callback with no args.
+    count = 0
+    idle1 = root.after_idle(callback)
+    self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+    root.update_idletasks()  # Process all pending events.
+    self.assertEqual(count, 1)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)
+
+    # Set up with callback with args.
+    count = 0
+    idle1 = root.after_idle(callback, 42, 11)
+    root.update_idletasks()  # Process all pending events.
+    self.assertEqual(count, 53)
+
+    # Cancel before called.
+    idle1 = root.after_idle(callback)
+    self.assertIn(idle1, root.tk.call(&#39;after&#39;, &#39;info&#39;))
+    (script, _) = root.tk.splitlist(root.tk.call(&#39;after&#39;, &#39;info&#39;, idle1))
+    root.after_cancel(idle1)  # Cancel this event.
+    self.assertEqual(count, 53)
+    with self.assertRaises(tkinter.TclError):
+        root.tk.call(script)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_all"><code class="name flex">
+<span>def <span class="ident">test_all</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_all(self):
+    self.assertIn(&#34;Widget&#34;, tkinter.__all__)
+    # Check that variables from tkinter.constants are also in tkinter.__all__
+    self.assertIn(&#34;CASCADE&#34;, tkinter.__all__)
+    self.assertIsNotNone(tkinter.CASCADE)
+    # Check that sys, re, and constants are not in tkinter.__all__
+    self.assertNotIn(&#34;re&#34;, tkinter.__all__)
+    self.assertNotIn(&#34;sys&#34;, tkinter.__all__)
+    self.assertNotIn(&#34;constants&#34;, tkinter.__all__)
+    # Check that an underscored functions is not in tkinter.__all__
+    self.assertNotIn(&#34;_tkerror&#34;, tkinter.__all__)
+    # Check that wantobjects is not in tkinter.__all__
+    self.assertNotIn(&#34;wantobjects&#34;, tkinter.__all__)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard"><code class="name flex">
+<span>def <span class="ident">test_clipboard</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_clipboard(self):
+    root = self.root
+    root.clipboard_clear()
+    root.clipboard_append(&#39;Ùñî&#39;)
+    self.assertEqual(root.clipboard_get(), &#39;Ùñî&#39;)
+    root.clipboard_append(&#39;çōđě&#39;)
+    self.assertEqual(root.clipboard_get(), &#39;Ùñîçōđě&#39;)
+    root.clipboard_clear()
+    with self.assertRaises(tkinter.TclError):
+        root.clipboard_get()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard_astral"><code class="name flex">
+<span>def <span class="ident">test_clipboard_astral</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_clipboard_astral(self):
+    root = self.root
+    root.clipboard_clear()
+    root.clipboard_append(&#39;𝔘𝔫𝔦&#39;)
+    self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦&#39;)
+    root.clipboard_append(&#39;𝔠𝔬𝔡𝔢&#39;)
+    self.assertEqual(root.clipboard_get(), &#39;𝔘𝔫𝔦𝔠𝔬𝔡𝔢&#39;)
+    root.clipboard_clear()
+    with self.assertRaises(tkinter.TclError):
+        root.clipboard_get()</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr"><code class="name flex">
+<span>def <span class="ident">test_event_repr</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_event_repr(self):
+    e = tkinter.Event()
+    e.serial = 12345
+    e.num = 3
+    e.focus = True
+    e.height = 200
+    e.keycode = 65
+    e.state = 0x30405
+    e.time = 123456789
+    e.width = 300
+    e.x = 10
+    e.y = 20
+    e.char = &#39;A&#39;
+    e.send_event = True
+    e.keysym = &#39;Key-A&#39;
+    e.keysym_num = ord(&#39;A&#39;)
+    e.type = tkinter.EventType.Configure
+    e.widget = &#39;.text&#39;
+    e.x_root = 1010
+    e.y_root = 1020
+    e.delta = -1
+    self.assertEqual(repr(e),
+                     &#34;&lt;Configure event send_event=True&#34;
+                     &#34; state=Shift|Control|Button3|0x30000&#34;
+                     &#34; keysym=Key-A keycode=65 char=&#39;A&#39;&#34;
+                     &#34; num=3 delta=-1 focus=True&#34;
+                     &#34; x=10 y=20 width=300 height=200&gt;&#34;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr_defaults"><code class="name flex">
+<span>def <span class="ident">test_event_repr_defaults</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_event_repr_defaults(self):
+    e = tkinter.Event()
+    e.serial = 12345
+    e.num = &#39;??&#39;
+    e.height = &#39;??&#39;
+    e.keycode = &#39;??&#39;
+    e.state = 0
+    e.time = 123456789
+    e.width = &#39;??&#39;
+    e.x = &#39;??&#39;
+    e.y = &#39;??&#39;
+    e.char = &#39;&#39;
+    e.keysym = &#39;??&#39;
+    e.keysym_num = &#39;??&#39;
+    e.type = &#39;100&#39;
+    e.widget = &#39;??&#39;
+    e.x_root = &#39;??&#39;
+    e.y_root = &#39;??&#39;
+    e.delta = 0
+    self.assertEqual(repr(e), &#39;&lt;100 event&gt;&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_generated_names"><code class="name flex">
+<span>def <span class="ident">test_generated_names</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_generated_names(self):
+    t = tkinter.Toplevel(self.root)
+    f = tkinter.Frame(t)
+    f2 = tkinter.Frame(t)
+    b = tkinter.Button(f2)
+    for name in str(b).split(&#39;.&#39;):
+        self.assertFalse(name.isidentifier(), msg=repr(name))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_getboolean"><code class="name flex">
+<span>def <span class="ident">test_getboolean</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_getboolean(self):
+    for v in &#39;true&#39;, &#39;yes&#39;, &#39;on&#39;, &#39;1&#39;, &#39;t&#39;, &#39;y&#39;, 1, True:
+        self.assertIs(self.root.getboolean(v), True)
+    for v in &#39;false&#39;, &#39;no&#39;, &#39;off&#39;, &#39;0&#39;, &#39;f&#39;, &#39;n&#39;, 0, False:
+        self.assertIs(self.root.getboolean(v), False)
+    self.assertRaises(ValueError, self.root.getboolean, &#39;yea&#39;)
+    self.assertRaises(ValueError, self.root.getboolean, &#39;&#39;)
+    self.assertRaises(TypeError, self.root.getboolean, None)
+    self.assertRaises(TypeError, self.root.getboolean, ())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_mainloop"><code class="name flex">
+<span>def <span class="ident">test_mainloop</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_mainloop(self):
+    log = []
+    def callback():
+        log.append(1)
+        self.root.after(100, self.root.quit)
+    self.root.after(100, callback)
+    self.root.mainloop(1)
+    self.assertEqual(log, [])
+    self.root.mainloop(0)
+    self.assertEqual(log, [1])
+    self.assertTrue(self.root.winfo_exists())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_repr"><code class="name flex">
+<span>def <span class="ident">test_repr</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_repr(self):
+    t = tkinter.Toplevel(self.root, name=&#39;top&#39;)
+    f = tkinter.Frame(t, name=&#39;child&#39;)
+    self.assertEqual(repr(f), &#39;&lt;tkinter.Frame object .top.child&gt;&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_tk_setPalette"><code class="name flex">
+<span>def <span class="ident">test_tk_setPalette</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_tk_setPalette(self):
+    root = self.root
+    root.tk_setPalette(&#39;black&#39;)
+    self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+    root.tk_setPalette(&#39;white&#39;)
+    self.assertEqual(root[&#39;background&#39;], &#39;white&#39;)
+    self.assertRaisesRegex(tkinter.TclError,
+            &#39;^unknown color name &#34;spam&#34;$&#39;,
+            root.tk_setPalette, &#39;spam&#39;)
+
+    root.tk_setPalette(background=&#39;black&#39;)
+    self.assertEqual(root[&#39;background&#39;], &#39;black&#39;)
+    root.tk_setPalette(background=&#39;blue&#39;, highlightColor=&#39;yellow&#39;)
+    self.assertEqual(root[&#39;background&#39;], &#39;blue&#39;)
+    self.assertEqual(root[&#39;highlightcolor&#39;], &#39;yellow&#39;)
+    root.tk_setPalette(background=&#39;yellow&#39;, highlightColor=&#39;blue&#39;)
+    self.assertEqual(root[&#39;background&#39;], &#39;yellow&#39;)
+    self.assertEqual(root[&#39;highlightcolor&#39;], &#39;blue&#39;)
+    self.assertRaisesRegex(tkinter.TclError,
+            &#39;^unknown color name &#34;spam&#34;$&#39;,
+            root.tk_setPalette, background=&#39;spam&#39;)
+    self.assertRaisesRegex(tkinter.TclError,
+            &#39;^must specify a background color$&#39;,
+            root.tk_setPalette, spam=&#39;white&#39;)
+    self.assertRaisesRegex(tkinter.TclError,
+            &#39;^must specify a background color$&#39;,
+            root.tk_setPalette, highlightColor=&#39;blue&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_misc.MiscTest.test_winfo_rgb"><code class="name flex">
+<span>def <span class="ident">test_winfo_rgb</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_winfo_rgb(self):
+    root = self.root
+    rgb = root.winfo_rgb
+
+    # Color name.
+    self.assertEqual(rgb(&#39;red&#39;), (65535, 0, 0))
+    self.assertEqual(rgb(&#39;dark slate blue&#39;), (18504, 15677, 35723))
+    # #RGB - extends each 4-bit hex value to be 16-bit.
+    self.assertEqual(rgb(&#39;#F0F&#39;), (0xFFFF, 0x0000, 0xFFFF))
+    # #RRGGBB - extends each 8-bit hex value to be 16-bit.
+    self.assertEqual(rgb(&#39;#4a3c8c&#39;), (0x4a4a, 0x3c3c, 0x8c8c))
+    # #RRRRGGGGBBBB
+    self.assertEqual(rgb(&#39;#dede14143939&#39;), (0xdede, 0x1414, 0x3939))
+    # Invalid string.
+    with self.assertRaises(tkinter.TclError):
+        rgb(&#39;#123456789a&#39;)
+    # RGB triplet is invalid input.
+    with self.assertRaises(tkinter.TclError):
+        rgb((111, 78, 55))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tkinter.test.test_tkinter" href="index.html">tkinter.test.test_tkinter</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_misc.DefaultRootTest" href="#tkinter.test.test_tkinter.test_misc.DefaultRootTest">DefaultRootTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_default_root" href="#tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_default_root">test_default_root</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_getboolean" href="#tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_getboolean">test_getboolean</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_mainloop" href="#tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_mainloop">test_mainloop</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_no_default_root" href="#tkinter.test.test_tkinter.test_misc.DefaultRootTest.test_no_default_root">test_no_default_root</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest" href="#tkinter.test.test_tkinter.test_misc.MiscTest">MiscTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_after" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_after">test_after</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_after_cancel" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_after_cancel">test_after_cancel</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_after_idle" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_after_idle">test_after_idle</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_all" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_all">test_all</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard">test_clipboard</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard_astral" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_clipboard_astral">test_clipboard_astral</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr">test_event_repr</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr_defaults" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_event_repr_defaults">test_event_repr_defaults</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_generated_names" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_generated_names">test_generated_names</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_getboolean" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_getboolean">test_getboolean</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_mainloop" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_mainloop">test_mainloop</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_repr" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_repr">test_repr</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_tk_setPalette" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_tk_setPalette">test_tk_setPalette</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_misc.MiscTest.test_winfo_rgb" href="#tkinter.test.test_tkinter.test_misc.MiscTest.test_winfo_rgb">test_winfo_rgb</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

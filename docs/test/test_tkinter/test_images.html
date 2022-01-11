@@ -1,0 +1,1818 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>tkinter.test.test_tkinter.test_images API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>tkinter.test.test_tkinter.test_images</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import unittest
+import tkinter
+from test import support
+from test.support import os_helper
+from tkinter.test.support import AbstractTkTest, AbstractDefaultRootTest, requires_tcl
+
+support.requires(&#39;gui&#39;)
+
+
+class MiscTest(AbstractTkTest, unittest.TestCase):
+
+    def test_image_types(self):
+        image_types = self.root.image_types()
+        self.assertIsInstance(image_types, tuple)
+        self.assertIn(&#39;photo&#39;, image_types)
+        self.assertIn(&#39;bitmap&#39;, image_types)
+
+    def test_image_names(self):
+        image_names = self.root.image_names()
+        self.assertIsInstance(image_names, tuple)
+
+
+class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_image_types(self):
+        self.assertRaises(RuntimeError, tkinter.image_types)
+        root = tkinter.Tk()
+        image_types = tkinter.image_types()
+        self.assertIsInstance(image_types, tuple)
+        self.assertIn(&#39;photo&#39;, image_types)
+        self.assertIn(&#39;bitmap&#39;, image_types)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.image_types)
+
+    def test_image_names(self):
+        self.assertRaises(RuntimeError, tkinter.image_names)
+        root = tkinter.Tk()
+        image_names = tkinter.image_names()
+        self.assertIsInstance(image_names, tuple)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.image_names)
+
+    def test_image_create_bitmap(self):
+        self.assertRaises(RuntimeError, tkinter.BitmapImage)
+        root = tkinter.Tk()
+        image = tkinter.BitmapImage()
+        self.assertIn(image.name, tkinter.image_names())
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.BitmapImage)
+
+    def test_image_create_photo(self):
+        self.assertRaises(RuntimeError, tkinter.PhotoImage)
+        root = tkinter.Tk()
+        image = tkinter.PhotoImage()
+        self.assertIn(image.name, tkinter.image_names())
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.PhotoImage)
+
+
+class BitmapImageTest(AbstractTkTest, unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        AbstractTkTest.setUpClass.__func__(cls)
+        cls.testfile = support.findfile(&#39;python.xbm&#39;, subdir=&#39;imghdrdata&#39;)
+
+    def test_create_from_file(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                    foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                    file=self.testfile)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;bitmap&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def test_create_from_data(self):
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                    foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                    data=data)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;bitmap&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def assertEqualStrList(self, actual, expected):
+        self.assertIsInstance(actual, str)
+        self.assertEqual(self.root.splitlist(actual), expected)
+
+    def test_configure_data(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;data&#39;], &#39;-data {} {} {} {}&#39;)
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image.configure(data=data)
+        self.assertEqualStrList(image[&#39;data&#39;],
+                                (&#39;-data&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+        self.assertEqual(image[&#39;maskdata&#39;], &#39;-maskdata {} {} {} {}&#39;)
+        image.configure(maskdata=data)
+        self.assertEqualStrList(image[&#39;maskdata&#39;],
+                                (&#39;-maskdata&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))
+
+    def test_configure_file(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;file&#39;], &#39;-file {} {} {} {}&#39;)
+        image.configure(file=self.testfile)
+        self.assertEqualStrList(image[&#39;file&#39;],
+                                (&#39;-file&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;,self.testfile))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+        self.assertEqual(image[&#39;maskfile&#39;], &#39;-maskfile {} {} {} {}&#39;)
+        image.configure(maskfile=self.testfile)
+        self.assertEqualStrList(image[&#39;maskfile&#39;],
+                                (&#39;-maskfile&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, self.testfile))
+
+    def test_configure_background(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} {}&#39;)
+        image.configure(background=&#39;blue&#39;)
+        self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} blue&#39;)
+
+    def test_configure_foreground(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;foreground&#39;],
+                         &#39;-foreground {} {} #000000 #000000&#39;)
+        image.configure(foreground=&#39;yellow&#39;)
+        self.assertEqual(image[&#39;foreground&#39;],
+                         &#39;-foreground {} {} #000000 yellow&#39;)
+
+
+class PhotoImageTest(AbstractTkTest, unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        AbstractTkTest.setUpClass.__func__(cls)
+        cls.testfile = support.findfile(&#39;python.gif&#39;, subdir=&#39;imghdrdata&#39;)
+
+    def create(self):
+        return tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                  file=self.testfile)
+
+    def colorlist(self, *args):
+        if tkinter.TkVersion &gt;= 8.6 and self.wantobjects:
+            return args
+        else:
+            return tkinter._join(args)
+
+    def check_create_from_file(self, ext):
+        testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                   file=testfile)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;photo&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+        self.assertEqual(image[&#39;file&#39;], testfile)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def check_create_from_data(self, ext):
+        testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+        with open(testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                   data=data)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;photo&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                        else data.decode(&#39;latin1&#39;))
+        self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def test_create_from_ppm_file(self):
+        self.check_create_from_file(&#39;ppm&#39;)
+
+    def test_create_from_ppm_data(self):
+        self.check_create_from_data(&#39;ppm&#39;)
+
+    def test_create_from_pgm_file(self):
+        self.check_create_from_file(&#39;pgm&#39;)
+
+    def test_create_from_pgm_data(self):
+        self.check_create_from_data(&#39;pgm&#39;)
+
+    def test_create_from_gif_file(self):
+        self.check_create_from_file(&#39;gif&#39;)
+
+    def test_create_from_gif_data(self):
+        self.check_create_from_data(&#39;gif&#39;)
+
+    @requires_tcl(8, 6)
+    def test_create_from_png_file(self):
+        self.check_create_from_file(&#39;png&#39;)
+
+    @requires_tcl(8, 6)
+    def test_create_from_png_data(self):
+        self.check_create_from_data(&#39;png&#39;)
+
+    def test_configure_data(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image.configure(data=data)
+        self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                        else data.decode(&#39;latin1&#39;))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_format(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;format&#39;], &#39;&#39;)
+        image.configure(file=self.testfile, format=&#39;gif&#39;)
+        self.assertEqual(image[&#39;format&#39;], (&#39;gif&#39;,) if self.wantobjects
+                                          else &#39;gif&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_file(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+        image.configure(file=self.testfile)
+        self.assertEqual(image[&#39;file&#39;], self.testfile)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_gamma(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;gamma&#39;], &#39;1.0&#39;)
+        image.configure(gamma=2.0)
+        self.assertEqual(image[&#39;gamma&#39;], &#39;2.0&#39;)
+
+    def test_configure_width_height(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;width&#39;], &#39;0&#39;)
+        self.assertEqual(image[&#39;height&#39;], &#39;0&#39;)
+        image.configure(width=20)
+        image.configure(height=10)
+        self.assertEqual(image[&#39;width&#39;], &#39;20&#39;)
+        self.assertEqual(image[&#39;height&#39;], &#39;10&#39;)
+        self.assertEqual(image.width(), 20)
+        self.assertEqual(image.height(), 10)
+
+    def test_configure_palette(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;palette&#39;], &#39;&#39;)
+        image.configure(palette=256)
+        self.assertEqual(image[&#39;palette&#39;], &#39;256&#39;)
+        image.configure(palette=&#39;3/4/2&#39;)
+        self.assertEqual(image[&#39;palette&#39;], &#39;3/4/2&#39;)
+
+    def test_blank(self):
+        image = self.create()
+        image.blank()
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image.get(4, 6), self.colorlist(0, 0, 0))
+
+    def test_copy(self):
+        image = self.create()
+        image2 = image.copy()
+        self.assertEqual(image2.width(), 16)
+        self.assertEqual(image2.height(), 16)
+        self.assertEqual(image.get(4, 6), image.get(4, 6))
+
+    def test_subsample(self):
+        image = self.create()
+        image2 = image.subsample(2, 3)
+        self.assertEqual(image2.width(), 8)
+        self.assertEqual(image2.height(), 6)
+        self.assertEqual(image2.get(2, 2), image.get(4, 6))
+
+        image2 = image.subsample(2)
+        self.assertEqual(image2.width(), 8)
+        self.assertEqual(image2.height(), 8)
+        self.assertEqual(image2.get(2, 3), image.get(4, 6))
+
+    def test_zoom(self):
+        image = self.create()
+        image2 = image.zoom(2, 3)
+        self.assertEqual(image2.width(), 32)
+        self.assertEqual(image2.height(), 48)
+        self.assertEqual(image2.get(8, 18), image.get(4, 6))
+        self.assertEqual(image2.get(9, 20), image.get(4, 6))
+
+        image2 = image.zoom(2)
+        self.assertEqual(image2.width(), 32)
+        self.assertEqual(image2.height(), 32)
+        self.assertEqual(image2.get(8, 12), image.get(4, 6))
+        self.assertEqual(image2.get(9, 13), image.get(4, 6))
+
+    def test_put(self):
+        image = self.create()
+        image.put(&#39;{red green} {blue yellow}&#39;, to=(4, 6))
+        self.assertEqual(image.get(4, 6), self.colorlist(255, 0, 0))
+        self.assertEqual(image.get(5, 6),
+                         self.colorlist(0, 128 if tkinter.TkVersion &gt;= 8.6
+                                           else 255, 0))
+        self.assertEqual(image.get(4, 7), self.colorlist(0, 0, 255))
+        self.assertEqual(image.get(5, 7), self.colorlist(255, 255, 0))
+
+        image.put(((&#39;#f00&#39;, &#39;#00ff00&#39;), (&#39;#000000fff&#39;, &#39;#ffffffff0000&#39;)))
+        self.assertEqual(image.get(0, 0), self.colorlist(255, 0, 0))
+        self.assertEqual(image.get(1, 0), self.colorlist(0, 255, 0))
+        self.assertEqual(image.get(0, 1), self.colorlist(0, 0, 255))
+        self.assertEqual(image.get(1, 1), self.colorlist(255, 255, 0))
+
+    def test_get(self):
+        image = self.create()
+        self.assertEqual(image.get(4, 6), self.colorlist(62, 116, 162))
+        self.assertEqual(image.get(0, 0), self.colorlist(0, 0, 0))
+        self.assertEqual(image.get(15, 15), self.colorlist(0, 0, 0))
+        self.assertRaises(tkinter.TclError, image.get, -1, 0)
+        self.assertRaises(tkinter.TclError, image.get, 0, -1)
+        self.assertRaises(tkinter.TclError, image.get, 16, 15)
+        self.assertRaises(tkinter.TclError, image.get, 15, 16)
+
+    def test_write(self):
+        image = self.create()
+        self.addCleanup(os_helper.unlink, os_helper.TESTFN)
+
+        image.write(os_helper.TESTFN)
+        image2 = tkinter.PhotoImage(&#39;::img::test2&#39;, master=self.root,
+                                    format=&#39;ppm&#39;,
+                                    file=os_helper.TESTFN)
+        self.assertEqual(str(image2), &#39;::img::test2&#39;)
+        self.assertEqual(image2.type(), &#39;photo&#39;)
+        self.assertEqual(image2.width(), 16)
+        self.assertEqual(image2.height(), 16)
+        self.assertEqual(image2.get(0, 0), image.get(0, 0))
+        self.assertEqual(image2.get(15, 8), image.get(15, 8))
+
+        image.write(os_helper.TESTFN, format=&#39;gif&#39;, from_coords=(4, 6, 6, 9))
+        image3 = tkinter.PhotoImage(&#39;::img::test3&#39;, master=self.root,
+                                    format=&#39;gif&#39;,
+                                    file=os_helper.TESTFN)
+        self.assertEqual(str(image3), &#39;::img::test3&#39;)
+        self.assertEqual(image3.type(), &#39;photo&#39;)
+        self.assertEqual(image3.width(), 2)
+        self.assertEqual(image3.height(), 3)
+        self.assertEqual(image3.get(0, 0), image.get(4, 6))
+        self.assertEqual(image3.get(1, 2), image.get(5, 8))
+
+    def test_transparency(self):
+        image = self.create()
+        self.assertEqual(image.transparency_get(0, 0), True)
+        self.assertEqual(image.transparency_get(4, 6), False)
+        image.transparency_set(4, 6, True)
+        self.assertEqual(image.transparency_get(4, 6), True)
+        image.transparency_set(4, 6, False)
+        self.assertEqual(image.transparency_get(4, 6), False)
+
+
+tests_gui = (MiscTest, DefaultRootTest, BitmapImageTest, PhotoImageTest,)
+
+if __name__ == &#34;__main__&#34;:
+    support.run_unittest(*tests_gui)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest"><code class="flex name class">
+<span>class <span class="ident">BitmapImageTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BitmapImageTest(AbstractTkTest, unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        AbstractTkTest.setUpClass.__func__(cls)
+        cls.testfile = support.findfile(&#39;python.xbm&#39;, subdir=&#39;imghdrdata&#39;)
+
+    def test_create_from_file(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                    foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                    file=self.testfile)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;bitmap&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def test_create_from_data(self):
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                    foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                    data=data)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;bitmap&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def assertEqualStrList(self, actual, expected):
+        self.assertIsInstance(actual, str)
+        self.assertEqual(self.root.splitlist(actual), expected)
+
+    def test_configure_data(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;data&#39;], &#39;-data {} {} {} {}&#39;)
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image.configure(data=data)
+        self.assertEqualStrList(image[&#39;data&#39;],
+                                (&#39;-data&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+        self.assertEqual(image[&#39;maskdata&#39;], &#39;-maskdata {} {} {} {}&#39;)
+        image.configure(maskdata=data)
+        self.assertEqualStrList(image[&#39;maskdata&#39;],
+                                (&#39;-maskdata&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))
+
+    def test_configure_file(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;file&#39;], &#39;-file {} {} {} {}&#39;)
+        image.configure(file=self.testfile)
+        self.assertEqualStrList(image[&#39;file&#39;],
+                                (&#39;-file&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;,self.testfile))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+        self.assertEqual(image[&#39;maskfile&#39;], &#39;-maskfile {} {} {} {}&#39;)
+        image.configure(maskfile=self.testfile)
+        self.assertEqualStrList(image[&#39;maskfile&#39;],
+                                (&#39;-maskfile&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, self.testfile))
+
+    def test_configure_background(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} {}&#39;)
+        image.configure(background=&#39;blue&#39;)
+        self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} blue&#39;)
+
+    def test_configure_foreground(self):
+        image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;foreground&#39;],
+                         &#39;-foreground {} {} #000000 #000000&#39;)
+        image.configure(foreground=&#39;yellow&#39;)
+        self.assertEqual(image[&#39;foreground&#39;],
+                         &#39;-foreground {} {} #000000 yellow&#39;)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractTkTest" href="../support.html#tkinter.test.support.AbstractTkTest">AbstractTkTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Static methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.setUpClass"><code class="name flex">
+<span>def <span class="ident">setUpClass</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Hook method for setting up class fixture before running tests in the class.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def setUpClass(cls):
+    AbstractTkTest.setUpClass.__func__(cls)
+    cls.testfile = support.findfile(&#39;python.xbm&#39;, subdir=&#39;imghdrdata&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.assertEqualStrList"><code class="name flex">
+<span>def <span class="ident">assertEqualStrList</span></span>(<span>self, actual, expected)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def assertEqualStrList(self, actual, expected):
+    self.assertIsInstance(actual, str)
+    self.assertEqual(self.root.splitlist(actual), expected)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_background"><code class="name flex">
+<span>def <span class="ident">test_configure_background</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_background(self):
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} {}&#39;)
+    image.configure(background=&#39;blue&#39;)
+    self.assertEqual(image[&#39;background&#39;], &#39;-background {} {} {} blue&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_data"><code class="name flex">
+<span>def <span class="ident">test_configure_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_data(self):
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;data&#39;], &#39;-data {} {} {} {}&#39;)
+    with open(self.testfile, &#39;rb&#39;) as f:
+        data = f.read()
+    image.configure(data=data)
+    self.assertEqualStrList(image[&#39;data&#39;],
+                            (&#39;-data&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+
+    self.assertEqual(image[&#39;maskdata&#39;], &#39;-maskdata {} {} {} {}&#39;)
+    image.configure(maskdata=data)
+    self.assertEqualStrList(image[&#39;maskdata&#39;],
+                            (&#39;-maskdata&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, data.decode(&#39;ascii&#39;)))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_file"><code class="name flex">
+<span>def <span class="ident">test_configure_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_file(self):
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;file&#39;], &#39;-file {} {} {} {}&#39;)
+    image.configure(file=self.testfile)
+    self.assertEqualStrList(image[&#39;file&#39;],
+                            (&#39;-file&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;,self.testfile))
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+
+    self.assertEqual(image[&#39;maskfile&#39;], &#39;-maskfile {} {} {} {}&#39;)
+    image.configure(maskfile=self.testfile)
+    self.assertEqualStrList(image[&#39;maskfile&#39;],
+                            (&#39;-maskfile&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, self.testfile))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_foreground"><code class="name flex">
+<span>def <span class="ident">test_configure_foreground</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_foreground(self):
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;foreground&#39;],
+                     &#39;-foreground {} {} #000000 #000000&#39;)
+    image.configure(foreground=&#39;yellow&#39;)
+    self.assertEqual(image[&#39;foreground&#39;],
+                     &#39;-foreground {} {} #000000 yellow&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_data"><code class="name flex">
+<span>def <span class="ident">test_create_from_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_data(self):
+    with open(self.testfile, &#39;rb&#39;) as f:
+        data = f.read()
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                data=data)
+    self.assertEqual(str(image), &#39;::img::test&#39;)
+    self.assertEqual(image.type(), &#39;bitmap&#39;)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+    self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+    del image
+    self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_file"><code class="name flex">
+<span>def <span class="ident">test_create_from_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_file(self):
+    image = tkinter.BitmapImage(&#39;::img::test&#39;, master=self.root,
+                                foreground=&#39;yellow&#39;, background=&#39;blue&#39;,
+                                file=self.testfile)
+    self.assertEqual(str(image), &#39;::img::test&#39;)
+    self.assertEqual(image.type(), &#39;bitmap&#39;)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+    self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+    del image
+    self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.DefaultRootTest"><code class="flex name class">
+<span>class <span class="ident">DefaultRootTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DefaultRootTest(AbstractDefaultRootTest, unittest.TestCase):
+
+    def test_image_types(self):
+        self.assertRaises(RuntimeError, tkinter.image_types)
+        root = tkinter.Tk()
+        image_types = tkinter.image_types()
+        self.assertIsInstance(image_types, tuple)
+        self.assertIn(&#39;photo&#39;, image_types)
+        self.assertIn(&#39;bitmap&#39;, image_types)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.image_types)
+
+    def test_image_names(self):
+        self.assertRaises(RuntimeError, tkinter.image_names)
+        root = tkinter.Tk()
+        image_names = tkinter.image_names()
+        self.assertIsInstance(image_names, tuple)
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.image_names)
+
+    def test_image_create_bitmap(self):
+        self.assertRaises(RuntimeError, tkinter.BitmapImage)
+        root = tkinter.Tk()
+        image = tkinter.BitmapImage()
+        self.assertIn(image.name, tkinter.image_names())
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.BitmapImage)
+
+    def test_image_create_photo(self):
+        self.assertRaises(RuntimeError, tkinter.PhotoImage)
+        root = tkinter.Tk()
+        image = tkinter.PhotoImage()
+        self.assertIn(image.name, tkinter.image_names())
+        root.destroy()
+        tkinter.NoDefaultRoot()
+        self.assertRaises(RuntimeError, tkinter.PhotoImage)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractDefaultRootTest" href="../support.html#tkinter.test.support.AbstractDefaultRootTest">AbstractDefaultRootTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_bitmap"><code class="name flex">
+<span>def <span class="ident">test_image_create_bitmap</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_create_bitmap(self):
+    self.assertRaises(RuntimeError, tkinter.BitmapImage)
+    root = tkinter.Tk()
+    image = tkinter.BitmapImage()
+    self.assertIn(image.name, tkinter.image_names())
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.BitmapImage)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_photo"><code class="name flex">
+<span>def <span class="ident">test_image_create_photo</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_create_photo(self):
+    self.assertRaises(RuntimeError, tkinter.PhotoImage)
+    root = tkinter.Tk()
+    image = tkinter.PhotoImage()
+    self.assertIn(image.name, tkinter.image_names())
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.PhotoImage)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_names"><code class="name flex">
+<span>def <span class="ident">test_image_names</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_names(self):
+    self.assertRaises(RuntimeError, tkinter.image_names)
+    root = tkinter.Tk()
+    image_names = tkinter.image_names()
+    self.assertIsInstance(image_names, tuple)
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.image_names)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_types"><code class="name flex">
+<span>def <span class="ident">test_image_types</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_types(self):
+    self.assertRaises(RuntimeError, tkinter.image_types)
+    root = tkinter.Tk()
+    image_types = tkinter.image_types()
+    self.assertIsInstance(image_types, tuple)
+    self.assertIn(&#39;photo&#39;, image_types)
+    self.assertIn(&#39;bitmap&#39;, image_types)
+    root.destroy()
+    tkinter.NoDefaultRoot()
+    self.assertRaises(RuntimeError, tkinter.image_types)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.MiscTest"><code class="flex name class">
+<span>class <span class="ident">MiscTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MiscTest(AbstractTkTest, unittest.TestCase):
+
+    def test_image_types(self):
+        image_types = self.root.image_types()
+        self.assertIsInstance(image_types, tuple)
+        self.assertIn(&#39;photo&#39;, image_types)
+        self.assertIn(&#39;bitmap&#39;, image_types)
+
+    def test_image_names(self):
+        image_names = self.root.image_names()
+        self.assertIsInstance(image_names, tuple)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractTkTest" href="../support.html#tkinter.test.support.AbstractTkTest">AbstractTkTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.MiscTest.test_image_names"><code class="name flex">
+<span>def <span class="ident">test_image_names</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_names(self):
+    image_names = self.root.image_names()
+    self.assertIsInstance(image_names, tuple)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.MiscTest.test_image_types"><code class="name flex">
+<span>def <span class="ident">test_image_types</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_image_types(self):
+    image_types = self.root.image_types()
+    self.assertIsInstance(image_types, tuple)
+    self.assertIn(&#39;photo&#39;, image_types)
+    self.assertIn(&#39;bitmap&#39;, image_types)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest"><code class="flex name class">
+<span>class <span class="ident">PhotoImageTest</span></span>
+<span>(</span><span>methodName='runTest')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+'runTest'.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.</p>
+<p>If it is necessary to override the <strong>init</strong> method, the base class
+<strong>init</strong> method must always be called. It is important that subclasses
+should not change the signature of their <strong>init</strong> method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+the instance's assertion methods fail; test methods raising this
+exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PhotoImageTest(AbstractTkTest, unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        AbstractTkTest.setUpClass.__func__(cls)
+        cls.testfile = support.findfile(&#39;python.gif&#39;, subdir=&#39;imghdrdata&#39;)
+
+    def create(self):
+        return tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                  file=self.testfile)
+
+    def colorlist(self, *args):
+        if tkinter.TkVersion &gt;= 8.6 and self.wantobjects:
+            return args
+        else:
+            return tkinter._join(args)
+
+    def check_create_from_file(self, ext):
+        testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                   file=testfile)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;photo&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+        self.assertEqual(image[&#39;file&#39;], testfile)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def check_create_from_data(self, ext):
+        testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+        with open(testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                                   data=data)
+        self.assertEqual(str(image), &#39;::img::test&#39;)
+        self.assertEqual(image.type(), &#39;photo&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                        else data.decode(&#39;latin1&#39;))
+        self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+        self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+        del image
+        self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())
+
+    def test_create_from_ppm_file(self):
+        self.check_create_from_file(&#39;ppm&#39;)
+
+    def test_create_from_ppm_data(self):
+        self.check_create_from_data(&#39;ppm&#39;)
+
+    def test_create_from_pgm_file(self):
+        self.check_create_from_file(&#39;pgm&#39;)
+
+    def test_create_from_pgm_data(self):
+        self.check_create_from_data(&#39;pgm&#39;)
+
+    def test_create_from_gif_file(self):
+        self.check_create_from_file(&#39;gif&#39;)
+
+    def test_create_from_gif_data(self):
+        self.check_create_from_data(&#39;gif&#39;)
+
+    @requires_tcl(8, 6)
+    def test_create_from_png_file(self):
+        self.check_create_from_file(&#39;png&#39;)
+
+    @requires_tcl(8, 6)
+    def test_create_from_png_data(self):
+        self.check_create_from_data(&#39;png&#39;)
+
+    def test_configure_data(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+        with open(self.testfile, &#39;rb&#39;) as f:
+            data = f.read()
+        image.configure(data=data)
+        self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                        else data.decode(&#39;latin1&#39;))
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_format(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;format&#39;], &#39;&#39;)
+        image.configure(file=self.testfile, format=&#39;gif&#39;)
+        self.assertEqual(image[&#39;format&#39;], (&#39;gif&#39;,) if self.wantobjects
+                                          else &#39;gif&#39;)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_file(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+        image.configure(file=self.testfile)
+        self.assertEqual(image[&#39;file&#39;], self.testfile)
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+
+    def test_configure_gamma(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;gamma&#39;], &#39;1.0&#39;)
+        image.configure(gamma=2.0)
+        self.assertEqual(image[&#39;gamma&#39;], &#39;2.0&#39;)
+
+    def test_configure_width_height(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;width&#39;], &#39;0&#39;)
+        self.assertEqual(image[&#39;height&#39;], &#39;0&#39;)
+        image.configure(width=20)
+        image.configure(height=10)
+        self.assertEqual(image[&#39;width&#39;], &#39;20&#39;)
+        self.assertEqual(image[&#39;height&#39;], &#39;10&#39;)
+        self.assertEqual(image.width(), 20)
+        self.assertEqual(image.height(), 10)
+
+    def test_configure_palette(self):
+        image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+        self.assertEqual(image[&#39;palette&#39;], &#39;&#39;)
+        image.configure(palette=256)
+        self.assertEqual(image[&#39;palette&#39;], &#39;256&#39;)
+        image.configure(palette=&#39;3/4/2&#39;)
+        self.assertEqual(image[&#39;palette&#39;], &#39;3/4/2&#39;)
+
+    def test_blank(self):
+        image = self.create()
+        image.blank()
+        self.assertEqual(image.width(), 16)
+        self.assertEqual(image.height(), 16)
+        self.assertEqual(image.get(4, 6), self.colorlist(0, 0, 0))
+
+    def test_copy(self):
+        image = self.create()
+        image2 = image.copy()
+        self.assertEqual(image2.width(), 16)
+        self.assertEqual(image2.height(), 16)
+        self.assertEqual(image.get(4, 6), image.get(4, 6))
+
+    def test_subsample(self):
+        image = self.create()
+        image2 = image.subsample(2, 3)
+        self.assertEqual(image2.width(), 8)
+        self.assertEqual(image2.height(), 6)
+        self.assertEqual(image2.get(2, 2), image.get(4, 6))
+
+        image2 = image.subsample(2)
+        self.assertEqual(image2.width(), 8)
+        self.assertEqual(image2.height(), 8)
+        self.assertEqual(image2.get(2, 3), image.get(4, 6))
+
+    def test_zoom(self):
+        image = self.create()
+        image2 = image.zoom(2, 3)
+        self.assertEqual(image2.width(), 32)
+        self.assertEqual(image2.height(), 48)
+        self.assertEqual(image2.get(8, 18), image.get(4, 6))
+        self.assertEqual(image2.get(9, 20), image.get(4, 6))
+
+        image2 = image.zoom(2)
+        self.assertEqual(image2.width(), 32)
+        self.assertEqual(image2.height(), 32)
+        self.assertEqual(image2.get(8, 12), image.get(4, 6))
+        self.assertEqual(image2.get(9, 13), image.get(4, 6))
+
+    def test_put(self):
+        image = self.create()
+        image.put(&#39;{red green} {blue yellow}&#39;, to=(4, 6))
+        self.assertEqual(image.get(4, 6), self.colorlist(255, 0, 0))
+        self.assertEqual(image.get(5, 6),
+                         self.colorlist(0, 128 if tkinter.TkVersion &gt;= 8.6
+                                           else 255, 0))
+        self.assertEqual(image.get(4, 7), self.colorlist(0, 0, 255))
+        self.assertEqual(image.get(5, 7), self.colorlist(255, 255, 0))
+
+        image.put(((&#39;#f00&#39;, &#39;#00ff00&#39;), (&#39;#000000fff&#39;, &#39;#ffffffff0000&#39;)))
+        self.assertEqual(image.get(0, 0), self.colorlist(255, 0, 0))
+        self.assertEqual(image.get(1, 0), self.colorlist(0, 255, 0))
+        self.assertEqual(image.get(0, 1), self.colorlist(0, 0, 255))
+        self.assertEqual(image.get(1, 1), self.colorlist(255, 255, 0))
+
+    def test_get(self):
+        image = self.create()
+        self.assertEqual(image.get(4, 6), self.colorlist(62, 116, 162))
+        self.assertEqual(image.get(0, 0), self.colorlist(0, 0, 0))
+        self.assertEqual(image.get(15, 15), self.colorlist(0, 0, 0))
+        self.assertRaises(tkinter.TclError, image.get, -1, 0)
+        self.assertRaises(tkinter.TclError, image.get, 0, -1)
+        self.assertRaises(tkinter.TclError, image.get, 16, 15)
+        self.assertRaises(tkinter.TclError, image.get, 15, 16)
+
+    def test_write(self):
+        image = self.create()
+        self.addCleanup(os_helper.unlink, os_helper.TESTFN)
+
+        image.write(os_helper.TESTFN)
+        image2 = tkinter.PhotoImage(&#39;::img::test2&#39;, master=self.root,
+                                    format=&#39;ppm&#39;,
+                                    file=os_helper.TESTFN)
+        self.assertEqual(str(image2), &#39;::img::test2&#39;)
+        self.assertEqual(image2.type(), &#39;photo&#39;)
+        self.assertEqual(image2.width(), 16)
+        self.assertEqual(image2.height(), 16)
+        self.assertEqual(image2.get(0, 0), image.get(0, 0))
+        self.assertEqual(image2.get(15, 8), image.get(15, 8))
+
+        image.write(os_helper.TESTFN, format=&#39;gif&#39;, from_coords=(4, 6, 6, 9))
+        image3 = tkinter.PhotoImage(&#39;::img::test3&#39;, master=self.root,
+                                    format=&#39;gif&#39;,
+                                    file=os_helper.TESTFN)
+        self.assertEqual(str(image3), &#39;::img::test3&#39;)
+        self.assertEqual(image3.type(), &#39;photo&#39;)
+        self.assertEqual(image3.width(), 2)
+        self.assertEqual(image3.height(), 3)
+        self.assertEqual(image3.get(0, 0), image.get(4, 6))
+        self.assertEqual(image3.get(1, 2), image.get(5, 8))
+
+    def test_transparency(self):
+        image = self.create()
+        self.assertEqual(image.transparency_get(0, 0), True)
+        self.assertEqual(image.transparency_get(4, 6), False)
+        image.transparency_set(4, 6, True)
+        self.assertEqual(image.transparency_get(4, 6), True)
+        image.transparency_set(4, 6, False)
+        self.assertEqual(image.transparency_get(4, 6), False)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="tkinter.test.support.AbstractTkTest" href="../support.html#tkinter.test.support.AbstractTkTest">AbstractTkTest</a></li>
+<li>unittest.case.TestCase</li>
+</ul>
+<h3>Static methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.setUpClass"><code class="name flex">
+<span>def <span class="ident">setUpClass</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Hook method for setting up class fixture before running tests in the class.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@classmethod
+def setUpClass(cls):
+    AbstractTkTest.setUpClass.__func__(cls)
+    cls.testfile = support.findfile(&#39;python.gif&#39;, subdir=&#39;imghdrdata&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_data"><code class="name flex">
+<span>def <span class="ident">check_create_from_data</span></span>(<span>self, ext)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_create_from_data(self, ext):
+    testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+    with open(testfile, &#39;rb&#39;) as f:
+        data = f.read()
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                               data=data)
+    self.assertEqual(str(image), &#39;::img::test&#39;)
+    self.assertEqual(image.type(), &#39;photo&#39;)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+    self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                    else data.decode(&#39;latin1&#39;))
+    self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+    self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+    del image
+    self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_file"><code class="name flex">
+<span>def <span class="ident">check_create_from_file</span></span>(<span>self, ext)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_create_from_file(self, ext):
+    testfile = support.findfile(&#39;python.&#39; + ext, subdir=&#39;imghdrdata&#39;)
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                               file=testfile)
+    self.assertEqual(str(image), &#39;::img::test&#39;)
+    self.assertEqual(image.type(), &#39;photo&#39;)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+    self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+    self.assertEqual(image[&#39;file&#39;], testfile)
+    self.assertIn(&#39;::img::test&#39;, self.root.image_names())
+    del image
+    self.assertNotIn(&#39;::img::test&#39;, self.root.image_names())</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.colorlist"><code class="name flex">
+<span>def <span class="ident">colorlist</span></span>(<span>self, *args)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def colorlist(self, *args):
+    if tkinter.TkVersion &gt;= 8.6 and self.wantobjects:
+        return args
+    else:
+        return tkinter._join(args)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.create"><code class="name flex">
+<span>def <span class="ident">create</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create(self):
+    return tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root,
+                              file=self.testfile)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_blank"><code class="name flex">
+<span>def <span class="ident">test_blank</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_blank(self):
+    image = self.create()
+    image.blank()
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)
+    self.assertEqual(image.get(4, 6), self.colorlist(0, 0, 0))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_data"><code class="name flex">
+<span>def <span class="ident">test_configure_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_data(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;data&#39;], &#39;&#39;)
+    with open(self.testfile, &#39;rb&#39;) as f:
+        data = f.read()
+    image.configure(data=data)
+    self.assertEqual(image[&#39;data&#39;], data if self.wantobjects
+                                    else data.decode(&#39;latin1&#39;))
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_file"><code class="name flex">
+<span>def <span class="ident">test_configure_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_file(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;file&#39;], &#39;&#39;)
+    image.configure(file=self.testfile)
+    self.assertEqual(image[&#39;file&#39;], self.testfile)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_format"><code class="name flex">
+<span>def <span class="ident">test_configure_format</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_format(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;format&#39;], &#39;&#39;)
+    image.configure(file=self.testfile, format=&#39;gif&#39;)
+    self.assertEqual(image[&#39;format&#39;], (&#39;gif&#39;,) if self.wantobjects
+                                      else &#39;gif&#39;)
+    self.assertEqual(image.width(), 16)
+    self.assertEqual(image.height(), 16)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_gamma"><code class="name flex">
+<span>def <span class="ident">test_configure_gamma</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_gamma(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;gamma&#39;], &#39;1.0&#39;)
+    image.configure(gamma=2.0)
+    self.assertEqual(image[&#39;gamma&#39;], &#39;2.0&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_palette"><code class="name flex">
+<span>def <span class="ident">test_configure_palette</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_palette(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;palette&#39;], &#39;&#39;)
+    image.configure(palette=256)
+    self.assertEqual(image[&#39;palette&#39;], &#39;256&#39;)
+    image.configure(palette=&#39;3/4/2&#39;)
+    self.assertEqual(image[&#39;palette&#39;], &#39;3/4/2&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_width_height"><code class="name flex">
+<span>def <span class="ident">test_configure_width_height</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_configure_width_height(self):
+    image = tkinter.PhotoImage(&#39;::img::test&#39;, master=self.root)
+    self.assertEqual(image[&#39;width&#39;], &#39;0&#39;)
+    self.assertEqual(image[&#39;height&#39;], &#39;0&#39;)
+    image.configure(width=20)
+    image.configure(height=10)
+    self.assertEqual(image[&#39;width&#39;], &#39;20&#39;)
+    self.assertEqual(image[&#39;height&#39;], &#39;10&#39;)
+    self.assertEqual(image.width(), 20)
+    self.assertEqual(image.height(), 10)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_copy"><code class="name flex">
+<span>def <span class="ident">test_copy</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_copy(self):
+    image = self.create()
+    image2 = image.copy()
+    self.assertEqual(image2.width(), 16)
+    self.assertEqual(image2.height(), 16)
+    self.assertEqual(image.get(4, 6), image.get(4, 6))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_data"><code class="name flex">
+<span>def <span class="ident">test_create_from_gif_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_gif_data(self):
+    self.check_create_from_data(&#39;gif&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_file"><code class="name flex">
+<span>def <span class="ident">test_create_from_gif_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_gif_file(self):
+    self.check_create_from_file(&#39;gif&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_data"><code class="name flex">
+<span>def <span class="ident">test_create_from_pgm_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_pgm_data(self):
+    self.check_create_from_data(&#39;pgm&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_file"><code class="name flex">
+<span>def <span class="ident">test_create_from_pgm_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_pgm_file(self):
+    self.check_create_from_file(&#39;pgm&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_data"><code class="name flex">
+<span>def <span class="ident">test_create_from_png_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@requires_tcl(8, 6)
+def test_create_from_png_data(self):
+    self.check_create_from_data(&#39;png&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_file"><code class="name flex">
+<span>def <span class="ident">test_create_from_png_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">@requires_tcl(8, 6)
+def test_create_from_png_file(self):
+    self.check_create_from_file(&#39;png&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_data"><code class="name flex">
+<span>def <span class="ident">test_create_from_ppm_data</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_ppm_data(self):
+    self.check_create_from_data(&#39;ppm&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_file"><code class="name flex">
+<span>def <span class="ident">test_create_from_ppm_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_create_from_ppm_file(self):
+    self.check_create_from_file(&#39;ppm&#39;)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_get"><code class="name flex">
+<span>def <span class="ident">test_get</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_get(self):
+    image = self.create()
+    self.assertEqual(image.get(4, 6), self.colorlist(62, 116, 162))
+    self.assertEqual(image.get(0, 0), self.colorlist(0, 0, 0))
+    self.assertEqual(image.get(15, 15), self.colorlist(0, 0, 0))
+    self.assertRaises(tkinter.TclError, image.get, -1, 0)
+    self.assertRaises(tkinter.TclError, image.get, 0, -1)
+    self.assertRaises(tkinter.TclError, image.get, 16, 15)
+    self.assertRaises(tkinter.TclError, image.get, 15, 16)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_put"><code class="name flex">
+<span>def <span class="ident">test_put</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_put(self):
+    image = self.create()
+    image.put(&#39;{red green} {blue yellow}&#39;, to=(4, 6))
+    self.assertEqual(image.get(4, 6), self.colorlist(255, 0, 0))
+    self.assertEqual(image.get(5, 6),
+                     self.colorlist(0, 128 if tkinter.TkVersion &gt;= 8.6
+                                       else 255, 0))
+    self.assertEqual(image.get(4, 7), self.colorlist(0, 0, 255))
+    self.assertEqual(image.get(5, 7), self.colorlist(255, 255, 0))
+
+    image.put(((&#39;#f00&#39;, &#39;#00ff00&#39;), (&#39;#000000fff&#39;, &#39;#ffffffff0000&#39;)))
+    self.assertEqual(image.get(0, 0), self.colorlist(255, 0, 0))
+    self.assertEqual(image.get(1, 0), self.colorlist(0, 255, 0))
+    self.assertEqual(image.get(0, 1), self.colorlist(0, 0, 255))
+    self.assertEqual(image.get(1, 1), self.colorlist(255, 255, 0))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_subsample"><code class="name flex">
+<span>def <span class="ident">test_subsample</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_subsample(self):
+    image = self.create()
+    image2 = image.subsample(2, 3)
+    self.assertEqual(image2.width(), 8)
+    self.assertEqual(image2.height(), 6)
+    self.assertEqual(image2.get(2, 2), image.get(4, 6))
+
+    image2 = image.subsample(2)
+    self.assertEqual(image2.width(), 8)
+    self.assertEqual(image2.height(), 8)
+    self.assertEqual(image2.get(2, 3), image.get(4, 6))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_transparency"><code class="name flex">
+<span>def <span class="ident">test_transparency</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_transparency(self):
+    image = self.create()
+    self.assertEqual(image.transparency_get(0, 0), True)
+    self.assertEqual(image.transparency_get(4, 6), False)
+    image.transparency_set(4, 6, True)
+    self.assertEqual(image.transparency_get(4, 6), True)
+    image.transparency_set(4, 6, False)
+    self.assertEqual(image.transparency_get(4, 6), False)</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_write"><code class="name flex">
+<span>def <span class="ident">test_write</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_write(self):
+    image = self.create()
+    self.addCleanup(os_helper.unlink, os_helper.TESTFN)
+
+    image.write(os_helper.TESTFN)
+    image2 = tkinter.PhotoImage(&#39;::img::test2&#39;, master=self.root,
+                                format=&#39;ppm&#39;,
+                                file=os_helper.TESTFN)
+    self.assertEqual(str(image2), &#39;::img::test2&#39;)
+    self.assertEqual(image2.type(), &#39;photo&#39;)
+    self.assertEqual(image2.width(), 16)
+    self.assertEqual(image2.height(), 16)
+    self.assertEqual(image2.get(0, 0), image.get(0, 0))
+    self.assertEqual(image2.get(15, 8), image.get(15, 8))
+
+    image.write(os_helper.TESTFN, format=&#39;gif&#39;, from_coords=(4, 6, 6, 9))
+    image3 = tkinter.PhotoImage(&#39;::img::test3&#39;, master=self.root,
+                                format=&#39;gif&#39;,
+                                file=os_helper.TESTFN)
+    self.assertEqual(str(image3), &#39;::img::test3&#39;)
+    self.assertEqual(image3.type(), &#39;photo&#39;)
+    self.assertEqual(image3.width(), 2)
+    self.assertEqual(image3.height(), 3)
+    self.assertEqual(image3.get(0, 0), image.get(4, 6))
+    self.assertEqual(image3.get(1, 2), image.get(5, 8))</code></pre>
+</details>
+</dd>
+<dt id="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_zoom"><code class="name flex">
+<span>def <span class="ident">test_zoom</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_zoom(self):
+    image = self.create()
+    image2 = image.zoom(2, 3)
+    self.assertEqual(image2.width(), 32)
+    self.assertEqual(image2.height(), 48)
+    self.assertEqual(image2.get(8, 18), image.get(4, 6))
+    self.assertEqual(image2.get(9, 20), image.get(4, 6))
+
+    image2 = image.zoom(2)
+    self.assertEqual(image2.width(), 32)
+    self.assertEqual(image2.height(), 32)
+    self.assertEqual(image2.get(8, 12), image.get(4, 6))
+    self.assertEqual(image2.get(9, 13), image.get(4, 6))</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="tkinter.test.test_tkinter" href="index.html">tkinter.test.test_tkinter</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest">BitmapImageTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.assertEqualStrList" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.assertEqualStrList">assertEqualStrList</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.setUpClass" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.setUpClass">setUpClass</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_background" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_background">test_configure_background</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_data" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_data">test_configure_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_file" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_file">test_configure_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_foreground" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_configure_foreground">test_configure_foreground</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_data" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_data">test_create_from_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_file" href="#tkinter.test.test_tkinter.test_images.BitmapImageTest.test_create_from_file">test_create_from_file</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_images.DefaultRootTest" href="#tkinter.test.test_tkinter.test_images.DefaultRootTest">DefaultRootTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_bitmap" href="#tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_bitmap">test_image_create_bitmap</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_photo" href="#tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_create_photo">test_image_create_photo</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_names" href="#tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_names">test_image_names</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_types" href="#tkinter.test.test_tkinter.test_images.DefaultRootTest.test_image_types">test_image_types</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_images.MiscTest" href="#tkinter.test.test_tkinter.test_images.MiscTest">MiscTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_images.MiscTest.test_image_names" href="#tkinter.test.test_tkinter.test_images.MiscTest.test_image_names">test_image_names</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.MiscTest.test_image_types" href="#tkinter.test.test_tkinter.test_images.MiscTest.test_image_types">test_image_types</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest">PhotoImageTest</a></code></h4>
+<ul class="">
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_data">check_create_from_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.check_create_from_file">check_create_from_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.colorlist" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.colorlist">colorlist</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.create" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.create">create</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.setUpClass" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.setUpClass">setUpClass</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_blank" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_blank">test_blank</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_data">test_configure_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_file">test_configure_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_format" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_format">test_configure_format</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_gamma" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_gamma">test_configure_gamma</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_palette" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_palette">test_configure_palette</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_width_height" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_configure_width_height">test_configure_width_height</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_copy" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_copy">test_copy</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_data">test_create_from_gif_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_gif_file">test_create_from_gif_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_data">test_create_from_pgm_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_pgm_file">test_create_from_pgm_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_data">test_create_from_png_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_png_file">test_create_from_png_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_data" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_data">test_create_from_ppm_data</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_file" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_create_from_ppm_file">test_create_from_ppm_file</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_get" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_get">test_get</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_put" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_put">test_put</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_subsample" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_subsample">test_subsample</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_transparency" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_transparency">test_transparency</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_write" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_write">test_write</a></code></li>
+<li><code><a title="tkinter.test.test_tkinter.test_images.PhotoImageTest.test_zoom" href="#tkinter.test.test_tkinter.test_images.PhotoImageTest.test_zoom">test_zoom</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
